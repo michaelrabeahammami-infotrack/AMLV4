@@ -149,34 +149,33 @@ namespace AMLv4_API
 
             #region Migration Customer and User details - Request
 
-            MigrationCustomerAndUserDetailsRequest migrationCustomerAndUserDetailsRequest = new MigrationCustomerAndUserDetailsRequest()
-            {
-                CustomerId = "360 Business Law",
-                IntegratorId = integratorId,
-                UserId = "AML Provider"
-            };
+            //MigrationCustomerAndUserDetailsRequest migrationCustomerAndUserDetailsRequest = new MigrationCustomerAndUserDetailsRequest()
+            //{
+            //    CustomerId = "360 Business Law",
+            //    IntegratorId = integratorId,
+            //    UserId = "AML Provider"
+            //};
 
-            MigrationCustomerAndUserDetailsResponse migrationListResponse = RequestPerformer.RequestPerformer.PerformRequest<MigrationCustomerAndUserDetailsResponse>(migrationCustomerAndUserDetailsRequest, "/migration/run", "additional reference", 0);
+            //MigrationCustomerAndUserDetailsResponse migrationListResponse = RequestPerformer.RequestPerformer.PerformRequest<MigrationCustomerAndUserDetailsResponse>(migrationCustomerAndUserDetailsRequest, "/migration/run", "additional reference", 0);
 
             #endregion Migration Customer and User details - Request
 
-
-            //#region Select Risk Profile / CDD - Request
+            #region Select Risk Profile / CDD - Request
 
             //SelectRiskProfileCddRequest selectRiskProfileCddRequest = new SelectRiskProfileCddRequest()
             //{
-            //    interview_value = InterviewValue.home.ToString(),
-            //    nationality_value = "UK",
-            //    ProfileOverride = ProfileOverride.empty.ToString(),
-            //    profiletype = Profiletype.personal.ToString(),
-            //    relationship_value = RelationshipValue.existing,
-            //    residency_value = "UK",
-            //    uri = authenticationResponse.uri,
+            //    InterviewValue = InterviewValue.Home,
+            //    NationalityValue = "UK",
+            //    ProfileOverride = ProfileOverride.Empty,
+            //    Profiletype = Profiletype.Personal,
+            //    RelationshipValue = RelationshipValue.Existing,
+            //    ResidencyValue = "UK",
+            //    Uri = authenticationResponse.uri,
             //};
 
             //SelectRiskProfileCddResponse selectRiskProfileCddResponse = RequestPerformer.RequestPerformer.PerformRequest<SelectRiskProfileCddResponse>(selectRiskProfileCddRequest, "/riskprofile/lookup", "additional reference", 0);
 
-            //#endregion Select Risk Profile / CDD - Request
+            #endregion Select Risk Profile / CDD - Request
 
 
             //#region Personal Risk Assessment, Client Data - Request

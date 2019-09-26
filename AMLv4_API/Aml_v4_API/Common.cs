@@ -98,29 +98,48 @@ namespace AMLv4_API.Aml_v4_API
         [EnumMember(Value = "yes")]
         Yes 
     };
+
+    public enum InterviewValue 
+    {
+        [EnumMember(Value = "home")]
+        Home,
+        [EnumMember(Value = "person")]
+        Person,
+        [EnumMember(Value = "phone")]
+        Phone 
+    };
+
+    public enum ProfileOverride 
+    {
+        [EnumMember(Value = "")]
+        Empty,
+        [EnumMember(Value = "enhanced")]
+        Enhanced,
+        [EnumMember(Value = "simplified")]
+        Simplified 
+    };
+
+    public enum Profiletype 
+    {
+        [EnumMember(Value = "nonpersonal")]
+        Nonpersonal,
+        [EnumMember(Value = "personal")]
+        Personal
+    };
+
+    public enum RelationshipValue 
+    {
+        [EnumMember(Value = "existing")]
+        Existing,
+        [EnumMember(Value = "new")]
+        New,
+        [EnumMember(Value = "newknown")]
+        Newknown 
+    };
+
     #endregion
 
     public enum Cancelled { no, yes };
-
-
-    //public enum InterviewValue { home, person, phone };
-
-    public class ProfileOverride
-    {
-        public const string empty = "";
-        public const string enhanced = "enhanced";
-        public const string simplified = "simplified";
-    }
-
-    public enum Profiletype { nonpersonal, personal };
-
-    public static class RelationshipValue
-    {
-
-        public const string existing = "existing";
-        public const string @new = "new";
-        public const string newknown = "newknown";
-    }
 
     public enum ClientType { nonpersonal, personal };
 
@@ -144,8 +163,6 @@ namespace AMLv4_API.Aml_v4_API
     public enum AllowEnhanced { no, yes };
 
     public enum Match { defined, no, yes };
-
-    public enum InterviewValue { empty, home, person, phone };
 
     //public enum RelationshipValue { empty, existing, @new, newknown };
 
