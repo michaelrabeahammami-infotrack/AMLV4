@@ -147,18 +147,18 @@ namespace AMLv4_API
 
             #endregion Migration List - Request
 
-            //#region Migration Customer and User details - Request
+            #region Migration Customer and User details - Request
 
-            //MigrationCustomerAndUserDetailsRequest migrationCustomerAndUserDetailsRequest = new MigrationCustomerAndUserDetailsRequest()
-            //{
-            //    CustomerID = "360 Business Law",
-            //    IntegratorID = integratorId,
-            //    UserID = "AML Provider"
-            //};
+            MigrationCustomerAndUserDetailsRequest migrationCustomerAndUserDetailsRequest = new MigrationCustomerAndUserDetailsRequest()
+            {
+                CustomerId = "360 Business Law",
+                IntegratorId = integratorId,
+                UserId = "AML Provider"
+            };
 
-            //MigrationCustomerAndUserDetailsResponse migrationListResponse = RequestPerformer.RequestPerformer.PerformRequest<MigrationCustomerAndUserDetailsResponse>(migrationCustomerAndUserDetailsRequest, "/migration/run", "additional reference", 0);
+            MigrationCustomerAndUserDetailsResponse migrationListResponse = RequestPerformer.RequestPerformer.PerformRequest<MigrationCustomerAndUserDetailsResponse>(migrationCustomerAndUserDetailsRequest, "/migration/run", "additional reference", 0);
 
-            //#endregion Migration Customer and User details - Request
+            #endregion Migration Customer and User details - Request
 
 
             //#region Select Risk Profile / CDD - Request
