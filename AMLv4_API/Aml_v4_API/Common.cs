@@ -85,15 +85,20 @@ namespace AMLv4_API.Aml_v4_API
         [EnumMember(Value = "user")]
         User 
     };
-    #endregion
-
     /// <summary>
     /// no|yes - Set to no to check terms version, yes to retrieve a copy of the terms
     ///
     /// no|yes - Set to yes to obtain a preview of a new Terms version. Set to no to view
     /// currently agreeed version
     /// </summary>
-    public enum IncludeBinary { no, yes };
+    public enum IncludeBinary 
+    {
+        [EnumMember(Value = "no")]
+        No,
+        [EnumMember(Value = "yes")]
+        Yes 
+    };
+    #endregion
 
     public enum Cancelled { no, yes };
 
