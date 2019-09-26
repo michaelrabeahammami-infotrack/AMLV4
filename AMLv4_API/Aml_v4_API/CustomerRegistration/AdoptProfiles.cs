@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
 
 namespace AMLv4_API.Aml_v4_API
 {
@@ -7,16 +7,22 @@ namespace AMLv4_API.Aml_v4_API
     /// </summary>
     public class AdoptProfilesRequest
     {
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
-
-    public class AdoptProfilesResponse
+    public partial class AdoptProfilesResponse
     {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public string profilecount { get; set; }
-        public Profile[] profiles { get; set; }
-    }
+        [JsonProperty("error")]
+        public string Error { get; set; }
 
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("profilecount")]
+        public long Profilecount { get; set; }
+
+        [JsonProperty("profiles")]
+        public Profile[] Profiles { get; set; }
+    }
 }

@@ -61,37 +61,37 @@ namespace AMLv4_API
 
             #region Customer Terms
 
-            CustomerTermsRequest customerTermsRequest = new CustomerTermsRequest()
-            {
-                uri = authenticationResponse.uri,
-                ContactEmail = "joao.fernandes@infotrack.co.uk",
-                ContactForename = "Joao",
-                ContactPosition = "Overworked Developer",
-                ContactSurname = "Fernandes",
-                ContactTitle = "Mr",
-                CustomerAddress = "91 Waterloo Road",
-                CustomerName = "InfoTrack"
-            };
+            //CustomerTermsRequest customerTermsRequest = new CustomerTermsRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    ContactEmail = "joao.fernandes@infotrack.co.uk",
+            //    ContactForename = "Joao",
+            //    ContactPosition = "Overworked Developer",
+            //    ContactSurname = "Fernandes",
+            //    ContactTitle = "Mr",
+            //    CustomerAddress = "91 Waterloo Road",
+            //    CustomerName = "InfoTrack"
+            //};
 
-            CustomerTermsResponse customerTermsResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerTermsResponse>(customerTermsRequest, "/register/terms", "additional reference", 0);
+            //CustomerTermsResponse customerTermsResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerTermsResponse>(customerTermsRequest, "/register/terms", "additional reference", 0);
 
-            if (customerTermsResponse.error == "no")
-            {
-                File.WriteAllBytes(@"C:\CustomerTerms.pdf", Convert.FromBase64String(customerTermsResponse.TermsBinary));
-            }
+            //if (customerTermsResponse.Error == "no")
+            //{
+            //    File.WriteAllBytes(@"C:\CustomerTerms.pdf", Convert.FromBase64String(customerTermsResponse.TermsBinary));
+            //}
 
             #endregion Customer Terms
 
-            //#region Adopt Profiles
+            #region Adopt Profiles
 
             //AdoptProfilesRequest adoptProfileRequest = new AdoptProfilesRequest()
             //{
-            //    uri = authenticationResponse.uri
+            //    Uri = authenticationResponse.uri
             //};
 
             //AdoptProfilesResponse adoptProfilesResponse = RequestPerformer.RequestPerformer.PerformRequest<AdoptProfilesResponse>(adoptProfileRequest, "/register/adoptprofiles", "additional reference", 0);
 
-            //#endregion Adopt Profiles
+            #endregion Adopt Profiles
 
             //#region Add User to Registered Customer
 

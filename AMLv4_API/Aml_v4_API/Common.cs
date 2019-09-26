@@ -5,6 +5,66 @@ using System.Runtime.Serialization;
 
 namespace AMLv4_API.Aml_v4_API
 {
+    #region Classes
+    public class Profile
+    {
+        [JsonProperty("profileid")]
+        public string Profileid { get; set; }
+
+        [JsonProperty("profilename")]
+        public string Profilename { get; set; }
+
+        [JsonProperty("profilestatus")]
+        public string Profilestatus { get; set; }
+
+        [JsonProperty("profiletype")]
+        public string Profiletype { get; set; }
+
+        [JsonProperty("profilecreated")]
+        public DateTime Profilecreated { get; set; }
+
+        [JsonProperty("profileorigin")]
+        public string Profileorigin { get; set; }
+    }
+    #endregion
+
+    #region Enums
+    public enum CustomerAccess
+    {
+        [EnumMember(Value = "sub-both")]
+        SubBoth,
+        [EnumMember(Value = "sub-simple")]
+        SubSimple,
+        [EnumMember(Value = "transactional")]
+        Transactional
+    };
+
+    public enum OrgType
+    {
+        [EnumMember(Value = "accountant")]
+        Accountant,
+        [EnumMember(Value = "casino")]
+        Casino,
+        [EnumMember(Value = "estateagent")]
+        Estateagent,
+        [EnumMember(Value = "highvaluedealer")]
+        Highvaluedealer,
+        [EnumMember(Value = "insolvencypractitioner")]
+        Insolvencypractitioner,
+        [EnumMember(Value = "other")]
+        Other,
+        [EnumMember(Value = "solicitor")]
+        Solicitor,
+        [EnumMember(Value = "trustorcompanyserviceprovider")]
+        Trustorcompanyserviceprovider
+    };
+
+    public enum TermsAccepted
+    {
+        [EnumMember(Value = "yes")]
+        Yes
+    };
+    #endregion
 
     /// <summary>
     /// no|yes - Set to no to check terms version, yes to retrieve a copy of the terms
@@ -74,55 +134,7 @@ namespace AMLv4_API.Aml_v4_API
 
     public enum Profilestatus { archived, enabled, pending };
 
-    public enum CustomerAccess 
-    {
-        [EnumMember(Value="sub-both")]
-        SubBoth,
-        [EnumMember(Value="sub-simple")]
-        SubSimple,
-        [EnumMember(Value="transactional")]
-        Transactional 
-    };
-
-    public enum OrgType 
-    { 
-        [EnumMember(Value="accountant")]
-        Accountant, 
-        [EnumMember(Value="casino")]
-        Casino, 
-        [EnumMember(Value="estateagent")]
-        Estateagent, 
-        [EnumMember(Value="highvaluedealer")]
-        Highvaluedealer, 
-        [EnumMember(Value="insolvencypractitioner")]
-        Insolvencypractitioner, 
-        [EnumMember(Value="other")]
-        Other, 
-        [EnumMember(Value="solicitor")]
-        Solicitor, 
-        [EnumMember(Value="trustorcompanyserviceprovider")]
-        Trustorcompanyserviceprovider 
-    };
-
-    public enum TermsAccepted 
-    { 
-        [EnumMember(Value="yes")]
-        Yes 
-    };
-
-
-    public class Profile
-    {
-        public string profileid { get; set; }
-        public string profilename { get; set; }
-        public string profilestatus { get; set; }
-        public string profiletype { get; set; }
-        public string profilecreated { get; set; }
-        public string profileorigin { get; set; }
-        public string simplified { get; set; }
-        public string enhanced { get; set; }
-        public string matchruleid { get; set; }
-    }
+    
 
     public enum AssessmentType { enhanced, simplified };
 
