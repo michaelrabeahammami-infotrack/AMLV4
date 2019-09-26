@@ -177,14 +177,13 @@ namespace AMLv4_API
 
             #endregion Select Risk Profile / CDD - Request
 
-
-            //#region Personal Risk Assessment, Client Data - Request
+            #region Personal Risk Assessment, Client Data - Request
 
             //PersonalRiskAssessmentClientDataRequest personalRiskAssessmentClientDataRequest = new PersonalRiskAssessmentClientDataRequest()
             //{
-            //    AssessmentType = AssessmentType.simplified.ToString(),
-            //    clienttype = Clienttype.personal.ToString(),
-            //    compliance = Compliance.yes.ToString(),
+            //    AssessmentType = AssessmentType.Simplified,
+            //    Clienttype = Clienttype.Personal,
+            //    Compliance = Compliance.Yes,
             //    CountryCode = "UK",
             //    CurrentAddressFlatFloor = "11",
             //    CurrentAddressHouseNameNumber = "Capital Tower",
@@ -194,15 +193,15 @@ namespace AMLv4_API
             //    CurrentAddressStreet = "Waterloo Road",
             //    CurrentAddressTown = "London",
             //    DateMoved = "2019-01-01",
-            //    DOB = "1987-06-09",
+            //    Dob = "1987-06-09",
             //    Email = "joao.fernandes@infotrack.co.uk",
             //    Forename = "Joao",
-            //    Gender = Gender.Male.ToString(),
-            //    Interview = Interview.person.ToString(),
+            //    Gender = Gender.Male,
+            //    Interview = Interview.Person,
             //    Nationality = "UK",
             //    OtherNames = "Pedro",
             //    Phone = "3829013802",
-            //    PreviousAddress = Previous.no.ToString(),
+            //    PreviousAddress = Previous.No,
             //    PreviousAddressFlatFloor = "",
             //    PreviousAddressHouseNameNumber = "",
             //    PreviousAddressLocality = "",
@@ -212,35 +211,33 @@ namespace AMLv4_API
             //    PreviousAddressTown = "",
             //    PreviousCountryCode = "",
             //    PreviousForename = "",
-            //    PreviousName = Previous.no.ToString(),
+            //    PreviousName = Previous.No,
             //    PreviousOtherNames = "",
             //    PreviousSuffix = "",
             //    PreviousSurname = "",
             //    PreviousTitle = "",
-            //    Relationship = RelationshipValue.existing,
+            //    Relationship = Relationship.Existing,
             //    Residency = "UK",
             //    RiskProfile = "4097",
-            //    SSN = "N/A",
+            //    Ssn = "N/A",
             //    Suffix = "N/A",
             //    Surname = "Fernandes",
             //    Title = "mr",
-            //    uri = authenticationResponse.uri
+            //    Uri = authenticationResponse.uri
             //};
 
             //PersonalRiskAssessmentClientDataResponse personalRiskAssessmentClientDataResponse = RequestPerformer.RequestPerformer.PerformRequest<PersonalRiskAssessmentClientDataResponse>(personalRiskAssessmentClientDataRequest, "/client/personal/add", "additional reference", 0);
 
 
-            //#endregion Personal Risk Assessment, Client Data - Request
+            #endregion Personal Risk Assessment, Client Data - Request
 
-
-
-            //#region Personal Risk Assessment, Update Client Data - Request
+            #region Personal Risk Assessment, Update Client Data - Request
 
             //PersonalRiskAssessmentUpdateClientDataRequest personalRiskAssessmentUpdateClientDataRequest = new PersonalRiskAssessmentUpdateClientDataRequest()
             //{
-            //    AssessmentType = AssessmentType.simplified.ToString(),
-            //    clienttype = Clienttype.personal.ToString(),
-            //    compliance = Compliance.yes.ToString(),
+            //    AssessmentType = AssessmentType.Simplified,
+            //    Clienttype = Clienttype.Personal,
+            //    Compliance = Compliance.Yes,
             //    CountryCode = "UK",
             //    CurrentAddressFlatFloor = "11",
             //    CurrentAddressHouseNameNumber = "Capital Tower",
@@ -250,15 +247,15 @@ namespace AMLv4_API
             //    CurrentAddressStreet = "Waterloo Road",
             //    CurrentAddressTown = "London",
             //    DateMoved = "2019-01-01",
-            //    DOB = "1987-06-09",
+            //    Dob = "1987-06-09",
             //    Email = "joao.fernandes@infotrack.co.uk",
             //    Forename = "Joao",
-            //    Gender = Gender.Male.ToString(),
-            //    Interview = Interview.person.ToString(),
+            //    Gender = Gender.Male,
+            //    Interview = Interview.Person,
             //    Nationality = "UK",
             //    OtherNames = "Pedro",
             //    Phone = "3829013802",
-            //    PreviousAddress = Previous.no.ToString(),
+            //    PreviousAddress = Previous.No,
             //    PreviousAddressFlatFloor = "",
             //    PreviousAddressHouseNameNumber = "",
             //    PreviousAddressLocality = "",
@@ -268,26 +265,26 @@ namespace AMLv4_API
             //    PreviousAddressTown = "",
             //    PreviousCountryCode = "",
             //    PreviousForename = "",
-            //    PreviousName = Previous.no.ToString(),
+            //    PreviousName = Previous.No,
             //    PreviousOtherNames = "",
             //    PreviousSuffix = "",
             //    PreviousSurname = "",
             //    PreviousTitle = "",
-            //    Relationship = RelationshipValue.existing,
+            //    Relationship = Relationship.Existing,
             //    Residency = "UK",
             //    RiskProfile = "4097",
-            //    SSN = "N/A",
+            //    Ssn = "N/A",
             //    Suffix = "N/A",
             //    Surname = "Fernandes",
             //    Title = "mr",
-            //    uri = authenticationResponse.uri,
-            //    ClientID = "12345"
+            //    Uri = authenticationResponse.uri,
+            //    ClientId = "12345"
             //};
 
             //PersonalRiskAssessmentUpdateClientDataResponse personalRiskAssessmentUpdateClientDataResponse = RequestPerformer.RequestPerformer.PerformRequest<PersonalRiskAssessmentUpdateClientDataResponse>(personalRiskAssessmentUpdateClientDataRequest, "/client/personal/update", "additional reference", 0);
 
 
-            //#endregion Personal Risk Assessment, Update Client Data - Request
+            #endregion Personal Risk Assessment, Update Client Data - Request
 
 
         }
