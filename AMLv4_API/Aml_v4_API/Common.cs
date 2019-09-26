@@ -64,6 +64,27 @@ namespace AMLv4_API.Aml_v4_API
         [EnumMember(Value = "yes")]
         Yes
     };
+
+    /// <summary>
+    /// Additional rights (MO=Management Oversight, MOD=MO for Document Expiry Alert only)
+    /// </summary>
+    public enum ServicesAvailable 
+    {
+        [EnumMember(Value = "")]
+        Empty,
+        [EnumMember(Value = "MO")]
+        Mo,
+        [EnumMember(Value = "MOD")]
+        Mod 
+    };
+
+    public enum UserType 
+    {
+        [EnumMember(Value = "admin")]
+        Admin,
+        [EnumMember(Value = "user")]
+        User 
+    };
     #endregion
 
     /// <summary>
@@ -102,15 +123,6 @@ namespace AMLv4_API.Aml_v4_API
 
     public enum AllowOtherDocs { no, yes };
 
-    /// <summary>
-    /// Additional rights (MO=Management Oversight, MOD=MO for Document Expiry Alert only)
-    /// </summary>
-    //public enum ServicesAvailable { empty, MO, MOD };
-
-    /// <summary>
-    /// Main access level
-    /// </summary>
-    public enum UserType { admin, user };
 
     public enum LinkType { accountant, controller, officer, representative, shareholder, structure, ubo };
 

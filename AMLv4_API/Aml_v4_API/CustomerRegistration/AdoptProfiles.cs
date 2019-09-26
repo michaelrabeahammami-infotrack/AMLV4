@@ -2,6 +2,7 @@
 
 namespace AMLv4_API.Aml_v4_API
 {
+    #region Request
     /// <summary>
     /// Agree to adopt AML Default Profiles
     /// </summary>
@@ -10,8 +11,10 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("uri")]
         public string Uri { get; set; }
     }
+    #endregion
 
-    public partial class AdoptProfilesResponse
+    #region Response
+    public class AdoptProfilesResponse
     {
         [JsonProperty("error")]
         public string Error { get; set; }
@@ -24,5 +27,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("profiles")]
         public Profile[] Profiles { get; set; }
-    }
+    } 
+    #endregion
 }
