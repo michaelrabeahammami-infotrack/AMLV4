@@ -3,6 +3,7 @@
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
+    #region Request
     /// <summary>
     /// Register a new Customer
     /// </summary>
@@ -66,6 +67,9 @@
         public TermsAccepted TermsAccepted { get; set; }
     }
 
+    #endregion
+
+    #region Response
     public class RegisterCustomerResponse
     {
         [JsonProperty("error")]
@@ -125,7 +129,7 @@
         [JsonProperty("enum")]
         public string[] Enum { get; set; }
     }
-
+    #endregion
     //#region Request
 
     //public partial class RegisterCustomerRequest
