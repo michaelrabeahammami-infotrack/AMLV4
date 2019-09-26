@@ -137,6 +137,66 @@ namespace AMLv4_API.Aml_v4_API
         Newknown 
     };
 
+    public enum AssessmentType 
+    {
+        [EnumMember(Value = "enhanced")]
+        Enhanced,
+        [EnumMember(Value = "simplified")]
+        Simplified 
+    };
+
+    public enum Clienttype 
+    {
+        [EnumMember(Value = "personal")]
+        Personal 
+    };
+
+    public enum Compliance 
+    {
+        [EnumMember(Value = "yes")]
+        Yes 
+    };
+
+    public enum Gender 
+    {
+        [EnumMember(Value = "Female")]
+        Female,
+        [EnumMember(Value = "Male")]
+        Male,
+        [EnumMember(Value = "Non-binary")]
+        NonBinary,
+        [EnumMember(Value = "Not Disclosed")]
+        NotDisclosed 
+    };
+
+    public enum Interview 
+    {
+        [EnumMember(Value = "home")]
+        Home,
+        [EnumMember(Value = "person")]
+        Person,
+        [EnumMember(Value = "phone")]
+        Phone 
+    };
+
+    public enum Previous 
+    {
+        [EnumMember(Value = "no")]
+        No,
+        [EnumMember(Value = "yes")]
+        Yes 
+    };
+
+    public enum Relationship 
+    {
+        [EnumMember(Value = "existing")]
+        Existing,
+        [EnumMember(Value = "new")]
+        New,
+        [EnumMember(Value = "newknown")]
+        Newknown 
+    };
+
     #endregion
 
     public enum Cancelled { no, yes };
@@ -167,20 +227,6 @@ namespace AMLv4_API.Aml_v4_API
     //public enum RelationshipValue { empty, existing, @new, newknown };
 
     public enum Profilestatus { archived, enabled, pending };
-
-    
-
-    public enum AssessmentType { enhanced, simplified };
-
-    public enum Clienttype { personal };
-
-    public enum Compliance { yes };
-
-    public enum Gender { Female, Male, NonBinary, NotDisclosed };
-
-    public enum Interview { home, person, phone };
-
-    public enum Previous { no, yes };
 
     #region JSONConverters
     public class SingleOrArrayConverter<T> : JsonConverter

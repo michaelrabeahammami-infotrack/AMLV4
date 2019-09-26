@@ -3,6 +3,7 @@ using Newtonsoft.Json.Converters;
 
 namespace AMLv4_API.Aml_v4_API
 {
+    #region request
     /// <summary>
     /// Lookup available risk profiles and CDD
     /// </summary>
@@ -33,7 +34,9 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("uri")]
         public string Uri { get; set; }
     }
+    #endregion
 
+    #region response
     public class SelectRiskProfileCddResponse
     {
         [JsonProperty("error")]
@@ -47,5 +50,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("profiles")]
         public Profile[] Profiles { get; set; }
-    }
+    } 
+    #endregion
 }
