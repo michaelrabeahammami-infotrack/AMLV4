@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D30EF082-F411-4C4C-895C-BEF211AAEBDD}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AMLv4_API</RootNamespace>
+    <AssemblyName>AMLv4_API</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InfoTrack.Net.Http, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\InfoTrack.Net.Http.1.0.6\lib\net45\InfoTrack.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Polly, Version=5.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Polly.5.5.0\lib\net45\Polly.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aml_v4_API\CustomerTermsRevisions\AcceptNewCustomerTermsVersion.cs" />
+    <Compile Include="Aml_v4_API\CustomerRegistration\AddUserToRegisteredCustomer.cs" />
+    <Compile Include="Aml_v4_API\CustomerRegistration\AdoptProfiles.cs" />
+    <Compile Include="Aml_v4_API\AssessmentArchiving\ArchiveAssessment.cs" />
+    <Compile Include="Aml_v4_API\AssessmentArchiving\UnarchiveAssessment.cs" />
+    <Compile Include="Aml_v4_API\AssessmentList\ListOfAssessmentsForClient.cs" />
+    <Compile Include="Aml_v4_API\Authentication\Authentication.cs" />
+    <Compile Include="Aml_v4_API\CustomerTermsRevisions\CheckCustomerTermsVersion.cs" />
+    <Compile Include="Aml_v4_API\Client\ClientListForCustomer.cs" />
+    <Compile Include="Aml_v4_API\Client\NonPersonalViewClientData.cs" />
+    <Compile Include="Aml_v4_API\Client\SearchForClientWithWildcards.cs" />
+    <Compile Include="Aml_v4_API\Client\ViewClientData.cs" />
+    <Compile Include="Aml_v4_API\Common.cs" />
+    <Compile Include="Aml_v4_API\ComplianceReports\CustomerAllClientsDueDiligenceReport.cs" />
+    <Compile Include="Aml_v4_API\ComplianceReports\SingleClientDueDiligenceReport.cs" />
+    <Compile Include="Aml_v4_API\CustomerRegistration\CustomerTerms.cs" />
+    <Compile Include="Aml_v4_API\IntegratorAndCustomerAdministrationFunctions\ClientArchive.cs" />
+    <Compile Include="Aml_v4_API\IntegratorAndCustomerAdministrationFunctions\ClientUnarchive.cs" />
+    <Compile Include="Aml_v4_API\IntegratorAndCustomerAdministrationFunctions\CustomerComplianceTotals.cs" />
+    <Compile Include="Aml_v4_API\IntegratorAndCustomerAdministrationFunctions\TransactionList.cs" />
+    <Compile Include="Aml_v4_API\IntegratorAndCustomerAdministrationFunctions\UpdateCustomerDetails.cs" />
+    <Compile Include="Aml_v4_API\IntegratorAndCustomerAdministrationFunctions\UpdateUserDetailsAndRights.cs" />
+    <Compile Include="Aml_v4_API\IntegratorAndCustomerAdministrationFunctions\UserArchive.cs" />
+    <Compile Include="Aml_v4_API\IntegratorAndCustomerAdministrationFunctions\UserList.cs" />
+    <Compile Include="Aml_v4_API\IntegratorAndCustomerAdministrationFunctions\UserUnarchive.cs" />
+    <Compile Include="Aml_v4_API\IntegratorAndCustomerAdministrationFunctions\ViewCustomerDetails.cs" />
+    <Compile Include="Aml_v4_API\IntegratorAndCustomerAdministrationFunctions\ViewUserDetails.cs" />
+    <Compile Include="Aml_v4_API\IntegratorOnlyAdministratorFunctions\CustomerArchive.cs" />
+    <Compile Include="Aml_v4_API\IntegratorOnlyAdministratorFunctions\CustomerList.cs" />
+    <Compile Include="Aml_v4_API\IntegratorOnlyAdministratorFunctions\CustomerUnarchive.cs" />
+    <Compile Include="Aml_v4_API\ManagementOversight\ManagementOversightView.cs" />
+    <Compile Include="Aml_v4_API\ManagementOversight\OversightUpdate.cs" />
+    <Compile Include="Aml_v4_API\CustomerMigration\MigrationCustomerAndUserDetails.cs" />
+    <Compile Include="Aml_v4_API\CustomerMigration\MigrationList.cs" />
+    <Compile Include="Aml_v4_API\MonitoringOnGoingDueDiligence\MonitorAlertList.cs" />
+    <Compile Include="Aml_v4_API\MonitoringOnGoingDueDiligence\MonitoringAlertUpdate.cs" />
+    <Compile Include="Aml_v4_API\MonitoringOnGoingDueDiligence\SingleMonitoringAlertView.cs" />
+    <Compile Include="Aml_v4_API\NonPersonalRiskAssessment\AddAssociate.cs" />
+    <Compile Include="Aml_v4_API\NonPersonalRiskAssessment\AssociatesList.cs" />
+    <Compile Include="Aml_v4_API\NonPersonalRiskAssessment\NonPersonalAddClient.cs" />
+    <Compile Include="Aml_v4_API\NonPersonalRiskAssessment\NonPersonalViewRiskAssessment.cs" />
+    <Compile Include="Aml_v4_API\NonPersonalRiskAssessment\OrganisationLookup.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\AddClientRelationships.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\AddDocumentToCDDRecord.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\DeleteDocumentDetails.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\ListDocumentsOnCDDRecordOrAssessment.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\PersonalRiskAssessmentClientData.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\PersonalRiskAssessmentDocumentTypes.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\PersonalRiskAssessmentUpdateClientData.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\RiskAssessmentPickListSelect.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\RiskAssessmentResult.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\RunRiskAssessment.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\UpdateDocumentDetails.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\UseDocumentInAssessment.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\ViewDocumentDetails.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\ViewRiskAssessment.cs" />
+    <Compile Include="Aml_v4_API\CustomerRegistration\RegisterCustomer.cs" />
+    <Compile Include="Aml_v4_API\RelationshipViewingAndArchiving\ArchiveRelationship.cs" />
+    <Compile Include="Aml_v4_API\RelationshipViewingAndArchiving\ListRelationships.cs" />
+    <Compile Include="Aml_v4_API\RelationshipViewingAndArchiving\UnarchiveRelationship.cs" />
+    <Compile Include="Aml_v4_API\RelationshipViewingAndArchiving\ViewRelationship.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\AddProfileRule.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\AddRiskProfile.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\ArchiveRiskProfile.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\CopyProfileRule.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\CopyRiskProfile.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\DeletePendingProfileRule.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\DeletePendingRiskProfile.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\EnablePendingRiskProfile.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\ListRiskProfileRules.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\ListRiskProfiles.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\UnarchiveRiskProfile.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\UpdatePendingProfileRule.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\UpdatePendingRiskProfile.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\ValidatePendingRiskProfile.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\ValidateRuleAgainstOtherRules.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\ViewProfileRule.cs" />
+    <Compile Include="Aml_v4_API\RiskAssessmentProfiles\ViewRiskProfile.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\SelectRiskProfileCDD.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestPerformer\RequestPerformer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
