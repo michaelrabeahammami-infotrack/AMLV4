@@ -197,6 +197,80 @@ namespace AMLv4_API.Aml_v4_API
         Newknown 
     };
 
+    public enum Error 
+    {
+        [EnumMember(Value = "no")]
+        No,
+        [EnumMember(Value = "yes")]
+        Yes 
+    };
+
+    public enum Electronic 
+    {
+        [EnumMember(Value = "no")]
+        No,
+        [EnumMember(Value = "yes")]
+        Yes
+    };
+
+    public enum DocumentCode
+    {
+        [EnumMember(Value = "uk_passport")]
+        uk_passport,
+        [EnumMember(Value = "paper_driving_licence")]
+        paper_driving_licence,
+        [EnumMember(Value = "firearms_cert")]
+        firearms_cert,
+        [EnumMember(Value = "ni_card_and_p60")]
+        ni_card_and_p60,
+        [EnumMember(Value = "revenue_document")]
+        revenue_document,
+        [EnumMember(Value = "bank_statement")]
+        bank_statement,
+        [EnumMember(Value = "bank_card_statement")]
+        bank_card_statement,
+        [EnumMember(Value = "eu_state_id_card")]
+        eu_state_id_card,
+        [EnumMember(Value = "council_tax")]
+        council_tax,
+        [EnumMember(Value = "photo_driving_licence")]
+        photo_driving_licence,
+        [EnumMember(Value = "tax_credit")]
+        tax_credit,
+        [EnumMember(Value = "state_pension")]
+        state_pension,
+        [EnumMember(Value = "housing_benefit")]
+        housing_benefit,
+        [EnumMember(Value = "national_id_card_nonuk")]
+        national_id_card_nonuk,
+        [EnumMember(Value = "ni_er_id_card")]
+        ni_er_id_card,
+        [EnumMember(Value = "grant")]
+        grant,
+        [EnumMember(Value = "court_appointment")]
+        court_appointment,
+        [EnumMember(Value = "nonuk_passport")]
+        nonuk_passport,
+        [EnumMember(Value = "personal_id_no")]
+        personal_id_no,
+        [EnumMember(Value = "travel_document")]
+        travel_document,
+        [EnumMember(Value = "residence_permit")]
+        residence_permit,
+        [EnumMember(Value = "identity_cert_no")]
+        identity_cert_no,
+        [EnumMember(Value = "reg_fed_de_cont")]
+        reg_fed_de_cont,
+        [EnumMember(Value = "cred_de_elector")]
+        cred_de_elector,
+        [EnumMember(Value = "tax_file_no_aus")]
+        tax_file_no_aus,
+        [EnumMember(Value = "utility_bill")]
+        utility_bill,
+        [EnumMember(Value = "mortgage_statement")]
+        mortgage_statement
+    }
+
     #endregion
 
     public enum Cancelled { no, yes };

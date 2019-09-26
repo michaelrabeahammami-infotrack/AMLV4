@@ -1,66 +1,53 @@
-﻿namespace AMLv4_API.Aml_v4_API.PersonalRiskAssessment
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace AMLv4_API.Aml_v4_API
 {
+    /// <summary>
+    /// List Document Types and relevance for client
+    /// </summary>
     public class PersonalRiskAssessmentDocumentTypesRequest
     {
-        public string uri { get; set; }
+        [JsonProperty("ClientID")]
+        public string ClientId { get; set; }
 
-        public string ClientID { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
     public class PersonalRiskAssessmentDocumentTypesResponse
     {
-        public electronic Error { get; set; }
+        [JsonProperty("error")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Error Error { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
 
+        [JsonProperty("numidtypes")]
         public long Numidtypes { get; set; }
 
+        [JsonProperty("idtypes")]
         public Dtype[] Idtypes { get; set; }
 
+        [JsonProperty("numadtypes")]
         public long Numadtypes { get; set; }
 
+        [JsonProperty("adtypes")]
         public Dtype[] Adtypes { get; set; }
     }
 
     public class Dtype
     {
-        public code Code { get; set; }
+        [JsonProperty("code")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public DocumentCode Code { get; set; }
 
+        [JsonProperty("description")]
         public string Description { get; set; }
 
-        public electronic Electronic { get; set; }
-    }
-
-    public enum electronic { No, Yes };
-
-    public enum code
-    {
-        uk_passport,
-        paper_driving_licence,
-        firearms_cert,
-        ni_card_and_p60,
-        revenue_document,
-        bank_statement,
-        bank_card_statement,
-        eu_state_id_card,
-        council_tax, 
-        photo_driving_licence,
-        tax_credit,
-        state_pension,
-        housing_benefit,
-        national_id_card_nonuk,
-        ni_er_id_card,
-        grant,
-        court_appointment,
-        nonuk_passport,
-        personal_id_no,
-        travel_document,
-        residence_permit,
-        identity_cert_no,
-        reg_fed_de_cont,
-        cred_de_elector,
-        tax_file_no_aus,
-        utility_bill,
-        mortgage_statement
+        [JsonProperty("electronic")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Electronic Electronic { get; set; }
     }
 }

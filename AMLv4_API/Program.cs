@@ -286,7 +286,15 @@ namespace AMLv4_API
 
             #endregion Personal Risk Assessment, Update Client Data - Request
 
+            #region Risk Assessment Document Types (Personal) 
 
+            //var personalRiskAssessmentDocumentTypesRequest = new PersonalRiskAssessmentDocumentTypesRequest()
+            //{
+            //    ClientId = "12345",
+            //    Uri = authenticationResponse.uri
+            //};
+            //PersonalRiskAssessmentDocumentTypesResponse personalRiskAssessmentUpdateClientDataResponse = RequestPerformer.RequestPerformer.PerformRequest<PersonalRiskAssessmentDocumentTypesResponse>(personalRiskAssessmentDocumentTypesRequest, "/document/types", "additional reference", 0); 
+            #endregion
         }
     }
 }
