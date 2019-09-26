@@ -93,59 +93,59 @@ namespace AMLv4_API
 
             #endregion Adopt Profiles
 
-            //#region Add User to Registered Customer
+            #region Add User to Registered Customer
 
             //AddUserToRegisteredCustomerRequest addUserToRegisteredCustomerRequest = new AddUserToRegisteredCustomerRequest()
             //{
-            //    AmlCustomerID = authenticationResponse.AmlCustomerID,
-            //    uri = authenticationResponse.uri,
+            //    AmlCustomerId = authenticationResponse.AmlCustomerID,
+            //    Uri = authenticationResponse.uri,
             //    ContactEmail = "joao.fernandes@infotrack.co.uk",
             //    ContactForename = "Joao",
             //    ContactSurname = "Fernandes",
-            //    ServicesAvailable = ServicesAvailable.MO,
-            //    UserLoginID = "jpafernandes" + DateTime.Now.Ticks,
-            //    UserType = UserType.admin.ToString()
+            //    ServicesAvailable = ServicesAvailable.Mo,
+            //    UserLoginId = "jpafernandes" + DateTime.Now.Ticks,
+            //    UserType = UserType.Admin
             //};
 
             //AddUserToRegisteredCustomerResponse addUserToRegisteredCustomerResponse = RequestPerformer.RequestPerformer.PerformRequest<AddUserToRegisteredCustomerResponse>(addUserToRegisteredCustomerRequest, "/user/add", "additional reference", 0);
 
-            //#endregion Add User to Registered Customer
+            #endregion Add User to Registered Customer
 
-            //#region Check Customer Terms Version
+            #region Check Customer Terms Version
 
             //CheckCustomerTermsVersionRequest checkCustomerTermsVersionRequest = new CheckCustomerTermsVersionRequest()
             //{
-            //    IncludeBinary = IncludeBinary.yes.ToString(),
-            //    uri = authenticationResponse.uri,
-            //    ViewingNewVersion = IncludeBinary.yes.ToString()
+            //    IncludeBinary = IncludeBinary.Yes,
+            //    Uri = authenticationResponse.uri,
+            //    ViewingNewVersion = IncludeBinary.Yes
             //};
 
-            //CheckCustomerTermsVersionResponse checkCustomerTermsVersionResponse = RequestPerformer.RequestPerformer.PerformRequest<CheckCustomerTermsVersionResponse>(addUserToRegisteredCustomerRequest, "/terms/view", "additional reference", 0);
+            //CheckCustomerTermsVersionResponse checkCustomerTermsVersionResponse = RequestPerformer.RequestPerformer.PerformRequest<CheckCustomerTermsVersionResponse>(checkCustomerTermsVersionRequest, "/terms/view", "additional reference", 0);
 
 
-            //#endregion Check Customer Terms Version
+            #endregion Check Customer Terms Version
 
-            //#region Accept New Customer Terms Version
+            #region Accept New Customer Terms Version
 
             //AcceptNewCustomerTermsVersionRequest acceptNewCustomerTermsVersionRequest = new AcceptNewCustomerTermsVersionRequest()
             //{
-            //    uri = authenticationResponse.uri
+            //    Uri = authenticationResponse.uri
             //};
 
-            //AcceptNewCustomerTermsVersionResponse acceptNewCustomerTermsVersionResponse = RequestPerformer.RequestPerformer.PerformRequest<AcceptNewCustomerTermsVersionResponse>(addUserToRegisteredCustomerRequest, "/terms/accept", "additional reference", 0);
+            //AcceptNewCustomerTermsVersionResponse acceptNewCustomerTermsVersionResponse = RequestPerformer.RequestPerformer.PerformRequest<AcceptNewCustomerTermsVersionResponse>(acceptNewCustomerTermsVersionRequest, "/terms/accept", "additional reference", 0);
 
-            //#endregion Accept New Customer Terms Version
+            #endregion Accept New Customer Terms Version
 
-            //#region Migration List - Request
+            #region Migration List - Request
 
             //MigrationListRequest migrationListRequest = new MigrationListRequest()
             //{
-            //    IntegratorID = integratorId
+            //    IntegratorId = integratorId
             //};
 
             //MigrationListResponse migrationListResponse = RequestPerformer.RequestPerformer.PerformRequest<MigrationListResponse>(migrationListRequest, "/migration/list", "additional reference", 0);
 
-            //#endregion Migration List - Request
+            #endregion Migration List - Request
 
             //#region Migration Customer and User details - Request
 
