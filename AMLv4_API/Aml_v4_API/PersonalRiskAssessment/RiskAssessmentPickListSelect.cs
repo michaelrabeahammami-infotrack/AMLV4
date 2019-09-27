@@ -1,67 +1,98 @@
-﻿namespace AMLv4_API.Aml_v4_API.PersonalRiskAssessment
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Select Picklist entry and Run Risk Assessment
     /// </summary>
     public class RiskAssessmentPickListSelectRequest
     {
-        public string AssessmentID { get; set; }
+        [JsonProperty("AssessmentID")]
+        public string AssessmentId { get; set; }
 
-        public string PickID { get; set; }
+        [JsonProperty("PickID")]
+        public string PickId { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
     public class RiskAssessmentPickListSelectResponse
     {
-        public string error { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
 
-        public long AssessmentID { get; set; }
+        [JsonProperty("AssessmentID")]
+        public long AssessmentId { get; set; }
 
-        public long ClientID { get; set; }
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
 
-        public long AmlUserID { get; set; }
+        [JsonProperty("AmlUserID")]
+        public long AmlUserId { get; set; }
 
-        public long AmlCustomerID { get; set; }
+        [JsonProperty("AmlCustomerID")]
+        public long AmlCustomerId { get; set; }
 
-        public string clienttype { get; set; }
+        [JsonProperty("clienttype")]
+        public string Clienttype { get; set; }
 
-        public string date { get; set; }
+        [JsonProperty("date")]
+        public DateTime Date { get; set; }
 
-        public string reference { get; set; }
+        [JsonProperty("reference")]
+        public string Reference { get; set; }
 
-        public string assessmenttype { get; set; }
+        [JsonProperty("assessmenttype")]
+        public string Assessmenttype { get; set; }
 
-        public long profileid { get; set; }
+        [JsonProperty("profileid")]
+        public long Profileid { get; set; }
 
-        public string profilename { get; set; }
+        [JsonProperty("profilename")]
+        public string Profilename { get; set; }
 
-        public string status { get; set; }
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
+        [JsonProperty("DisplayPrice")]
         public string DisplayPrice { get; set; }
 
+        [JsonProperty("Price")]
         public string Price { get; set; }
 
+        [JsonProperty("Archived")]
         public string Archived { get; set; }
 
+        [JsonProperty("Locked")]
         public string Locked { get; set; }
 
+        [JsonProperty("client")]
         public Client Client { get; set; }
 
-        public long numdocuments { get; set; }
+        [JsonProperty("numdocuments")]
+        public long Numdocuments { get; set; }
 
-        public Document[] documents { get; set; }
+        [JsonProperty("documents")]
+        public Document[] Documents { get; set; }
 
-        public long numrelationships { get; set; }
+        [JsonProperty("numrelationships")]
+        public long Numrelationships { get; set; }
 
-        public RelationshipType[] relationships { get; set; }
+        [JsonProperty("relationships")]
+        public Relationship[] Relationships { get; set; }
 
-        public User user { get; set; }
+        [JsonProperty("user")]
+        public User User { get; set; }
 
-        public Customer customer { get; set; }
+        [JsonProperty("customer")]
+        public Customer Customer { get; set; }
 
+        [JsonProperty("Result")]
         public Result Result { get; set; }
     }
 }

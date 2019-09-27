@@ -33,7 +33,6 @@ namespace AMLv4_API.Aml_v4_API
     #region Client
     public class Client
     {
-
         [JsonProperty("ClientID")]
         public long ClientId { get; set; }
 
