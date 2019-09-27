@@ -307,6 +307,16 @@ namespace AMLv4_API
             //};
             //AddDocumentToCddRecordResponse addDocumentToCddRecordResponse = RequestPerformer.RequestPerformer.PerformRequest<AddDocumentToCddRecordResponse>(addDocumentToCddRecordRequest, "/document/add", "additional reference", 0);
             #endregion
+
+            #region List Documents on CDD record or Assessment
+            //var listDocumentsOnCddRecordOrAssessmentRequest = new ListDocumentsOnCddRecordOrAssessmentRequest()
+            //{
+            //    ClientId = "12345",
+            //    Uri = authenticationResponse.uri
+            //};
+            //ListDocumentsOnCddRecordOrAssessmentResponse listDocumentsOnCddRecordOrAssessmentResponse = RequestPerformer.RequestPerformer.PerformRequest<ListDocumentsOnCddRecordOrAssessmentResponse>(listDocumentsOnCddRecordOrAssessmentRequest, "/document/list", "additional reference", 0);
+            #endregion
+
         }
     }
 }

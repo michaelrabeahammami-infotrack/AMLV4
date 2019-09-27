@@ -1,71 +1,104 @@
-﻿namespace AMLv4_API.Aml_v4_API.PersonalRiskAssessment
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// List Client Documents
     /// </summary>
-    public partial class ListDocumentsOnCddRecordOrAssessmentRequest
+    public class ListDocumentsOnCddRecordOrAssessmentRequest
     {
         /// <summary>
         /// Use to see documents used on a specific assessment
         /// </summary>
-        public string AssessmentID { get; set; }
-        public string ClientID { get; set; }
-        public string uri { get; set; }
+        [JsonProperty("AssessmentID", NullValueHandling = NullValueHandling.Ignore)]
+        public string AssessmentId { get; set; }
+
+        [JsonProperty("ClientID")]
+        public string ClientId { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
-    public partial class ListDocumentsOnCddRecordOrAssessmentResponse
+    public class ListDocumentsOnCddRecordOrAssessmentResponse
     {
-        public string error { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
 
-        public long numids { get; set; }
+        [JsonProperty("numids")]
+        public long Numids { get; set; }
 
-        public Ad[] ids { get; set; }
+        [JsonProperty("ids")]
+        public Ad[] Ids { get; set; }
 
-        public long numads { get; set; }
+        [JsonProperty("numads")]
+        public long Numads { get; set; }
 
-        public Ad[] ads { get; set; }
+        [JsonProperty("ads")]
+        public Ad[] Ads { get; set; }
 
-        public long numothers { get; set; }
+        [JsonProperty("numothers")]
+        public long Numothers { get; set; }
 
-        public object[] others { get; set; }
+        [JsonProperty("others")]
+        public object[] Others { get; set; }
     }
 
-    public partial class Ad
+    public class Ad
     {
+        [JsonProperty("docid")]
         public long Docid { get; set; }
 
+        [JsonProperty("ClientID")]
         public long ClientId { get; set; }
 
+        [JsonProperty("docusage")]
         public string Docusage { get; set; }
 
+        [JsonProperty("doctype")]
         public string Doctype { get; set; }
 
+        [JsonProperty("docdescription")]
         public string Docdescription { get; set; }
 
+        [JsonProperty("docref")]
         public string Docref { get; set; }
 
+        [JsonProperty("docstored")]
         public string Docstored { get; set; }
 
-        public string Expirydate { get; set; }
+        [JsonProperty("expirydate")]
+        public DateTime Expirydate { get; set; }
 
+        [JsonProperty("expired")]
         public string Expired { get; set; }
 
-        public string Verifydate { get; set; }
+        [JsonProperty("verifydate")]
+        public DateTime Verifydate { get; set; }
 
+        [JsonProperty("verified")]
         public string Verified { get; set; }
 
+        [JsonProperty("AmlUserID")]
         public long AmlUserId { get; set; }
 
+        [JsonProperty("UserName")]
         public string UserName { get; set; }
 
+        [JsonProperty("archived")]
         public string Archived { get; set; }
 
+        [JsonProperty("sentelectronic")]
         public string Sentelectronic { get; set; }
 
+        [JsonProperty("filename")]
         public string Filename { get; set; }
 
+        [JsonProperty("AssessmentID", NullValueHandling = NullValueHandling.Ignore)]
         public long? AssessmentId { get; set; }
     }
 }
