@@ -1,4 +1,7 @@
-﻿namespace AMLv4_API.Aml_v4_API.PersonalRiskAssessment
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Add Client relationships
@@ -8,43 +11,57 @@
         /// <summary>
         /// required only if adding relationship AFTER Risk Assessment
         /// </summary>
-        public string AssessmentID { get; set; }
+        [JsonProperty("AssessmentID", NullValueHandling = NullValueHandling.Ignore)]
+        public string AssessmentId { get; set; }
 
         /// <summary>
         /// required only if adding relationship to a Non-Personal Associate
         /// </summary>
-        public string AssociateID { get; set; }
+        [JsonProperty("AssociateID", NullValueHandling = NullValueHandling.Ignore)]
+        public string AssociateId { get; set; }
 
-        public string ClientID { get; set; }
+        [JsonProperty("ClientID")]
+        public string ClientId { get; set; }
 
         /// <summary>
         /// The ClientID of the related Client
         /// </summary>
-        public string RelatedClientID { get; set; }
+        [JsonProperty("RelatedClientID")]
+        public string RelatedClientId { get; set; }
 
         /// <summary>
         /// Relationship type - if Personal, Spouse | Partner | Family Member, if NonPersonal UBO |
         /// Representative | Shareholder | Officer | Parent | Subsidary | Controller
         /// </summary>
+        [JsonProperty("Relationship")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public RelationshipType Relationship { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
     public class AddClientRelationshipsResponse
     {
-        public string error { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
 
-        public long RelationshipID { get; set; }
+        [JsonProperty("RelationshipID")]
+        public long RelationshipId { get; set; }
 
-        public long AssociateID { get; set; }
+        [JsonProperty("AssociateID")]
+        public long AssociateId { get; set; }
 
-        public long ClientID { get; set; }
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
 
-        public long RelatedClientID { get; set; }
+        [JsonProperty("RelatedClientID")]
+        public long RelatedClientId { get; set; }
 
-        public RelationshipType Relationship { get; set; }
+        [JsonProperty("Relationship")]
+        public string Relationship { get; set; }
 
+        [JsonProperty("Archived")]
         public string Archived { get; set; }
     }
 }

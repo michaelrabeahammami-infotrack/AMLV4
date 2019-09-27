@@ -349,12 +349,25 @@ namespace AMLv4_API
             #endregion
 
             #region Delete Document Details
-            var deleteDocumentDetailsRequest = new DeleteDocumentDetailsRequest()
+            //var deleteDocumentDetailsRequest = new DeleteDocumentDetailsRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Docid = "12345"
+            //};
+            //DeleteDocumentDetailsResponse deleteDocumentDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<DeleteDocumentDetailsResponse>(deleteDocumentDetailsRequest, "/document/delete", "additional reference", 0);
+            #endregion
+
+            #region Add Client Relationships
+            var addClientRelationshipsRequest = new AddClientRelationshipsRequest()
             {
                 Uri = authenticationResponse.uri,
-                Docid = "12345"
+                AssessmentId = "12345",
+                AssociateId = "12345",
+                ClientId = "12345",
+                RelatedClientId = "12345",
+                Relationship = RelationshipType.Controller
             };
-            DeleteDocumentDetailsResponse deleteDocumentDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<DeleteDocumentDetailsResponse>(deleteDocumentDetailsRequest, "/document/delete", "additional reference", 0);
+            AddClientRelationshipsResponse addClientRelationshipsResponse = RequestPerformer.RequestPerformer.PerformRequest<AddClientRelationshipsResponse>(addClientRelationshipsRequest, "/relationship/add", "additional reference", 0);
             #endregion
 
         }

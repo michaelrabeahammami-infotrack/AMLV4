@@ -208,6 +208,8 @@ namespace AMLv4_API.Aml_v4_API
         Newknown 
     };
 
+    
+
     public enum Error 
     {
         [EnumMember(Value = "no")]
@@ -282,7 +284,33 @@ namespace AMLv4_API.Aml_v4_API
         mortgage_statement
     }
 
-    
+    /// <summary>
+    /// Relationship type - if Personal, Spouse | Partner | Family Member, if NonPersonal UBO |
+    /// Representative | Shareholder | Officer | Parent | Subsidary | Controller
+    /// </summary>
+    public enum RelationshipType 
+    {
+        [EnumMember(Value = "Controller")]
+        Controller,
+        [EnumMember(Value = "Family Member")]
+        FamilyMember,
+        [EnumMember(Value = "Officer")]
+        Officer,
+        [EnumMember(Value = "Parent")]
+        Parent,
+        [EnumMember(Value = "Partner")]
+        Partner,
+        [EnumMember(Value = "Representative")]
+        Representative,
+        [EnumMember(Value = "Shareholder")]
+        Shareholder,
+        [EnumMember(Value = "Spouse")]
+        Spouse,
+        [EnumMember(Value = "Subsidary")]
+        Subsidary,
+        [EnumMember(Value = "UBO")]
+        Ubo 
+    };
 
     #endregion
 
@@ -298,11 +326,6 @@ namespace AMLv4_API.Aml_v4_API
     public enum LinkType { accountant, controller, officer, representative, shareholder, structure, ubo };
 
     public enum IsNewRelationShip { Existing, New, Newknown };
-    /// <summary>
-    /// Relationship type - if Personal, Spouse | Partner | Family Member, if NonPersonal UBO |
-    /// Representative | Shareholder | Officer | Parent | Subsidary | Controller
-    /// </summary>
-    public enum RelationshipType { Controller, FamilyMember, Officer, Parent, Partner, Representative, Shareholder, Spouse, Subsidary, Ubo };
 
     public enum AllowEnhanced { no, yes };
 
