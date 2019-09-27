@@ -337,15 +337,24 @@ namespace AMLv4_API
             #endregion
 
             #region Update Document Details
-            var updateDocumentDetailsRequest = new UpdateDocumentDetailsRequest()
+            //var updateDocumentDetailsRequest = new UpdateDocumentDetailsRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Docid = "12345",
+            //    Docref = "12345",
+            //    Doctype = "12345",
+            //    Expirydate = DateTime.Now.ToShortDateString()
+            //};
+            //ViewDocumentDetailsResponse viewDocumentDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewDocumentDetailsResponse>(updateDocumentDetailsRequest, "/document/update", "additional reference", 0);
+            #endregion
+
+            #region Delete Document Details
+            var deleteDocumentDetailsRequest = new DeleteDocumentDetailsRequest()
             {
                 Uri = authenticationResponse.uri,
-                Docid = "12345",
-                Docref = "12345",
-                Doctype = "12345",
-                Expirydate = DateTime.Now.ToShortDateString()
+                Docid = "12345"
             };
-            ViewDocumentDetailsResponse viewDocumentDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewDocumentDetailsResponse>(updateDocumentDetailsRequest, "/document/update", "additional reference", 0);
+            DeleteDocumentDetailsResponse deleteDocumentDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<DeleteDocumentDetailsResponse>(deleteDocumentDetailsRequest, "/document/delete", "additional reference", 0);
             #endregion
 
         }

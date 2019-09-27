@@ -1,4 +1,7 @@
-﻿namespace AMLv4_API.Aml_v4_API.PersonalRiskAssessment
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Permanently Delete Document Details (use before linking to an assessment, normally after
@@ -6,47 +9,67 @@
     /// </summary>
     public class DeleteDocumentDetailsRequest
     {
-        public string docid { get; set; }
+        [JsonProperty("docid")]
+        public string Docid { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
     public class DeleteDocumentDetailsResponse
     {
-        public string error { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
 
-        public long docid { get; set; }
+        [JsonProperty("docid")]
+        public long Docid { get; set; }
 
-        public long clientId { get; set; }
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
 
-        public string docusage { get; set; }
+        [JsonProperty("docusage")]
+        public string Docusage { get; set; }
 
-        public string doctype { get; set; }
+        [JsonProperty("doctype")]
+        public string Doctype { get; set; }
 
-        public string docdescription { get; set; }
+        [JsonProperty("docdescription")]
+        public string Docdescription { get; set; }
 
-        public long docref { get; set; }
+        [JsonProperty("docref")]
+        public long Docref { get; set; }
 
-        public string docstored { get; set; }
+        [JsonProperty("docstored")]
+        public string Docstored { get; set; }
 
-        public string expirydate { get; set; }
+        [JsonProperty("expirydate")]
+        public DateTime Expirydate { get; set; }
 
-        public string expired { get; set; }
+        [JsonProperty("expired")]
+        public string Expired { get; set; }
 
-        public string verifydate { get; set; }
+        [JsonProperty("verifydate")]
+        public DateTime Verifydate { get; set; }
 
-        public string verified { get; set; }
+        [JsonProperty("verified")]
+        public string Verified { get; set; }
 
-        public long AmlUserID { get; set; }
+        [JsonProperty("AmlUserID")]
+        public long AmlUserId { get; set; }
 
+        [JsonProperty("UserName")]
         public string UserName { get; set; }
 
-        public string archived { get; set; }
+        [JsonProperty("archived")]
+        public string Archived { get; set; }
 
-        public string sentelectronic { get; set; }
+        [JsonProperty("sentelectronic")]
+        public string Sentelectronic { get; set; }
 
-        public string filename { get; set; }
+        [JsonProperty("filename")]
+        public string Filename { get; set; }
     }
 }
