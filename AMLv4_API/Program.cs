@@ -327,13 +327,25 @@ namespace AMLv4_API
             //UseDocumentInAssessmentResponse useDocumentInAssessmentResponse = RequestPerformer.RequestPerformer.PerformRequest<UseDocumentInAssessmentResponse>(useDocumentInAssessmentRequest, "/document/include", "additional reference", 0);
             #endregion
 
-            #region Use Document in assessment
+            #region View Document Details
             //var viewDocumentDetailsRequest = new ViewDocumentDetailsRequest()
             //{
             //    Uri = authenticationResponse.uri,
             //    Docid = "12345"
             //};
             //ViewDocumentDetailsResponse viewDocumentDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewDocumentDetailsResponse>(viewDocumentDetailsRequest, "/document/view", "additional reference", 0);
+            #endregion
+
+            #region Update Document Details
+            var updateDocumentDetailsRequest = new UpdateDocumentDetailsRequest()
+            {
+                Uri = authenticationResponse.uri,
+                Docid = "12345",
+                Docref = "12345",
+                Doctype = "12345",
+                Expirydate = DateTime.Now.ToShortDateString()
+            };
+            ViewDocumentDetailsResponse viewDocumentDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewDocumentDetailsResponse>(updateDocumentDetailsRequest, "/document/update", "additional reference", 0);
             #endregion
 
         }

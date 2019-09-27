@@ -1,4 +1,7 @@
-﻿namespace AMLv4_API.Aml_v4_API.PersonalRiskAssessment
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Update document - normally only change of expiry date due to incorrect entry
@@ -8,77 +11,103 @@
         /// <summary>
         /// Base64 encoded new document, empty if includebinary == no
         /// </summary>
-        public string binarydata { get; set; }
+        [JsonProperty("binarydata", NullValueHandling = NullValueHandling.Ignore)]
+        public string Binarydata { get; set; }
 
         /// <summary>
         /// Unique Document ID from document/view
         /// </summary>
-        public string docid { get; set; }
+        [JsonProperty("docid")]
+        public string Docid { get; set; }
 
         /// <summary>
         /// Physical Document Reference Number
         /// </summary>
-        public string docref { get; set; }
+        [JsonProperty("docref")]
+        public string Docref { get; set; }
 
         /// <summary>
         /// Personal: Code from #document/types, NonPersonal always 'other'
         /// </summary>
-        public string doctype { get; set; }
+        [JsonProperty("doctype")]
+        public string Doctype { get; set; }
 
         /// <summary>
         /// Document Expiry Date: YYYY-MM-DD
         /// </summary>
-        public string expirydate { get; set; }
+        [JsonProperty("expirydate")]
+        public string Expirydate { get; set; }
 
         /// <summary>
         /// Name of new File to be uploaded, empty if includebinary == no
         /// </summary>
-        public string filename { get; set; }
+        [JsonProperty("filename", NullValueHandling = NullValueHandling.Ignore)]
+        public string Filename { get; set; }
 
         /// <summary>
         /// Optional upload a new document copy (will replace old file)
         /// </summary>
-        public Includebinary? includebinary { get; set; }
+        [JsonProperty("includebinary", NullValueHandling = NullValueHandling.Ignore)]
+        public Includebinary? Includebinary { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
     public class UpdateDocumentDetailsResponse
     {
-        public string error { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
 
-        public long docid { get; set; }
+        [JsonProperty("docid")]
+        public long Docid { get; set; }
 
-        public long ClientID { get; set; }
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
 
-        public string docusage { get; set; }
+        [JsonProperty("docusage")]
+        public string Docusage { get; set; }
 
-        public string doctype { get; set; }
+        [JsonProperty("doctype")]
+        public string Doctype { get; set; }
 
-        public string docdescription { get; set; }
+        [JsonProperty("docdescription")]
+        public string Docdescription { get; set; }
 
-        public long docref { get; set; }
+        [JsonProperty("docref")]
+        public long Docref { get; set; }
 
-        public string docstored { get; set; }
+        [JsonProperty("docstored")]
+        public string Docstored { get; set; }
 
-        public string expirydate { get; set; }
+        [JsonProperty("expirydate")]
+        public DateTime Expirydate { get; set; }
 
-        public string expired { get; set; }
+        [JsonProperty("expired")]
+        public string Expired { get; set; }
 
-        public string verifydate { get; set; }
+        [JsonProperty("verifydate")]
+        public DateTime Verifydate { get; set; }
 
-        public string verified { get; set; }
+        [JsonProperty("verified")]
+        public string Verified { get; set; }
 
-        public long AmlUserID { get; set; }
+        [JsonProperty("AmlUserID")]
+        public long AmlUserId { get; set; }
 
+        [JsonProperty("UserName")]
         public string UserName { get; set; }
 
-        public string archived { get; set; }
+        [JsonProperty("archived")]
+        public string Archived { get; set; }
 
-        public string sentelectronic { get; set; }
+        [JsonProperty("sentelectronic")]
+        public string Sentelectronic { get; set; }
 
-        public string filename { get; set; }
+        [JsonProperty("filename")]
+        public string Filename { get; set; }
     }
 }
