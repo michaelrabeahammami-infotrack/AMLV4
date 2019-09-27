@@ -317,6 +317,16 @@ namespace AMLv4_API
             //ListDocumentsOnCddRecordOrAssessmentResponse listDocumentsOnCddRecordOrAssessmentResponse = RequestPerformer.RequestPerformer.PerformRequest<ListDocumentsOnCddRecordOrAssessmentResponse>(listDocumentsOnCddRecordOrAssessmentRequest, "/document/list", "additional reference", 0);
             #endregion
 
+            #region Use Document in assessment
+            //var useDocumentInAssessmentRequest = new UseDocumentInAssessmentRequest()
+            //{
+            //    AssessmentId = "12345",
+            //    Uri = authenticationResponse.uri,
+            //    Docid = "12345"
+            //};
+            //UseDocumentInAssessmentResponse useDocumentInAssessmentResponse = RequestPerformer.RequestPerformer.PerformRequest<UseDocumentInAssessmentResponse>(useDocumentInAssessmentRequest, "/document/include", "additional reference", 0);
+            #endregion
+
         }
     }
 }

@@ -1,16 +1,28 @@
-﻿namespace AMLv4_API.Aml_v4_API.PersonalRiskAssessment
+﻿using Newtonsoft.Json;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Use Document in Risk Assessment
     /// </summary>
     public class UseDocumentInAssessmentRequest
     {
-        public string AssessmentID { get; set; }
+        [JsonProperty("AssessmentID")]
+        public string AssessmentId { get; set; }
 
-        public string docid { get; set; }
+        [JsonProperty("docid")]
+        public string Docid { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
-    //response is missing on the site!!
+    public class UseDocumentInAssessmentResponse
+    {
+        [JsonProperty("schemafile")]
+        public string Schemafile { get; set; }
+
+        [JsonProperty("status")]
+        public string Status { get; set; }
+    }
 }
