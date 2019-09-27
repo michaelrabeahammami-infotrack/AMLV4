@@ -28,26 +28,6 @@
         public Result Result { get; set; }
     }
 
-    public class Client
-    {
-        public long ClientID { get; set; }
-        public string Clienttype { get; set; }
-        public long ClientReference { get; set; }
-        public string Relationship { get; set; }
-        public string Interview { get; set; }
-        public string CountryCode { get; set; }
-        public string JurisdictionCode { get; set; }
-        public string CountryName { get; set; }
-        public string CompanyName { get; set; }
-        public string CompanyNo { get; set; }
-        public string CompanyNoDisplay { get; set; }
-        public string CompanyType { get; set; }
-        public string CompanyStatus { get; set; }
-        public string RegisteredAddress { get; set; }
-        public string InceptionDate { get; set; }
-        public string CompanyIntroducer { get; set; }
-    }
-
     public class Customer
     {
         public long AmlCustomerId { get; set; }

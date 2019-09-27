@@ -1,4 +1,4 @@
-﻿namespace AMLv4_API.Aml_v4_API.Client
+﻿namespace AMLv4_API.Aml_v4_API
 {
     public partial class NonPersonalViewClientDataResponse
 {

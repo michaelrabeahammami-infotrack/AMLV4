@@ -26,6 +26,235 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("profileorigin")]
         public string Profileorigin { get; set; }
     }
+
+    public class Client
+    {
+        
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
+
+        [JsonProperty("clienttype")]
+        public string Clienttype { get; set; }
+
+        [JsonProperty("ClientReference")]
+        public string ClientReference { get; set; }
+
+        [JsonProperty("Title")]
+        public string Title { get; set; }
+
+        [JsonProperty("Forename")]
+        public string Forename { get; set; }
+
+        [JsonProperty("Surname")]
+        public string Surname { get; set; }
+
+        [JsonProperty("OtherNames")]
+        public string OtherNames { get; set; }
+
+        [JsonProperty("Suffix")]
+        public string Suffix { get; set; }
+
+        [JsonProperty("PreviousName")]
+        public string PreviousName { get; set; }
+
+        [JsonProperty("PreviousTitle")]
+        public string PreviousTitle { get; set; }
+
+        [JsonProperty("PreviousForename")]
+        public string PreviousForename { get; set; }
+
+        [JsonProperty("PreviousSurname")]
+        public string PreviousSurname { get; set; }
+
+        [JsonProperty("PreviousOtherNames")]
+        public string PreviousOtherNames { get; set; }
+
+        [JsonProperty("PreviousSuffix")]
+        public string PreviousSuffix { get; set; }
+
+        [JsonProperty("DOB")]
+        public DateTimeOffset Dob { get; set; }
+
+        [JsonProperty("Gender")]
+        public string Gender { get; set; }
+
+        [JsonProperty("Nationality")]
+        public string Nationality { get; set; }
+
+        [JsonProperty("NationalityName")]
+        public string NationalityName { get; set; }
+
+        [JsonProperty("Relationship")]
+        public string Relationship { get; set; }
+
+        [JsonProperty("Interview")]
+        public string Interview { get; set; }
+
+        [JsonProperty("CurrentAddressFlatFloor")]
+        public string CurrentAddressFlatFloor { get; set; }
+
+        [JsonProperty("CurrentAddressHouseNameNumber")]
+        public long CurrentAddressHouseNameNumber { get; set; }
+
+        [JsonProperty("CurrentAddressStreet")]
+        public string CurrentAddressStreet { get; set; }
+
+        [JsonProperty("CurrentAddressLocality")]
+        public string CurrentAddressLocality { get; set; }
+
+        [JsonProperty("CurrentAddressTown")]
+        public string CurrentAddressTown { get; set; }
+
+        [JsonProperty("CurrentAddressPostcode")]
+        public string CurrentAddressPostcode { get; set; }
+
+        [JsonProperty("CurrentAddressState")]
+        public string CurrentAddressState { get; set; }
+
+        [JsonProperty("CountryCode")]
+        public string CountryCode { get; set; }
+
+        [JsonProperty("PreviousAddress")]
+        public string PreviousAddress { get; set; }
+
+        [JsonProperty("PreviousAddressFlatFloor")]
+        public string PreviousAddressFlatFloor { get; set; }
+
+        [JsonProperty("PreviousAddressHouseNameNumber")]
+        public string PreviousAddressHouseNameNumber { get; set; }
+
+        [JsonProperty("PreviousAddressStreet")]
+        public string PreviousAddressStreet { get; set; }
+
+        [JsonProperty("PreviousAddressLocality")]
+        public string PreviousAddressLocality { get; set; }
+
+        [JsonProperty("PreviousAddressTown")]
+        public string PreviousAddressTown { get; set; }
+
+        [JsonProperty("PreviousAddressPostcode")]
+        public string PreviousAddressPostcode { get; set; }
+
+        [JsonProperty("PreviousAddressState")]
+        public string PreviousAddressState { get; set; }
+
+        [JsonProperty("PreviousCountryCode")]
+        public string PreviousCountryCode { get; set; }
+
+        [JsonProperty("CountryName")]
+        public string CountryName { get; set; }
+
+        [JsonProperty("ComplianceStatus")]
+        public string ComplianceStatus { get; set; }
+
+        [JsonProperty("Archived")]
+        public string Archived { get; set; }
+
+        [JsonProperty("DateCreated")]
+        public string DateCreated { get; set; }
+
+        [JsonProperty("DateUpdated")]
+        public string DateUpdated { get; set; }
+
+        [JsonProperty("AlertCount")]
+        public long AlertCount { get; set; }
+
+        [JsonProperty("CompanyName")]
+        public string CompanyName { get; set; }
+
+        [JsonProperty("CompanyNo")]
+        public long? CompanyNo { get; set; }
+
+        [JsonProperty("JurisdictionCode")]
+        public string JurisdictionCode { get; set; }
+
+        [JsonProperty("CompanyNoDisplay")]
+        public string CompanyNoDisplay { get; set; }
+        
+        [JsonProperty("CompanyType")]
+        public string CompanyType { get; set; }
+
+        [JsonProperty("CompanyStatus")]
+        public string CompanyStatus { get; set; }
+
+        [JsonProperty("RegisteredAddress")]
+        public string RegisteredAddress { get; set; }
+
+        [JsonProperty("InceptionDate")]
+        public string InceptionDate { get; set; }
+
+        [JsonProperty("CompanyIntroducer")]
+        public string CompanyIntroducer { get; set; }
+    }
+
+    public class Relationship
+    {
+        [JsonProperty("RelationshipID")]
+        public long RelationshipId { get; set; }
+
+        [JsonProperty("RelatedClientID")]
+        public long RelatedClientId { get; set; }
+
+        [JsonProperty("Relationship")]
+        public string RelationshipRelationship { get; set; }
+
+        [JsonProperty("clienttype")]
+        public string Clienttype { get; set; }
+
+        [JsonProperty("Forename")]
+        public string Forename { get; set; }
+
+        [JsonProperty("Surname")]
+        public string Surname { get; set; }
+
+        [JsonProperty("DOB")]
+        public DateTime Dob { get; set; }
+
+        [JsonProperty("CurrentAddressPostcode")]
+        public string CurrentAddressPostcode { get; set; }
+
+        [JsonProperty("CountryCode")]
+        public string CountryCode { get; set; }
+
+        [JsonProperty("ComplianceStatus")]
+        public string ComplianceStatus { get; set; }
+
+        [JsonProperty("Archived")]
+        public string Archived { get; set; }
+    }
+
+    public class Customer
+    {
+        [JsonProperty("AmlCustomerID")]
+        public long AmlCustomerId { get; set; }
+
+        [JsonProperty("CustomerName")]
+        public string CustomerName { get; set; }
+
+        [JsonProperty("LoginName")]
+        public string LoginName { get; set; }
+
+        [JsonProperty("OrgName")]
+        public string OrgName { get; set; }
+
+        [JsonProperty("Address")]
+        public string Address { get; set; }
+
+        [JsonProperty("Postcode")]
+        public string Postcode { get; set; }
+
+        [JsonProperty("RegistrationDate")]
+        public DateTime RegistrationDate { get; set; }
+
+        [JsonProperty("CustomerAccess")]
+        public string CustomerAccess { get; set; }
+
+        [JsonProperty("CustomerStatus")]
+        public string CustomerStatus { get; set; }
+
+        [JsonProperty("UserLoginName")]
+        public string UserLoginName { get; set; }
+    }
     #endregion
 
     #region Enums
@@ -86,8 +315,6 @@ namespace AMLv4_API.Aml_v4_API
         User 
     };
     /// <summary>
-    /// no|yes - Set to no to check terms version, yes to retrieve a copy of the terms
-    ///
     /// no|yes - Set to yes to obtain a preview of a new Terms version. Set to no to view
     /// currently agreeed version
     /// </summary>
@@ -198,7 +425,7 @@ namespace AMLv4_API.Aml_v4_API
         Yes 
     };
 
-    public enum Relationship 
+    public enum IsNewRelationship
     {
         [EnumMember(Value = "existing")]
         Existing,
@@ -316,20 +543,12 @@ namespace AMLv4_API.Aml_v4_API
 
     public enum Cancelled { no, yes };
 
-    public enum ClientType { nonpersonal, personal };
-
-    public enum IncludeArchived { no, yes };
-
     public enum AllowOtherDocs { no, yes };
 
 
     public enum LinkType { accountant, controller, officer, representative, shareholder, structure, ubo };
 
-    public enum IsNewRelationShip { Existing, New, Newknown };
-
     public enum AllowEnhanced { no, yes };
-
-    public enum Match { defined, no, yes };
 
     //public enum RelationshipValue { empty, existing, @new, newknown };
 

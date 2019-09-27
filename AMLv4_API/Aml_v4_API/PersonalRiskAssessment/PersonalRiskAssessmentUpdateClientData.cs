@@ -126,7 +126,7 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("Relationship", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringEnumConverter))]
-        public Relationship? Relationship { get; set; }
+        public RelationshipType? Relationship { get; set; }
 
         [JsonProperty("Residency")]
         public string Residency { get; set; }

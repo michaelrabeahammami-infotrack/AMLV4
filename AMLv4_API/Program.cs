@@ -358,16 +358,25 @@ namespace AMLv4_API
             #endregion
 
             #region Add Client Relationships
-            var addClientRelationshipsRequest = new AddClientRelationshipsRequest()
+            //var addClientRelationshipsRequest = new AddClientRelationshipsRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AssessmentId = "12345",
+            //    AssociateId = "12345",
+            //    ClientId = "12345",
+            //    RelatedClientId = "12345",
+            //    Relationship = RelationshipType.Controller
+            //};
+            //AddClientRelationshipsResponse addClientRelationshipsResponse = RequestPerformer.RequestPerformer.PerformRequest<AddClientRelationshipsResponse>(addClientRelationshipsRequest, "/relationship/add", "additional reference", 0);
+            #endregion
+
+            #region Add Client Relationships
+            var viewRiskAssessmentRequest = new ViewRiskAssessmentRequest()
             {
                 Uri = authenticationResponse.uri,
-                AssessmentId = "12345",
-                AssociateId = "12345",
-                ClientId = "12345",
-                RelatedClientId = "12345",
-                Relationship = RelationshipType.Controller
+                AssessmentId = "12345"
             };
-            AddClientRelationshipsResponse addClientRelationshipsResponse = RequestPerformer.RequestPerformer.PerformRequest<AddClientRelationshipsResponse>(addClientRelationshipsRequest, "/relationship/add", "additional reference", 0);
+            ViewRiskAssessmentResponse viewRiskAssessmentResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewRiskAssessmentResponse>(viewRiskAssessmentRequest, "/assessment/view", "additional reference", 0);
             #endregion
 
         }

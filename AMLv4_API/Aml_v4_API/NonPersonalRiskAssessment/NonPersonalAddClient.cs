@@ -33,7 +33,7 @@
 
         public string RegisteredAddress { get; set; }
 
-        public IsNewRelationShip Relationship { get; set; }
+        public IsNewRelationship Relationship { get; set; }
 
         public string RiskProfile { get; set; }
 

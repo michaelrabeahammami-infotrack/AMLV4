@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
 
 namespace AMLv4_API.Aml_v4_API
 {
@@ -26,32 +25,5 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("customers")]
         public Customer[] Customers { get; set; }
     } 
-
-    public class Customer
-    {
-        [JsonProperty("LoginName")]
-        public string LoginName { get; set; }
-
-        [JsonProperty("OrgName")]
-        public string OrgName { get; set; }
-
-        [JsonProperty("Address")]
-        public string Address { get; set; }
-
-        [JsonProperty("Postcode")]
-        public string Postcode { get; set; }
-
-        [JsonProperty("RegistrationDate")]
-        public DateTime RegistrationDate { get; set; }
-
-        [JsonProperty("CustomerAccess")]
-        public string CustomerAccess { get; set; }
-
-        [JsonProperty("CustomerStatus")]
-        public string CustomerStatus { get; set; }
-
-        [JsonProperty("UserLoginName")]
-        public string UserLoginName { get; set; }
-    }
     #endregion
 }

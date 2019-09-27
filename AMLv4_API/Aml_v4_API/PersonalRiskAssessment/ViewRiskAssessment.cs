@@ -1,247 +1,242 @@
-﻿namespace AMLv4_API.Aml_v4_API.PersonalRiskAssessment
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// View Assessment Details before or after running
     /// </summary>
     public class ViewRiskAssessmentRequest
     {
-        public string AssessmentID { get; set; }
+        [JsonProperty("AssessmentID")]
+        public string AssessmentId { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
-    #region Response
-    public partial class ViewRiskAssessmentResponse
+    public class ViewRiskAssessmentResponse
     {
-        public string error { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
 
-        public long AssessmentID { get; set; }
+        [JsonProperty("AssessmentID")]
+        public long AssessmentId { get; set; }
 
-        public long ClientID { get; set; }
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
 
-        public long AmlUserID { get; set; }
+        [JsonProperty("AmlUserID")]
+        public long AmlUserId { get; set; }
 
-        public long AmlCustomerID { get; set; }
+        [JsonProperty("AmlCustomerID")]
+        public long AmlCustomerId { get; set; }
 
-        public string clienttype { get; set; }
+        [JsonProperty("clienttype")]
+        public string Clienttype { get; set; }
 
-        public string date { get; set; }
+        [JsonProperty("date")]
+        public DateTime Date { get; set; }
 
-        public string reference { get; set; }
+        [JsonProperty("reference")]
+        public string Reference { get; set; }
 
-        public string assessmenttype { get; set; }
+        [JsonProperty("assessmenttype")]
+        public string Assessmenttype { get; set; }
 
-        public long profileid { get; set; }
+        [JsonProperty("profileid")]
+        public long Profileid { get; set; }
 
-        public string profilename { get; set; }
+        [JsonProperty("profilename")]
+        public string Profilename { get; set; }
 
-        public string status { get; set; }
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-        public string displayPrice { get; set; }
+        [JsonProperty("DisplayPrice")]
+        public string DisplayPrice { get; set; }
 
-        public string price { get; set; }
+        [JsonProperty("Price")]
+        public string Price { get; set; }
 
-        public string archived { get; set; }
+        [JsonProperty("Archived")]
+        public string Archived { get; set; }
 
-        public string locked { get; set; }
+        [JsonProperty("Locked")]
+        public string Locked { get; set; }
 
-        public Client client { get; set; }
+        [JsonProperty("client")]
+        public Client Client { get; set; }
 
-        public long numdocuments { get; set; }
+        [JsonProperty("numdocuments")]
+        public long Numdocuments { get; set; }
 
-        public Document[] documents { get; set; }
+        [JsonProperty("documents")]
+        public Document[] Documents { get; set; }
 
-        public long numrelationships { get; set; }
+        [JsonProperty("numrelationships")]
+        public long Numrelationships { get; set; }
 
-        public RelationshipType[] relationships { get; set; }
+        [JsonProperty("relationships")]
+        public Relationship[] Relationships { get; set; }
 
-        public long numalerts { get; set; }
+        [JsonProperty("numalerts")]
+        public long Numalerts { get; set; }
 
-        public Alert[] alerts { get; set; }
+        [JsonProperty("alerts")]
+        public Alert[] Alerts { get; set; }
 
-        public User user { get; set; }
+        [JsonProperty("user")]
+        public User User { get; set; }
 
-        public Customer customer { get; set; }
+        [JsonProperty("customer")]
+        public Customer Customer { get; set; }
 
-        public Result result { get; set; }
+        [JsonProperty("Result")]
+        public Result Result { get; set; }
     }
 
     public class Alert
     {
-        public string AlertDate { get; set; }
+        [JsonProperty("AlertDate")]
+        public DateTime AlertDate { get; set; }
 
+        [JsonProperty("AlertType")]
         public string AlertType { get; set; }
 
-        public long AlertDocID { get; set; }
+        [JsonProperty("AlertDocID")]
+        public long AlertDocId { get; set; }
 
+        [JsonProperty("AlertSanctionMatch")]
         public string AlertSanctionMatch { get; set; }
 
-        public long AlertID { get; set; }
+        [JsonProperty("AlertID")]
+        public long AlertId { get; set; }
 
+        [JsonProperty("Cancelled")]
         public string Cancelled { get; set; }
 
-        public long CancelUserID { get; set; }
+        [JsonProperty("CancelUserID")]
+        public long CancelUserId { get; set; }
 
+        [JsonProperty("CancelUserName")]
         public string CancelUserName { get; set; }
 
+        [JsonProperty("CancelReason")]
         public string CancelReason { get; set; }
 
-        public string CancelDate { get; set; }
+        [JsonProperty("CancelDate")]
+        public DateTime CancelDate { get; set; }
 
-        public long AssessmentID { get; set; }
+        [JsonProperty("AssessmentID")]
+        public long AssessmentId { get; set; }
 
-        public long ClientID { get; set; }
-    }
-
-    public class Client
-    {
-        public long ClientID { get; set; }
-
-        public string clienttype { get; set; }
-
-        public string ClientReference { get; set; }
-
-        public string Title { get; set; }
-
-        public string Forename { get; set; }
-
-        public string Surname { get; set; }
-
-        public string OtherNames { get; set; }
-
-        public string Suffix { get; set; }
-
-        public string PreviousName { get; set; }
-
-        public string PreviousTitle { get; set; }
-
-        public string PreviousForename { get; set; }
-
-        public string PreviousSurname { get; set; }
-
-        public string PreviousOtherNames { get; set; }
-
-        public string PreviousSuffix { get; set; }
-
-        public string DOB { get; set; }
-
-        public string Gender { get; set; }
-
-        public string Nationality { get; set; }
-
-        public string NationalityName { get; set; }
-
-        public string Relationship { get; set; }
-
-        public string Interview { get; set; }
-
-        public string CurrentAddressFlatFloor { get; set; }
-
-        public long CurrentAddressHouseNameNumber { get; set; }
-
-        public string CurrentAddressStreet { get; set; }
-
-        public string CurrentAddressLocality { get; set; }
-
-        public string CurrentAddressTown { get; set; }
-
-        public string CurrentAddressPostcode { get; set; }
-
-        public string CurrentAddressState { get; set; }
-
-        public string CountryCode { get; set; }
-
-        public string PreviousAddress { get; set; }
-
-        public string PreviousAddressFlatFloor { get; set; }
-
-        public string PreviousAddressHouseNameNumber { get; set; }
-
-        public string PreviousAddressStreet { get; set; }
-
-        public string PreviousAddressLocality { get; set; }
-
-        public string PreviousAddressTown { get; set; }
-
-        public string PreviousAddressPostcode { get; set; }
-
-        public string PreviousAddressState { get; set; }
-
-        public string PreviousCountryCode { get; set; }
-
-        public string CountryName { get; set; }
-    }
-
-    public class Customer
-    {
-        public long AmlCustomerID { get; set; }
-
-        public string CustomerName { get; set; }
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
     }
 
     public class Document
     {
-        public long docid { get; set; }
+        [JsonProperty("docid")]
+        public long Docid { get; set; }
 
-        public long ClientID { get; set; }
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
 
-        public string docusage { get; set; }
+        [JsonProperty("docusage")]
+        public string Docusage { get; set; }
 
-        public string doctype { get; set; }
+        [JsonProperty("doctype")]
+        public string Doctype { get; set; }
 
-        public string docdescription { get; set; }
+        [JsonProperty("docdescription")]
+        public string Docdescription { get; set; }
 
-        public string docref { get; set; }
+        [JsonProperty("docref")]
+        public string Docref { get; set; }
 
-        public string docstored { get; set; }
+        [JsonProperty("docstored")]
+        public string Docstored { get; set; }
 
-        public string expirydate { get; set; }
+        [JsonProperty("expirydate")]
+        public DateTime Expirydate { get; set; }
 
-        public string expired { get; set; }
+        [JsonProperty("expired")]
+        public string Expired { get; set; }
 
-        public string verifydate { get; set; }
+        [JsonProperty("verifydate")]
+        public DateTime Verifydate { get; set; }
 
-        public string verified { get; set; }
+        [JsonProperty("verified")]
+        public string Verified { get; set; }
 
-        public long AmlUserID { get; set; }
+        [JsonProperty("AmlUserID")]
+        public long AmlUserId { get; set; }
 
+        [JsonProperty("UserName")]
         public string UserName { get; set; }
 
-        public string archived { get; set; }
+        [JsonProperty("archived")]
+        public string Archived { get; set; }
 
-        public string aentelectronic { get; set; }
+        [JsonProperty("sentelectronic")]
+        public string Sentelectronic { get; set; }
 
-        public string filename { get; set; }
+        [JsonProperty("filename")]
+        public string Filename { get; set; }
     }
 
     public class Result
     {
-        public long TransactionID { get; set; }
+        [JsonProperty("TransactionID")]
+        public long TransactionId { get; set; }
 
+        [JsonProperty("ReportReference")]
         public string ReportReference { get; set; }
 
-        public string DateOfSearch { get; set; }
+        [JsonProperty("DateOfSearch")]
+        public DateTimeOffset DateOfSearch { get; set; }
 
+        [JsonProperty("NumIdsElectronic")]
         public long NumIdsElectronic { get; set; }
 
+        [JsonProperty("NumAdsElectronic")]
         public long NumAdsElectronic { get; set; }
 
+        [JsonProperty("NumIdsDocument")]
         public long NumIdsDocument { get; set; }
 
+        [JsonProperty("NumIdsDocElec")]
         public long NumIdsDocElec { get; set; }
 
+        [JsonProperty("VerifiedDocs")]
         public string VerifiedDocs { get; set; }
 
+        [JsonProperty("ElectronicStatus")]
         public string ElectronicStatus { get; set; }
 
+        [JsonProperty("OverallStatus")]
         public string OverallStatus { get; set; }
 
+        [JsonProperty("SanctionMatches")]
         public string SanctionMatches { get; set; }
 
+        [JsonProperty("FailError")]
         public string FailError { get; set; }
     }
 
-    #endregion
+    public class User
+    {
+        [JsonProperty("AmlUserID")]
+        public long AmlUserId { get; set; }
+
+        [JsonProperty("ContactForename")]
+        public string ContactForename { get; set; }
+
+        [JsonProperty("ContactSurname")]
+        public string ContactSurname { get; set; }
+    }
 }
