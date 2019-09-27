@@ -295,6 +295,18 @@ namespace AMLv4_API
             //};
             //PersonalRiskAssessmentDocumentTypesResponse personalRiskAssessmentUpdateClientDataResponse = RequestPerformer.RequestPerformer.PerformRequest<PersonalRiskAssessmentDocumentTypesResponse>(personalRiskAssessmentDocumentTypesRequest, "/document/types", "additional reference", 0); 
             #endregion
+
+            #region Add Document to CDD Record
+            //var addDocumentToCddRecordRequest = new AddDocumentToCddRecordRequest()
+            //{
+            //    ClientId = "12345",
+            //    Uri = authenticationResponse.uri,
+            //    Docref = "mydocref",
+            //    Doctype = "mydoctype",
+            //    Expirydate = DateTime.Now.ToShortDateString()
+            //};
+            //AddDocumentToCddRecordResponse addDocumentToCddRecordResponse = RequestPerformer.RequestPerformer.PerformRequest<AddDocumentToCddRecordResponse>(addDocumentToCddRecordRequest, "/document/add", "additional reference", 0);
+            #endregion
         }
     }
 }

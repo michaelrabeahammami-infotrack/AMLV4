@@ -99,6 +99,17 @@ namespace AMLv4_API.Aml_v4_API
         Yes 
     };
 
+    /// <summary>
+    /// Optional upload a document copy
+    /// </summary>
+    public enum Includebinary
+    {
+        [EnumMember(Value = "no")]
+        No,
+        [EnumMember(Value = "yes")]
+        Yes
+    };
+
     public enum InterviewValue 
     {
         [EnumMember(Value = "home")]
@@ -271,6 +282,8 @@ namespace AMLv4_API.Aml_v4_API
         mortgage_statement
     }
 
+    
+
     #endregion
 
     public enum Cancelled { no, yes };
@@ -283,9 +296,6 @@ namespace AMLv4_API.Aml_v4_API
 
 
     public enum LinkType { accountant, controller, officer, representative, shareholder, structure, ubo };
-
-    public enum Includebinary { No, Yes };
-
 
     public enum IsNewRelationShip { Existing, New, Newknown };
     /// <summary>
