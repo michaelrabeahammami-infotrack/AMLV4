@@ -6,6 +6,8 @@ using System.Runtime.Serialization;
 namespace AMLv4_API.Aml_v4_API
 {
     #region Classes
+
+    #region Profile
     public class Profile
     {
         [JsonProperty("profileid")]
@@ -26,10 +28,12 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("profileorigin")]
         public string Profileorigin { get; set; }
     }
+    #endregion
 
+    #region Client
     public class Client
     {
-        
+
         [JsonProperty("ClientID")]
         public long ClientId { get; set; }
 
@@ -170,7 +174,7 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("CompanyNoDisplay")]
         public string CompanyNoDisplay { get; set; }
-        
+
         [JsonProperty("CompanyType")]
         public string CompanyType { get; set; }
 
@@ -186,7 +190,9 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("CompanyIntroducer")]
         public string CompanyIntroducer { get; set; }
     }
+    #endregion
 
+    #region RelationShip
     public class Relationship
     {
         [JsonProperty("RelationshipID")]
@@ -222,7 +228,9 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("Archived")]
         public string Archived { get; set; }
     }
+    #endregion
 
+    #region Customer
     public class Customer
     {
         [JsonProperty("AmlCustomerID")]
@@ -255,6 +263,116 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("UserLoginName")]
         public string UserLoginName { get; set; }
     }
+    #endregion
+
+    #region Document
+    public class Document
+    {
+        [JsonProperty("docid")]
+        public long Docid { get; set; }
+
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
+
+        [JsonProperty("docusage")]
+        public string Docusage { get; set; }
+
+        [JsonProperty("doctype")]
+        public string Doctype { get; set; }
+
+        [JsonProperty("docdescription")]
+        public string Docdescription { get; set; }
+
+        [JsonProperty("docref")]
+        public string Docref { get; set; }
+
+        [JsonProperty("docstored")]
+        public string Docstored { get; set; }
+
+        [JsonProperty("expirydate")]
+        public DateTime Expirydate { get; set; }
+
+        [JsonProperty("expired")]
+        public string Expired { get; set; }
+
+        [JsonProperty("verifydate")]
+        public DateTime Verifydate { get; set; }
+
+        [JsonProperty("verified")]
+        public string Verified { get; set; }
+
+        [JsonProperty("AmlUserID")]
+        public long AmlUserId { get; set; }
+
+        [JsonProperty("UserName")]
+        public string UserName { get; set; }
+
+        [JsonProperty("archived")]
+        public string Archived { get; set; }
+
+        [JsonProperty("sentelectronic")]
+        public string Sentelectronic { get; set; }
+
+        [JsonProperty("filename")]
+        public string Filename { get; set; }
+    }
+    #endregion
+
+    #region Result
+    public class Result
+    {
+        [JsonProperty("TransactionID")]
+        public long TransactionId { get; set; }
+
+        [JsonProperty("ReportReference")]
+        public string ReportReference { get; set; }
+
+        [JsonProperty("DateOfSearch")]
+        public DateTimeOffset DateOfSearch { get; set; }
+
+        [JsonProperty("NumIdsElectronic")]
+        public long NumIdsElectronic { get; set; }
+
+        [JsonProperty("NumAdsElectronic")]
+        public long NumAdsElectronic { get; set; }
+
+        [JsonProperty("NumIdsDocument")]
+        public long NumIdsDocument { get; set; }
+
+        [JsonProperty("NumIdsDocElec")]
+        public long NumIdsDocElec { get; set; }
+
+        [JsonProperty("VerifiedDocs")]
+        public string VerifiedDocs { get; set; }
+
+        [JsonProperty("ElectronicStatus")]
+        public string ElectronicStatus { get; set; }
+
+        [JsonProperty("OverallStatus")]
+        public string OverallStatus { get; set; }
+
+        [JsonProperty("SanctionMatches")]
+        public string SanctionMatches { get; set; }
+
+        [JsonProperty("FailError")]
+        public string FailError { get; set; }
+    }
+    #endregion
+
+    #region User
+    public class User
+    {
+        [JsonProperty("AmlUserID")]
+        public long AmlUserId { get; set; }
+
+        [JsonProperty("ContactForename")]
+        public string ContactForename { get; set; }
+
+        [JsonProperty("ContactSurname")]
+        public string ContactSurname { get; set; }
+    } 
+    #endregion
+
     #endregion
 
     #region Enums
@@ -434,8 +552,6 @@ namespace AMLv4_API.Aml_v4_API
         [EnumMember(Value = "newknown")]
         Newknown 
     };
-
-    
 
     public enum Error 
     {
