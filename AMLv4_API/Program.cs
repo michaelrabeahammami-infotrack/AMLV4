@@ -418,28 +418,38 @@ namespace AMLv4_API
             #endregion
 
             #region Non-Personal Add Client
-            var nonPersonalAddClientRequest = new NonPersonalAddClientRequest()
+            //var nonPersonalAddClientRequest = new NonPersonalAddClientRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    CompanyName = "myCompany",
+            //    CompanyRegistrationNumber = "12345",
+            //    CountryCode = "UK",
+            //    AssessmentType = AssessmentType.Enhanced,
+            //    Clienttype =  Clienttype.NonPersonal,
+            //    CompanyIntroducer = "myintro",
+            //    CompanyNoDisplay = "nodisplay",
+            //    CompanyStatus = "status",
+            //    CompanyType = "myType",
+            //    Compliance = Compliance.Yes,
+            //    InceptionDate = DateTime.Now.ToString("yyyy-MM-dd"),
+            //    Interview = Interview.Viaexisting,
+            //    JurisdictionCode = "12345",
+            //    RegisteredAddress = "myAddress",
+            //    Relationship = RelationshipValue.Newknown,
+            //    RiskProfile = "12345",
+            //    SearchRef = "12345"
+            //};
+            //NonPersonalAddClientResponse nonPersonalAddClientResponse = RequestPerformer.RequestPerformer.PerformRequest<NonPersonalAddClientResponse>(nonPersonalAddClientRequest, "/client/nonpersonal/add", "additional reference", 0);
+            #endregion
+
+            #region Associates List
+            var associatesListRequest = new AssociatesListRequest()
             {
                 Uri = authenticationResponse.uri,
-                CompanyName = "myCompany",
-                CompanyRegistrationNumber = "12345",
-                CountryCode = "UK",
-                AssessmentType = AssessmentType.Enhanced,
-                Clienttype =  Clienttype.NonPersonal,
-                CompanyIntroducer = "myintro",
-                CompanyNoDisplay = "nodisplay",
-                CompanyStatus = "status",
-                CompanyType = "myType",
-                Compliance = Compliance.Yes,
-                InceptionDate = DateTime.Now.ToString("yyyy-MM-dd"),
-                Interview = Interview.Viaexisting,
-                JurisdictionCode = "12345",
-                RegisteredAddress = "myAddress",
-                Relationship = RelationshipValue.Newknown,
-                RiskProfile = "12345",
-                SearchRef = "12345"
+                AssessmentId = "12345",
+                ClientId = "12345"
             };
-            NonPersonalAddClientResponse nonPersonalAddClientResponse = RequestPerformer.RequestPerformer.PerformRequest<NonPersonalAddClientResponse>(nonPersonalAddClientRequest, "/client/nonpersonal/add", "additional reference", 0);
+            AssociatesListResponse associatesListResponse = RequestPerformer.RequestPerformer.PerformRequest<AssociatesListResponse>(associatesListRequest, "/client/associate/list", "additional reference", 0);
             #endregion
         }
     }
