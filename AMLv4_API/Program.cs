@@ -471,12 +471,21 @@ namespace AMLv4_API
             #endregion
 
             #region Non Personal View Risk Assessment
-            var nonPersonalViewRiskAssessmentRequest = new NonPersonalViewRiskAssessmentRequest()
+            //var nonPersonalViewRiskAssessmentRequest = new NonPersonalViewRiskAssessmentRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AssessmentId = "12345",
+            //};
+            //NonPersonalViewRiskAssessmentResponse nonPersonalViewRiskAssessmentResponse = RequestPerformer.RequestPerformer.PerformRequest<NonPersonalViewRiskAssessmentResponse>(nonPersonalViewRiskAssessmentRequest, "/assessment/view", "additional reference", 0);
+            #endregion
+
+            #region Management Oversight View
+            var managementOversightViewRequest = new ManagementOversightViewRequest()
             {
                 Uri = authenticationResponse.uri,
                 AssessmentId = "12345",
             };
-            NonPersonalViewRiskAssessmentResponse nonPersonalViewRiskAssessmentResponse = RequestPerformer.RequestPerformer.PerformRequest<NonPersonalViewRiskAssessmentResponse>(nonPersonalViewRiskAssessmentRequest, "/assessment/view", "additional reference", 0);
+            ManagementOversightViewResponse managementOversightViewResponse = RequestPerformer.RequestPerformer.PerformRequest<ManagementOversightViewResponse>(managementOversightViewRequest, "/client/oversight/view", "additional reference", 0);
             #endregion
         }
     }

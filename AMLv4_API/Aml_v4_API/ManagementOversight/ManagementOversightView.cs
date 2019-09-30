@@ -1,12 +1,25 @@
-﻿namespace AMLv4_API.Aml_v4_API.ManagementOversight
+﻿using Newtonsoft.Json;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// View Management Oversight
     /// </summary>
-    public class OversightViewRequest
+    public class ManagementOversightViewRequest
     {
-        public string AssessmentID { get; set; }
-        public string uri { get; set; }
+        [JsonProperty("AssessmentID")]
+        public string AssessmentId { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
-    //RESPONSE IS MISSING!!
+
+    public class ManagementOversightViewResponse
+    {
+        [JsonProperty("schemafile")]
+        public string Schemafile { get; set; }
+
+        [JsonProperty("status")]
+        public string Status { get; set; }
+    }
 }
