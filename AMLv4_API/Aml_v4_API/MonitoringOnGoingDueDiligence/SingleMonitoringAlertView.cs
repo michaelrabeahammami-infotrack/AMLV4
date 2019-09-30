@@ -1,4 +1,9 @@
-﻿namespace AMLv4_API.Aml_v4_API.MonitoringOnGoingDueDiligence
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
+using System.Runtime.Serialization;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Monitoring Alert Update
@@ -8,29 +13,79 @@
         /// <summary>
         /// Unique ID of the Alert record
         /// </summary>
-        public string AlertID { get; set; }
+        [JsonProperty("AlertID")]
+        public string AlertId { get; set; }
 
-        public string uri { get; set; }
+        /// <summary>
+        /// Remove (yes) or Reinstate (no) Alert in current active alert list
+        /// </summary>
+        [JsonProperty("Cancelled", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Cancelled? Cancelled { get; set; }
+
+        /// <summary>
+        /// User generated or system calculated from multiple choice
+        /// </summary>
+        [JsonProperty("CancelReason", NullValueHandling = NullValueHandling.Ignore)]
+        public string CancelReason { get; set; }
+
+        /// <summary>
+        /// If the alert has caused the client and latest assessment to be changed to Non-Compliant,
+        /// set it back to compliant (yes) or leave non-compliant (no) depending on user selection
+        /// </summary>
+        [JsonProperty("UndoNonCompliance", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Cancelled? UndoNonCompliance { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
-    public partial class SingleMonitoringAlertViewResponse
+    public class SingleMonitoringAlertViewResponse
     {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public string CustomerID { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("CustomerID")]
+        public string CustomerId { get; set; }
+
+        [JsonProperty("ClientSummary")]
         public string ClientSummary { get; set; }
+
+        [JsonProperty("ClientReference")]
         public string ClientReference { get; set; }
-        public string AlertDate { get; set; }
+
+        [JsonProperty("AlertDate")]
+        public DateTime AlertDate { get; set; }
+
+        [JsonProperty("AlertType")]
         public string AlertType { get; set; }
+
+        [JsonProperty("AlertSanctionMatch")]
         public string AlertSanctionMatch { get; set; }
-        public long AlertID { get; set; }
+
+        [JsonProperty("AlertID")]
+        public long AlertId { get; set; }
+
+        [JsonProperty("Cancelled")]
         public string Cancelled { get; set; }
-        public long AssessmentID { get; set; }
-        public long ClientID { get; set; }
-        public long AmlUserID { get; set; }
-        public long AmlCustomerID { get; set; }
-        public long AmlIntegratorID { get; set; }
+
+        [JsonProperty("AssessmentID")]
+        public long AssessmentId { get; set; }
+
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
+
+        [JsonProperty("AmlUserID")]
+        public long AmlUserId { get; set; }
+
+        [JsonProperty("AmlCustomerID")]
+        public long AmlCustomerId { get; set; }
+
+        [JsonProperty("AmlIntegratorID")]
+        public long AmlIntegratorId { get; set; }
     }
-
-
 }

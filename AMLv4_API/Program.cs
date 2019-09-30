@@ -498,12 +498,24 @@ namespace AMLv4_API
             #endregion
 
             #region Management Oversight Update
-            var monitorAlertListRequest = new MonitorAlertListRequest()
+            //var monitorAlertListRequest = new MonitorAlertListRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AmlCustomerId = "12345"
+            //};
+            //MonitorAlertListResponse monitorAlertListResponse = RequestPerformer.RequestPerformer.PerformRequest<MonitorAlertListResponse>(monitorAlertListRequest, "/alert/list", "additional reference", 0);
+            #endregion
+
+            #region Single Monitoring Alert View
+            var singleMonitoringAlertViewRequest = new SingleMonitoringAlertViewRequest()
             {
                 Uri = authenticationResponse.uri,
-                AmlCustomerId = "12345"
+                AlertId = "12345",
+                Cancelled = Cancelled.no,
+                CancelReason = "myReason",
+                UndoNonCompliance = Cancelled.no
             };
-            MonitorAlertListResponse monitorAlertListResponse = RequestPerformer.RequestPerformer.PerformRequest<MonitorAlertListResponse>(monitorAlertListRequest, "/alert/list", "additional reference", 0);
+            SingleMonitoringAlertViewResponse singleMonitoringAlertViewResponse = RequestPerformer.RequestPerformer.PerformRequest<SingleMonitoringAlertViewResponse>(singleMonitoringAlertViewRequest, "/alert/update", "additional reference", 0);
             #endregion
         }
     }
