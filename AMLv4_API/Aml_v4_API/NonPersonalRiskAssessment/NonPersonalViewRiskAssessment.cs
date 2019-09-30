@@ -1,54 +1,92 @@
-﻿namespace AMLv4_API.Aml_v4_API.NonPersonalRiskAssessment
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
+    /// <summary>
+    /// View Assessment Details before or after running
+    /// </summary>
+    public class NonPersonalViewRiskAssessmentRequest
+    {
+        [JsonProperty("AssessmentID")]
+        public string AssessmentId { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+    }
+
     public class NonPersonalViewRiskAssessmentResponse
     {
+        [JsonProperty("error")]
         public string Error { get; set; }
+
+        [JsonProperty("uri")]
         public string Uri { get; set; }
+
+        [JsonProperty("AssessmentID")]
         public long AssessmentId { get; set; }
+
+        [JsonProperty("ClientID")]
         public long ClientId { get; set; }
+
+        [JsonProperty("AmlUserID")]
         public long AmlUserId { get; set; }
+
+        [JsonProperty("AmlCustomerID")]
         public long AmlCustomerId { get; set; }
+
+        [JsonProperty("clienttype")]
         public string Clienttype { get; set; }
-        public string Date { get; set; }
+
+        [JsonProperty("date")]
+        public DateTime Date { get; set; }
+
+        [JsonProperty("reference")]
         public long Reference { get; set; }
+
+        [JsonProperty("assessmenttype")]
         public string Assessmenttype { get; set; }
+
+        [JsonProperty("profileid")]
         public long Profileid { get; set; }
+
+        [JsonProperty("profilename")]
         public string Profilename { get; set; }
+
+        [JsonProperty("status")]
         public string Status { get; set; }
+
+        [JsonProperty("DisplayPrice")]
         public string DisplayPrice { get; set; }
+
+        [JsonProperty("Price")]
         public string Price { get; set; }
+
+        [JsonProperty("Archived")]
         public string Archived { get; set; }
+
+        [JsonProperty("Locked")]
         public string Locked { get; set; }
+
+        [JsonProperty("client")]
         public Client Client { get; set; }
+
+        [JsonProperty("numdocuments")]
         public long Numdocuments { get; set; }
+
+        [JsonProperty("numrelationships")]
         public long Numrelationships { get; set; }
+
+        [JsonProperty("numalerts")]
         public long Numalerts { get; set; }
+
+        [JsonProperty("user")]
         public User User { get; set; }
+
+        [JsonProperty("customer")]
         public Customer Customer { get; set; }
+
+        [JsonProperty("Result")]
         public Result Result { get; set; }
-    }
-
-    public class Customer
-    {
-        public long AmlCustomerId { get; set; }
-        public string CustomerName { get; set; }
-    }
-
-    public class Result
-    {
-        public long TransactionId { get; set; }
-        public string ReportReference { get; set; }
-        public string DateOfSearch { get; set; }
-        public string ElectronicStatus { get; set; }
-        public string OverallStatus { get; set; }
-        public string SanctionMatches { get; set; }
-        public string FailError { get; set; }
-    }
-
-    public class User
-    {
-        public long AmlUserId { get; set; }
-        public string ContactForename { get; set; }
-        public string ContactSurname { get; set; }
     }
 }

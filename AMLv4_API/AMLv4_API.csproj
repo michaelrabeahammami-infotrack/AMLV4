@@ -122,7 +122,7 @@
     <Compile Include="Aml_v4_API\PersonalRiskAssessment\UpdateDocumentDetails.cs" />
     <Compile Include="Aml_v4_API\PersonalRiskAssessment\UseDocumentInAssessment.cs" />
     <Compile Include="Aml_v4_API\PersonalRiskAssessment\ViewDocumentDetails.cs" />
-    <Compile Include="Aml_v4_API\PersonalRiskAssessment\ViewRiskAssessment.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\PersonalViewRiskAssessment.cs" />
     <Compile Include="Aml_v4_API\CustomerRegistration\RegisterCustomer.cs" />
     <Compile Include="Aml_v4_API\RelationshipViewingAndArchiving\ArchiveRelationship.cs" />
     <Compile Include="Aml_v4_API\RelationshipViewingAndArchiving\ListRelationships.cs" />

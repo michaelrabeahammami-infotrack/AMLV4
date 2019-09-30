@@ -452,22 +452,31 @@ namespace AMLv4_API
             //AssociatesListResponse associatesListResponse = RequestPerformer.RequestPerformer.PerformRequest<AssociatesListResponse>(associatesListRequest, "/client/associate/list", "additional reference", 0);
             #endregion
 
-            #region Associates List
-            var addAssociateRequest = new AddAssociateRequest()
+            #region Add Associate
+            //var addAssociateRequest = new AddAssociateRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AssessmentId = "12345",
+            //    ClientId = "12345",
+            //    Address = "MyAddress",
+            //    CompanyName = "mycompanyName",
+            //    DateOfBirth = DateTime.Now.ToShortDateString(),
+            //    Forename = "myForeName",
+            //    LinkDescription = "myLinkDescription",
+            //    LinkType = LinkType.Accountant,
+            //    MiddleNames = "myMiddleNames",
+            //    Surname = "mySurname"
+            //};
+            //AddAssociateResponse addAssociateResponse = RequestPerformer.RequestPerformer.PerformRequest<AddAssociateResponse>(addAssociateRequest, "/client/associate/add", "additional reference", 0);
+            #endregion
+
+            #region Non Personal View Risk Assessment
+            var nonPersonalViewRiskAssessmentRequest = new NonPersonalViewRiskAssessmentRequest()
             {
                 Uri = authenticationResponse.uri,
                 AssessmentId = "12345",
-                ClientId = "12345",
-                Address = "MyAddress",
-                CompanyName = "mycompanyName",
-                DateOfBirth = DateTime.Now.ToShortDateString(),
-                Forename = "myForeName",
-                LinkDescription = "myLinkDescription",
-                LinkType = LinkType.Accountant,
-                MiddleNames = "myMiddleNames",
-                Surname = "mySurname"
             };
-            AddAssociateResponse addAssociateResponse = RequestPerformer.RequestPerformer.PerformRequest<AddAssociateResponse>(addAssociateRequest, "/client/associate/add", "additional reference", 0);
+            NonPersonalViewRiskAssessmentResponse nonPersonalViewRiskAssessmentResponse = RequestPerformer.RequestPerformer.PerformRequest<NonPersonalViewRiskAssessmentResponse>(nonPersonalViewRiskAssessmentRequest, "/assessment/view", "additional reference", 0);
             #endregion
         }
     }

@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// View Assessment Details before or after running
     /// </summary>
-    public class ViewRiskAssessmentRequest
+    public class PersonalViewRiskAssessmentRequest
     {
         [JsonProperty("AssessmentID")]
         public string AssessmentId { get; set; }
@@ -15,7 +15,7 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class ViewRiskAssessmentResponse
+    public class PersonalViewRiskAssessmentResponse
     {
         [JsonProperty("error")]
         public string Error { get; set; }
