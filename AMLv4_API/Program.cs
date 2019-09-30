@@ -398,12 +398,23 @@ namespace AMLv4_API
             #endregion
 
             #region Risk Assessment Result
-            var riskAssessmentResultRequest = new RiskAssessmentResultRequest()
+            //var riskAssessmentResultRequest = new RiskAssessmentResultRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AssessmentId = "12345"
+            //};
+            //RiskAssessmentResultResponse riskAssessmentResultResponse = RequestPerformer.RequestPerformer.PerformRequest<RiskAssessmentResultResponse>(riskAssessmentResultRequest, "/assessment/result", "additional reference", 0);
+            #endregion
+
+            #region Risk Assessment Result
+            var organisationLookupRequest = new OrganisationLookupRequest()
             {
                 Uri = authenticationResponse.uri,
-                AssessmentId = "12345"
+                CompanyName = "myCompany",
+                CompanyRegistrationNumber = "12345",
+                CountryCode = "UK"
             };
-            RiskAssessmentResultResponse riskAssessmentResultResponse = RequestPerformer.RequestPerformer.PerformRequest<RiskAssessmentResultResponse>(riskAssessmentResultRequest, "/assessment/result", "additional reference", 0);
+            OrganisationLookupResponse organisationLookupResponse = RequestPerformer.RequestPerformer.PerformRequest<OrganisationLookupResponse>(organisationLookupRequest, "assessment/nonpersonal/lookup", "additional reference", 0);
             #endregion
         }
     }
