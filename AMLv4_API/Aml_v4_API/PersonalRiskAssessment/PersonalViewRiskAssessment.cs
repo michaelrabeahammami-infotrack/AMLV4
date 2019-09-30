@@ -98,43 +98,4 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("Result")]
         public Result Result { get; set; }
     }
-
-    public class Alert
-    {
-        [JsonProperty("AlertDate")]
-        public DateTime AlertDate { get; set; }
-
-        [JsonProperty("AlertType")]
-        public string AlertType { get; set; }
-
-        [JsonProperty("AlertDocID")]
-        public long AlertDocId { get; set; }
-
-        [JsonProperty("AlertSanctionMatch")]
-        public string AlertSanctionMatch { get; set; }
-
-        [JsonProperty("AlertID")]
-        public long AlertId { get; set; }
-
-        [JsonProperty("Cancelled")]
-        public string Cancelled { get; set; }
-
-        [JsonProperty("CancelUserID")]
-        public long CancelUserId { get; set; }
-
-        [JsonProperty("CancelUserName")]
-        public string CancelUserName { get; set; }
-
-        [JsonProperty("CancelReason")]
-        public string CancelReason { get; set; }
-
-        [JsonProperty("CancelDate")]
-        public DateTime CancelDate { get; set; }
-
-        [JsonProperty("AssessmentID")]
-        public long AssessmentId { get; set; }
-
-        [JsonProperty("ClientID")]
-        public long ClientId { get; set; }
-    }
 }

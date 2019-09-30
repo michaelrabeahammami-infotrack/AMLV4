@@ -1,43 +1,35 @@
-﻿namespace AMLv4_API.Aml_v4_API.MonitoringOnGoingDueDiligence
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Monitoring Alert List
     /// </summary>
-    public class OversightUpdateRequest
+    public class MonitorAlertListRequest
     {
         /// <summary>
         /// Optional filter to list for single customer
         /// </summary>
-        public string AmlCustomerID { get; set; }
+        [JsonProperty("AmlCustomerID", NullValueHandling = NullValueHandling.Ignore)]
+        public string AmlCustomerId { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
-    public class OversightUpdateResponse
+    public class MonitorAlertListResponse
     {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public long numalerts { get; set; }
-        public Alert[] alerts { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("numalerts")]
+        public long Numalerts { get; set; }
+
+        [JsonProperty("alerts")]
+        public Alert[] Alerts { get; set; }
     }
-
-    public class Alert
-    {
-        public string CustomerID { get; set; }
-        public string ClientSummary { get; set; }
-        public string ClientReference { get; set; }
-        public string AlertDate { get; set; }
-        public string AlertType { get; set; }
-        public string AlertSanctionMatch { get; set; }
-        public long AlertID { get; set; }
-        public string Cancelled { get; set; }
-        public long AssessmentID { get; set; }
-        public long ClientID { get; set; }
-        public long AmlUserID { get; set; }
-        public long AmlCustomerID { get; set; }
-        public long AmlIntegratorID { get; set; }
-        public long? AlertDocID { get; set; }
-    }
-
-
 }

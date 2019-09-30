@@ -98,7 +98,7 @@
     <Compile Include="Aml_v4_API\IntegratorOnlyAdministratorFunctions\CustomerList.cs" />
     <Compile Include="Aml_v4_API\IntegratorOnlyAdministratorFunctions\CustomerUnarchive.cs" />
     <Compile Include="Aml_v4_API\ManagementOversight\ManagementOversightView.cs" />
-    <Compile Include="Aml_v4_API\ManagementOversight\OversightUpdate.cs" />
+    <Compile Include="Aml_v4_API\ManagementOversight\ManagementOversightUpdate.cs" />
     <Compile Include="Aml_v4_API\CustomerMigration\MigrationCustomerAndUserDetails.cs" />
     <Compile Include="Aml_v4_API\CustomerMigration\MigrationList.cs" />
     <Compile Include="Aml_v4_API\MonitoringOnGoingDueDiligence\MonitorAlertList.cs" />

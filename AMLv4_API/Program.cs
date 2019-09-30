@@ -480,12 +480,30 @@ namespace AMLv4_API
             #endregion
 
             #region Management Oversight View
-            var managementOversightViewRequest = new ManagementOversightViewRequest()
+            //var managementOversightViewRequest = new ManagementOversightViewRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AssessmentId = "12345",
+            //};
+            //ManagementOversightViewResponse managementOversightViewResponse = RequestPerformer.RequestPerformer.PerformRequest<ManagementOversightViewResponse>(managementOversightViewRequest, "/client/oversight/view", "additional reference", 0);
+            #endregion
+
+            #region Management Oversight Update
+            //var managementOversightUpdateRequest = new ManagementOversightUpdateRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AssessmentId = "12345",
+            //};
+            //ManagementOversightUpdateResponse managementOversightUpdateResponse = RequestPerformer.RequestPerformer.PerformRequest<ManagementOversightUpdateResponse>(managementOversightUpdateRequest, "/client/oversight/view", "additional reference", 0);
+            #endregion
+
+            #region Management Oversight Update
+            var monitorAlertListRequest = new MonitorAlertListRequest()
             {
                 Uri = authenticationResponse.uri,
-                AssessmentId = "12345",
+                AmlCustomerId = "12345"
             };
-            ManagementOversightViewResponse managementOversightViewResponse = RequestPerformer.RequestPerformer.PerformRequest<ManagementOversightViewResponse>(managementOversightViewRequest, "/client/oversight/view", "additional reference", 0);
+            MonitorAlertListResponse monitorAlertListResponse = RequestPerformer.RequestPerformer.PerformRequest<MonitorAlertListResponse>(monitorAlertListRequest, "/alert/list", "additional reference", 0);
             #endregion
         }
     }
