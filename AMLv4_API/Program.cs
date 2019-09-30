@@ -507,15 +507,26 @@ namespace AMLv4_API
             #endregion
 
             #region Single Monitoring Alert View
-            var singleMonitoringAlertViewRequest = new SingleMonitoringAlertViewRequest()
+            //var singleMonitoringAlertViewRequest = new SingleMonitoringAlertViewRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AlertId = "12345",
+            //    Cancelled = Cancelled.no,
+            //    CancelReason = "myReason",
+            //    UndoNonCompliance = Cancelled.no
+            //};
+            //SingleMonitoringAlertViewResponse singleMonitoringAlertViewResponse = RequestPerformer.RequestPerformer.PerformRequest<SingleMonitoringAlertViewResponse>(singleMonitoringAlertViewRequest, "/alert/update", "additional reference", 0);
+            #endregion
+
+            #region Monitoring Alert Update
+            var monitoringAlertUpdateRequest = new MonitoringAlertUpdateRequest()
             {
                 Uri = authenticationResponse.uri,
                 AlertId = "12345",
                 Cancelled = Cancelled.no,
-                CancelReason = "myReason",
-                UndoNonCompliance = Cancelled.no
+                CancelReason = "myReason"
             };
-            SingleMonitoringAlertViewResponse singleMonitoringAlertViewResponse = RequestPerformer.RequestPerformer.PerformRequest<SingleMonitoringAlertViewResponse>(singleMonitoringAlertViewRequest, "/alert/update", "additional reference", 0);
+            MonitoringAlertUpdateResponse monitoringAlertUpdateResponse = RequestPerformer.RequestPerformer.PerformRequest<MonitoringAlertUpdateResponse>(monitoringAlertUpdateRequest, "/alert/update", "additional reference", 0);
             #endregion
         }
     }
