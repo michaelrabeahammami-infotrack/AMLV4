@@ -407,14 +407,39 @@ namespace AMLv4_API
             #endregion
 
             #region Risk Assessment Result
-            var organisationLookupRequest = new OrganisationLookupRequest()
+            //var organisationLookupRequest = new OrganisationLookupRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    CompanyName = "myCompany",
+            //    CompanyRegistrationNumber = "12345",
+            //    CountryCode = "UK"
+            //};
+            //OrganisationLookupResponse organisationLookupResponse = RequestPerformer.RequestPerformer.PerformRequest<OrganisationLookupResponse>(organisationLookupRequest, "/assessment/nonpersonal/lookup", "additional reference", 0);
+            #endregion
+
+            #region Non-Personal Add Client
+            var nonPersonalAddClientRequest = new NonPersonalAddClientRequest()
             {
                 Uri = authenticationResponse.uri,
                 CompanyName = "myCompany",
                 CompanyRegistrationNumber = "12345",
-                CountryCode = "UK"
+                CountryCode = "UK",
+                AssessmentType = AssessmentType.Enhanced,
+                Clienttype =  Clienttype.NonPersonal,
+                CompanyIntroducer = "myintro",
+                CompanyNoDisplay = "nodisplay",
+                CompanyStatus = "status",
+                CompanyType = "myType",
+                Compliance = Compliance.Yes,
+                InceptionDate = DateTime.Now.ToString("yyyy-MM-dd"),
+                Interview = Interview.Viaexisting,
+                JurisdictionCode = "12345",
+                RegisteredAddress = "myAddress",
+                Relationship = RelationshipValue.Newknown,
+                RiskProfile = "12345",
+                SearchRef = "12345"
             };
-            OrganisationLookupResponse organisationLookupResponse = RequestPerformer.RequestPerformer.PerformRequest<OrganisationLookupResponse>(organisationLookupRequest, "assessment/nonpersonal/lookup", "additional reference", 0);
+            NonPersonalAddClientResponse nonPersonalAddClientResponse = RequestPerformer.RequestPerformer.PerformRequest<NonPersonalAddClientResponse>(nonPersonalAddClientRequest, "/client/nonpersonal/add", "additional reference", 0);
             #endregion
         }
     }

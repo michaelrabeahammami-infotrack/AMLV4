@@ -503,7 +503,9 @@ namespace AMLv4_API.Aml_v4_API
     public enum Clienttype 
     {
         [EnumMember(Value = "personal")]
-        Personal 
+        Personal,
+        [EnumMember(Value = "nonpersonal")]
+        NonPersonal 
     };
 
     public enum Compliance 
@@ -531,7 +533,17 @@ namespace AMLv4_API.Aml_v4_API
         [EnumMember(Value = "person")]
         Person,
         [EnumMember(Value = "phone")]
-        Phone 
+        Phone,
+        [EnumMember(Value = "existing")]
+        Existing,
+        [EnumMember(Value = "marketing")]
+        Marketing,
+        [EnumMember(Value = "other")]
+        Other,
+        [EnumMember(Value = "referral")]
+        Referral,
+        [EnumMember(Value = "viaexisting")]
+        Viaexisting
     };
 
     public enum Previous 
