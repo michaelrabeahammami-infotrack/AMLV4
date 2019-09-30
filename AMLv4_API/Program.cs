@@ -389,12 +389,21 @@ namespace AMLv4_API
             #endregion
 
             #region Run Risk Assessment PickList
-            var riskAssessmentPickListSelectRequest = new RiskAssessmentPickListSelectRequest()
+            //var riskAssessmentPickListSelectRequest = new RiskAssessmentPickListSelectRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AssessmentId = "12345"
+            //};
+            //RiskAssessmentPickListSelectResponse riskAssessmentPickListSelectResponse = RequestPerformer.RequestPerformer.PerformRequest<RiskAssessmentPickListSelectResponse>(riskAssessmentPickListSelectRequest, "/assessment/pick", "additional reference", 0);
+            #endregion
+
+            #region Risk Assessment Result
+            var riskAssessmentResultRequest = new RiskAssessmentResultRequest()
             {
                 Uri = authenticationResponse.uri,
                 AssessmentId = "12345"
             };
-            RiskAssessmentPickListSelectResponse riskAssessmentPickListSelectResponse = RequestPerformer.RequestPerformer.PerformRequest<RiskAssessmentPickListSelectResponse>(riskAssessmentPickListSelectRequest, "/assessment/pick", "additional reference", 0);
+            RiskAssessmentResultResponse riskAssessmentResultResponse = RequestPerformer.RequestPerformer.PerformRequest<RiskAssessmentResultResponse>(riskAssessmentResultRequest, "/assessment/result", "additional reference", 0);
             #endregion
         }
     }
