@@ -665,15 +665,29 @@ namespace AMLv4_API.Aml_v4_API
         [EnumMember(Value = "UBO")]
         Ubo 
     };
+    public enum LinkType 
+    {
+        [EnumMember(Value = "accountant")]
+        Accountant,
+        [EnumMember(Value = "controller")]
+        Controller,
+        [EnumMember(Value = "officer")]
+        Officer,
+        [EnumMember(Value = "representative")]
+        Representative,
+        [EnumMember(Value = "shareholder")]
+        Shareholder,
+        [EnumMember(Value = "structure")]
+        Structure,
+        [EnumMember(Value = "ubo")]
+        Ubo 
+    };
 
     #endregion
 
     public enum Cancelled { no, yes };
 
     public enum AllowOtherDocs { no, yes };
-
-
-    public enum LinkType { accountant, controller, officer, representative, shareholder, structure, ubo };
 
     public enum AllowEnhanced { no, yes };
 

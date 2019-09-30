@@ -443,13 +443,31 @@ namespace AMLv4_API
             #endregion
 
             #region Associates List
-            var associatesListRequest = new AssociatesListRequest()
+            //var associatesListRequest = new AssociatesListRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AssessmentId = "12345",
+            //    ClientId = "12345"
+            //};
+            //AssociatesListResponse associatesListResponse = RequestPerformer.RequestPerformer.PerformRequest<AssociatesListResponse>(associatesListRequest, "/client/associate/list", "additional reference", 0);
+            #endregion
+
+            #region Associates List
+            var addAssociateRequest = new AddAssociateRequest()
             {
                 Uri = authenticationResponse.uri,
                 AssessmentId = "12345",
-                ClientId = "12345"
+                ClientId = "12345",
+                Address = "MyAddress",
+                CompanyName = "mycompanyName",
+                DateOfBirth = DateTime.Now.ToShortDateString(),
+                Forename = "myForeName",
+                LinkDescription = "myLinkDescription",
+                LinkType = LinkType.Accountant,
+                MiddleNames = "myMiddleNames",
+                Surname = "mySurname"
             };
-            AssociatesListResponse associatesListResponse = RequestPerformer.RequestPerformer.PerformRequest<AssociatesListResponse>(associatesListRequest, "/client/associate/list", "additional reference", 0);
+            AddAssociateResponse addAssociateResponse = RequestPerformer.RequestPerformer.PerformRequest<AddAssociateResponse>(addAssociateRequest, "/client/associate/add", "additional reference", 0);
             #endregion
         }
     }
