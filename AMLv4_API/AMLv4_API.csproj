@@ -109,6 +109,8 @@
     <Compile Include="Aml_v4_API\NonPersonalRiskAssessment\NonPersonalAddClient.cs" />
     <Compile Include="Aml_v4_API\NonPersonalRiskAssessment\NonPersonalViewRiskAssessment.cs" />
     <Compile Include="Aml_v4_API\NonPersonalRiskAssessment\OrganisationLookup.cs" />
+    <Compile Include="Aml_v4_API\NonPersonalRiskAssessment\NonPersonalRunRiskAssessment.cs" />
+    <Compile Include="Aml_v4_API\NonPersonalRiskAssessment\NonPersonalRiskAssessmentResult.cs" />
     <Compile Include="Aml_v4_API\PersonalRiskAssessment\AddClientRelationships.cs" />
     <Compile Include="Aml_v4_API\PersonalRiskAssessment\AddDocumentToCDDRecord.cs" />
     <Compile Include="Aml_v4_API\PersonalRiskAssessment\DeleteDocumentDetails.cs" />
@@ -118,7 +120,7 @@
     <Compile Include="Aml_v4_API\PersonalRiskAssessment\PersonalRiskAssessmentUpdateClientData.cs" />
     <Compile Include="Aml_v4_API\PersonalRiskAssessment\RiskAssessmentPickListSelect.cs" />
     <Compile Include="Aml_v4_API\PersonalRiskAssessment\RiskAssessmentResult.cs" />
-    <Compile Include="Aml_v4_API\PersonalRiskAssessment\RunRiskAssessment.cs" />
+    <Compile Include="Aml_v4_API\PersonalRiskAssessment\PersonalRunRiskAssessment.cs" />
     <Compile Include="Aml_v4_API\PersonalRiskAssessment\UpdateDocumentDetails.cs" />
     <Compile Include="Aml_v4_API\PersonalRiskAssessment\UseDocumentInAssessment.cs" />
     <Compile Include="Aml_v4_API\PersonalRiskAssessment\ViewDocumentDetails.cs" />

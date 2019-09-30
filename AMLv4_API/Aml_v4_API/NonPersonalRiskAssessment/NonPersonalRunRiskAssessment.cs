@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Run Risk Assessment
     /// </summary>
-    public class RunRiskAssessmentRequest
+    public class NonPersonalRunRiskAssessmentRequest
     {
         [JsonProperty("AssessmentID")]
         public string AssessmentId { get; set; }
@@ -15,7 +15,7 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class RunRiskAssessmentResponse
+    public class NonPersonalRunRiskAssessmentResponse
     {
         [JsonProperty("error")]
         public string Error { get; set; }
