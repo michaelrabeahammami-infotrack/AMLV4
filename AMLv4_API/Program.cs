@@ -613,12 +613,22 @@ namespace AMLv4_API
             #endregion
 
             #region View Risk Profile
-            var viewRiskProfileRequest = new ViewRiskProfileRequest()
+            //var viewRiskProfileRequest = new ViewRiskProfileRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Profileid = "12345"
+            //};
+            //ViewRiskProfileResponse viewRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewRiskProfileResponse>(viewRiskProfileRequest, "/riskprofile/view", "additional reference", 0);
+            #endregion
+
+            #region Update Pending Risk Profile
+            var updatePendingRiskProfileRequest = new UpdatePendingRiskProfileRequest()
             {
                 Uri = authenticationResponse.uri,
-                Profileid = "12345"
+                Profileid = "12345",
+                Profilename = "myProfile"
             };
-            ViewRiskProfileResponse viewRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewRiskProfileResponse>(viewRiskProfileRequest, "/riskprofile/view", "additional reference", 0);
+            UpdatePendingRiskProfileResponse updatePendingRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdatePendingRiskProfileResponse>(updatePendingRiskProfileRequest, "/riskprofile/update", "additional reference", 0);
             #endregion
         }
     }
