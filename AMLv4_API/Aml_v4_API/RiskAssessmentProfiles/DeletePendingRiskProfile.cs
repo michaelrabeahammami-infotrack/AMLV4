@@ -1,22 +1,43 @@
-﻿namespace AMLv4_API.Aml_v4_API.RiskAssessmentProfiles
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Delete pending Risk Profile and list of rules
     /// </summary>
     public class DeletePendingRiskProfileRequest
     {
-        public string profileid { get; set; }
-        public string uri { get; set; }
+        [JsonProperty("profileid")]
+        public string Profileid { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
     public class DeletePendingRiskProfileResponse
     {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public string profilecreated { get; set; }
-        public long profileid { get; set; }
-        public string profilename { get; set; }
-        public string profileorigin { get; set; }
-        public string profilestatus { get; set; }
-        public string profiletype { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("profilecreated")]
+        public DateTime Profilecreated { get; set; }
+
+        [JsonProperty("profileid")]
+        public long Profileid { get; set; }
+
+        [JsonProperty("profilename")]
+        public string Profilename { get; set; }
+
+        [JsonProperty("profileorigin")]
+        public string Profileorigin { get; set; }
+
+        [JsonProperty("profilestatus")]
+        public string Profilestatus { get; set; }
+
+        [JsonProperty("profiletype")]
+        public string Profiletype { get; set; }
     }
 }
