@@ -4,7 +4,7 @@
     {
         public string AmlCustomerID { get; set; }
         public string AmlUserID { get; set; }
-        public ClientType? ClientType { get; set; }
+        public Clienttypefilter? ClientType { get; set; }
         public string EndDate { get; set; }
         public IncludeArchived? IncludeArchived { get; set; }
         public string StartDate { get; set; }

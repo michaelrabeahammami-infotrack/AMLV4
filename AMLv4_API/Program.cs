@@ -784,12 +784,31 @@ namespace AMLv4_API
             #endregion
 
             #region Client List For Customer
-            var clientListForCustomerRequest = new ClientListForCustomerRequest()
+            //var clientListForCustomerRequest = new ClientListForCustomerRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Clienttypefilter = Clienttypefilter.Personal
+            //};
+            //ClientListForCustomerResponse clientListForCustomerResponse = RequestPerformer.RequestPerformer.PerformRequest<ClientListForCustomerResponse>(clientListForCustomerRequest, "/client/list", "additional reference", 0);
+            #endregion
+
+            #region Search For Client With Wildcards
+            var SearchForClientWithWildcardsRequest = new SearchForClientWithWildcardsRequest()
             {
                 Uri = authenticationResponse.uri,
-                Clienttypefilter = Clienttypefilter.Personal
+                AmlUserId = "12345",
+                ClientName = "myname",
+                ClientReference = "myref",
+                ClientType = Clienttypefilter.Personal,
+                ComplianceStatus = ComplianceStatus.Compliant,
+                EndDate = DateTime.Now.ToString("yyyy-MM-dd"),
+                IncludeArchived = IncludeArchived.Yes,
+                Postcode = "se1 8rt",
+                RecordLimit = "32",
+                StartDate = DateTime.Now.ToString("yyyy-MM-dd"),
+                UserName = "myusername"
             };
-            ClientListForCustomerResponse clientListForCustomerResponse = RequestPerformer.RequestPerformer.PerformRequest<ClientListForCustomerResponse>(clientListForCustomerRequest, "/client/list", "additional reference", 0);
+            SearchForClientWithWildcardsResponse SearchForClientWithWildcardsResponse = RequestPerformer.RequestPerformer.PerformRequest<SearchForClientWithWildcardsResponse>(SearchForClientWithWildcardsRequest, "/client/search", "additional reference", 0);
             #endregion
         }
     }

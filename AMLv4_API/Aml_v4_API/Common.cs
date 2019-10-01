@@ -798,6 +798,30 @@ namespace AMLv4_API.Aml_v4_API
         Personal 
     };
 
+    /// <summary>
+    /// Filter by status
+    /// </summary>
+    public enum ComplianceStatus 
+    {
+        [EnumMember(Value = "compliant")]
+        Compliant,
+        [EnumMember(Value = "noncompliant")]
+        Noncompliant,
+        [EnumMember(Value = "pending")]
+        Pending 
+    };
+
+    /// <summary>
+    /// Include archived clients in results (default no)
+    /// </summary>
+    public enum IncludeArchived 
+    {
+        [EnumMember(Value = "no")]
+        No,
+        [EnumMember(Value = "yes")]
+        Yes 
+    };
+
     #endregion
 
     public enum Cancelled { no, yes };
