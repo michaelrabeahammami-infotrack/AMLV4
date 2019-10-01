@@ -775,12 +775,21 @@ namespace AMLv4_API
             #endregion
 
             #region Validate Rule Against Other Rules
-            var validateRuleAgainstOtherRulesRequest = new ValidateRuleAgainstOtherRulesRequest()
+            //var validateRuleAgainstOtherRulesRequest = new ValidateRuleAgainstOtherRulesRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Ruleid = "12345"
+            //};
+            //ValidateRuleAgainstOtherRulesResponse ValidateRuleAgainstOtherRulesResponse = RequestPerformer.RequestPerformer.PerformRequest<ValidateRuleAgainstOtherRulesResponse>(validateRuleAgainstOtherRulesRequest, "/riskprofile/rule/validate", "additional reference", 0);
+            #endregion
+
+            #region Client List For Customer
+            var clientListForCustomerRequest = new ClientListForCustomerRequest()
             {
                 Uri = authenticationResponse.uri,
-                Ruleid = "12345"
+                Clienttypefilter = Clienttypefilter.Personal
             };
-            ValidateRuleAgainstOtherRulesResponse ValidateRuleAgainstOtherRulesResponse = RequestPerformer.RequestPerformer.PerformRequest<ValidateRuleAgainstOtherRulesResponse>(validateRuleAgainstOtherRulesRequest, "/riskprofile/rule/validate", "additional reference", 0);
+            ClientListForCustomerResponse clientListForCustomerResponse = RequestPerformer.RequestPerformer.PerformRequest<ClientListForCustomerResponse>(clientListForCustomerRequest, "/client/list", "additional reference", 0);
             #endregion
         }
     }

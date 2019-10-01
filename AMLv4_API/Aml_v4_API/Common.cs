@@ -787,6 +787,17 @@ namespace AMLv4_API.Aml_v4_API
         Yes 
     };
 
+    /// <summary>
+    /// Type of Client, personal or nonpersonal
+    /// </summary>
+    public enum Clienttypefilter 
+    {
+        [EnumMember(Value = "nonpersonal")]
+        Nonpersonal,
+        [EnumMember(Value = "personal")]
+        Personal 
+    };
+
     #endregion
 
     public enum Cancelled { no, yes };

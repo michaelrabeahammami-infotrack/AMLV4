@@ -1,20 +1,33 @@
-﻿namespace AMLv4_API.Aml_v4_API
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace AMLv4_API.Aml_v4_API
 {
     public class ClientListForCustomerRequest
     {
         /// <summary>
         /// Type of Client, personal or nonpersonal
         /// </summary>
-        public Clienttype? clienttypefilter { get; set; }
+        [JsonProperty("clienttypefilter", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Clienttypefilter? Clienttypefilter { get; set; }
 
-        public string uri { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
     public class ClientListForCustomerResponse
     {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public long clientcount { get; set; }
-        public Client[] clients { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("clientcount")]
+        public long Clientcount { get; set; }
+
+        [JsonProperty("clients")]
+        public Client[] Clients { get; set; }
     }
 }
