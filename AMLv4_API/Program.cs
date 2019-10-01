@@ -641,12 +641,21 @@ namespace AMLv4_API
             #endregion
 
             #region Validate Pending Risk Profile
-            var validatePendingRiskProfileRequest = new ValidatePendingRiskProfileRequest()
+            //var validatePendingRiskProfileRequest = new ValidatePendingRiskProfileRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Profileid = "12345"
+            //};
+            //ValidatePendingRiskProfileResponse validatePendingRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<ValidatePendingRiskProfileResponse>(validatePendingRiskProfileRequest, "/riskprofile/validate", "additional reference", 0);
+            #endregion
+
+            #region Validate Pending Risk Profile
+            var enablePendingRiskProfileRequest = new EnablePendingRiskProfileRequest()
             {
                 Uri = authenticationResponse.uri,
                 Profileid = "12345"
             };
-            ValidatePendingRiskProfileResponse validatePendingRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<ValidatePendingRiskProfileResponse>(validatePendingRiskProfileRequest, "/riskprofile/validate", "additional reference", 0);
+            EnablePendingRiskProfileResponse enablePendingRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<EnablePendingRiskProfileResponse>(enablePendingRiskProfileRequest, "/riskprofile/enable", "additional reference", 0);
             #endregion
         }
     }
