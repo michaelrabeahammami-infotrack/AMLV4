@@ -46,16 +46,4 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("rules")]
         public Rule[] Rules { get; set; }
     }
-
-    public class Rule
-    {
-        [JsonProperty("ruleid")]
-        public long Ruleid { get; set; }
-
-        [JsonProperty("rulestatus")]
-        public string Rulestatus { get; set; }
-
-        [JsonProperty("summary")]
-        public string Summary { get; set; }
-    }
 }
