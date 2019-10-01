@@ -668,12 +668,21 @@ namespace AMLv4_API
             #endregion
 
             #region Unarchive Risk Profile
-            var unarchiveRiskProfileRequest = new UnarchiveRiskProfileRequest()
+            //var unarchiveRiskProfileRequest = new UnarchiveRiskProfileRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Profileid = "12345"
+            //};
+            //UnarchiveRiskProfileResponse UnarchiveRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<UnarchiveRiskProfileResponse>(unarchiveRiskProfileRequest, "/riskprofile/unarchive", "additional reference", 0);
+            #endregion
+
+            #region List Risk Profile Rules
+            var listRiskProfileRulesRequest = new ListRiskProfileRulesRequest()
             {
                 Uri = authenticationResponse.uri,
                 Profileid = "12345"
             };
-            UnarchiveRiskProfileResponse UnarchiveRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<UnarchiveRiskProfileResponse>(unarchiveRiskProfileRequest, "/riskprofile/unarchive", "additional reference", 0);
+            ListRiskProfileRulesResponse ListRiskProfileRulesResponse = RequestPerformer.RequestPerformer.PerformRequest<ListRiskProfileRulesResponse>(listRiskProfileRulesRequest, "/riskprofile/rule/list", "additional reference", 0);
             #endregion
         }
     }

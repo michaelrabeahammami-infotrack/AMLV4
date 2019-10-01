@@ -1,20 +1,36 @@
-﻿namespace AMLv4_API.Aml_v4_API.RiskAssessmentProfiles
+﻿using Newtonsoft.Json;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Profile Rule list (summaries) for one Risk Profile
     /// </summary>
     public class ListRiskProfileRulesRequest
     {
-        public string profileid { get; set; }
-        public string uri { get; set; }
+        [JsonProperty("profileid")]
+        public string Profileid { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
     public class ListRiskProfileRulesResponse
     {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public long profileid { get; set; }
-        public string profilename { get; set; }
-        public long rulecount { get; set; }
-        public Rule[] rules { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("profileid")]
+        public long Profileid { get; set; }
+
+        [JsonProperty("profilename")]
+        public string Profilename { get; set; }
+
+        [JsonProperty("rulecount")]
+        public long Rulecount { get; set; }
+
+        [JsonProperty("rules")]
+        public Rule[] Rules { get; set; }
     }
 }
