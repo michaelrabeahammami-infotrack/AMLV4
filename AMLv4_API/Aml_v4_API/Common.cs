@@ -529,6 +529,8 @@ namespace AMLv4_API.Aml_v4_API
 
     public enum InterviewValue 
     {
+        [EnumMember(Value = "")]
+        Empty,
         [EnumMember(Value = "home")]
         Home,
         [EnumMember(Value = "person")]
@@ -562,7 +564,9 @@ namespace AMLv4_API.Aml_v4_API
         [EnumMember(Value = "new")]
         New,
         [EnumMember(Value = "newknown")]
-        Newknown 
+        Newknown,
+        [EnumMember(Value = "")]
+        Empty
     };
 
     public enum AssessmentType 
@@ -765,16 +769,29 @@ namespace AMLv4_API.Aml_v4_API
         Pending
     };
 
+    public enum AllowEnhanced 
+    {
+        [EnumMember(Value = "no")]
+        No,
+        [EnumMember(Value = "yes")]
+        Yes 
+    };
+
+    public enum MatchType 
+    {
+        [EnumMember(Value = "defined")]
+        Defined,
+        [EnumMember(Value = "no")]
+        No,
+        [EnumMember(Value = "yes")]
+        Yes 
+    };
+
     #endregion
 
     public enum Cancelled { no, yes };
 
     public enum AllowOtherDocs { no, yes };
-
-    public enum AllowEnhanced { no, yes };
-
-    //public enum RelationshipValue { empty, existing, @new, newknown };
-
 
     #region JSONConverters
     public class SingleOrArrayConverter<T> : JsonConverter
