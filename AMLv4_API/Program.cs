@@ -717,13 +717,24 @@ namespace AMLv4_API
             #endregion
 
             #region Copy Profile Rule
-            var copyProfileRuleRequest = new CopyProfileRuleRequest()
+            //var copyProfileRuleRequest = new CopyProfileRuleRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Ruleid = "12345"
+            //};
+            //CopyProfileRuleResponse copyProfileRuleResponse = RequestPerformer.RequestPerformer.PerformRequest<CopyProfileRuleResponse>(copyProfileRuleRequest, "/riskprofile/rule/copy", "additional reference", 0);
+            #endregion
+
+            #region View Profile Rule
+            var viewProfileRuleRequest = new ViewProfileRuleRequest()
             {
                 Uri = authenticationResponse.uri,
                 Ruleid = "12345"
             };
-            CopyProfileRuleResponse copyProfileRuleResponse = RequestPerformer.RequestPerformer.PerformRequest<CopyProfileRuleResponse>(copyProfileRuleRequest, "/riskprofile/rule/copy", "additional reference", 0);
+            ViewProfileRuleResponse ViewProfileRuleResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewProfileRuleResponse>(viewProfileRuleRequest, "/riskprofile/rule/view", "additional reference", 0);
             #endregion
+
+
         }
     }
 }
