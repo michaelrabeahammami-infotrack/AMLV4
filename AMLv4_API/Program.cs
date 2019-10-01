@@ -686,34 +686,43 @@ namespace AMLv4_API
             #endregion
 
             #region Add Profile Rule
-            var addProfileRulesRequest = new AddProfileRulesRequest()
+            //var addProfileRulesRequest = new AddProfileRulesRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Profileid = "12345",
+            //    AllowEnhanced = AllowEnhanced.Yes,
+            //    AllowSimplified = AllowEnhanced.Yes,
+            //    DoccertEnhancedUnverified = AllowEnhanced.Yes,
+            //    DoccertEnhancedVerified = AllowEnhanced.Yes,
+            //    DoccertSimplified = AllowEnhanced.Yes,
+            //    InterviewMatch = MatchType.Yes,
+            //    InterviewValue = InterviewValue.Home,
+            //    NationalityMatch = MatchType.Yes,
+            //    NationalityValue = "uk",
+            //    NumadsElectronicEnhanced = "2",
+            //    NumadsEnhancedUnverified = "3",
+            //    NumadsEnhancedVerified = "4",
+            //    NumadsSimplified = "3",
+            //    NumidsElectronicEnhanced = "3",
+            //    NumidsEnhancedUnverified = "4",
+            //    NumidsEnhancedVerified = "3",
+            //    NumidsSimplified = "3",
+            //    NumotsElectronicEnhanced = "4",
+            //    RelationshipMatch = MatchType.Yes,
+            //    RelationshipValue = RelationshipValue.Existing,
+            //    ResidencyMatch = MatchType.Yes,
+            //    ResidencyValue = "hello"
+            //};
+            //AddPofileRuleResponse addPofileRuleResponse = RequestPerformer.RequestPerformer.PerformRequest<AddPofileRuleResponse>(addProfileRulesRequest, "/riskprofile/rule/add", "additional reference", 0);
+            #endregion
+
+            #region Copy Profile Rule
+            var copyProfileRuleRequest = new CopyProfileRuleRequest()
             {
                 Uri = authenticationResponse.uri,
-                Profileid = "12345",
-                AllowEnhanced = AllowEnhanced.Yes,
-                AllowSimplified = AllowEnhanced.Yes,
-                DoccertEnhancedUnverified = AllowEnhanced.Yes,
-                DoccertEnhancedVerified = AllowEnhanced.Yes,
-                DoccertSimplified = AllowEnhanced.Yes,
-                InterviewMatch = MatchType.Yes,
-                InterviewValue = InterviewValue.Home,
-                NationalityMatch = MatchType.Yes,
-                NationalityValue = "uk",
-                NumadsElectronicEnhanced = "2",
-                NumadsEnhancedUnverified = "3",
-                NumadsEnhancedVerified = "4",
-                NumadsSimplified = "3",
-                NumidsElectronicEnhanced = "3",
-                NumidsEnhancedUnverified = "4",
-                NumidsEnhancedVerified = "3",
-                NumidsSimplified = "3",
-                NumotsElectronicEnhanced = "4",
-                RelationshipMatch = MatchType.Yes,
-                RelationshipValue = RelationshipValue.Existing,
-                ResidencyMatch = MatchType.Yes,
-                ResidencyValue = "hello"
+                Ruleid = "12345"
             };
-            AddPofileRuleResponse addPofileRuleResponse = RequestPerformer.RequestPerformer.PerformRequest<AddPofileRuleResponse>(addProfileRulesRequest, "/riskprofile/rule/add", "additional reference", 0);
+            CopyProfileRuleResponse copyProfileRuleResponse = RequestPerformer.RequestPerformer.PerformRequest<CopyProfileRuleResponse>(copyProfileRuleRequest, "/riskprofile/rule/copy", "additional reference", 0);
             #endregion
         }
     }
