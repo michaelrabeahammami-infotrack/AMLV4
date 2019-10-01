@@ -557,12 +557,21 @@ namespace AMLv4_API
             #endregion
 
             #region View Relationship
-            var viewRelationshipsRequest = new ViewRelationshipsRequest()
+            //var viewRelationshipsRequest = new ViewRelationshipsRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    RelationshipId = "12345"
+            //};
+            //ViewRelationshipsResponse viewRelationshipsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewRelationshipsResponse>(viewRelationshipsRequest, "/relationship/view", "additional reference", 0);
+            #endregion
+
+            #region View Relationship
+            var archiveRelationshipRequest = new ArchiveRelationshipRequest()
             {
                 Uri = authenticationResponse.uri,
                 RelationshipId = "12345"
             };
-            ViewRelationshipsResponse viewRelationshipsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewRelationshipsResponse>(viewRelationshipsRequest, "/relationship/view", "additional reference", 0);
+            ArchiveRelationshipResponse archiveRelationshipResponse = RequestPerformer.RequestPerformer.PerformRequest<ArchiveRelationshipResponse>(archiveRelationshipRequest, "/relationship/archive", "additional reference", 0);
             #endregion
         }
     }
