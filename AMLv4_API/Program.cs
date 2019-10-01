@@ -632,12 +632,21 @@ namespace AMLv4_API
             #endregion
 
             #region Delete Pending Risk Profile
-            var deletePendingRiskProfileRequest = new DeletePendingRiskProfileRequest()
+            //var deletePendingRiskProfileRequest = new DeletePendingRiskProfileRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Profileid = "12345"
+            //};
+            //DeletePendingRiskProfileResponse deletePendingRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<DeletePendingRiskProfileResponse>(deletePendingRiskProfileRequest, "/riskprofile/delete", "additional reference", 0);
+            #endregion
+
+            #region Validate Pending Risk Profile
+            var validatePendingRiskProfileRequest = new ValidatePendingRiskProfileRequest()
             {
                 Uri = authenticationResponse.uri,
                 Profileid = "12345"
             };
-            DeletePendingRiskProfileResponse deletePendingRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<DeletePendingRiskProfileResponse>(deletePendingRiskProfileRequest, "/riskprofile/delete", "additional reference", 0);
+            ValidatePendingRiskProfileResponse validatePendingRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<ValidatePendingRiskProfileResponse>(validatePendingRiskProfileRequest, "/riskprofile/validate", "additional reference", 0);
             #endregion
         }
     }
