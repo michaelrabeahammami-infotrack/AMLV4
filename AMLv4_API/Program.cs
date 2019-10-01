@@ -766,12 +766,21 @@ namespace AMLv4_API
             #endregion
 
             #region Delete Profile Rule
-            var deletePendingProfileRuleRequest = new DeletePendingProfileRuleRequest()
+            //var deletePendingProfileRuleRequest = new DeletePendingProfileRuleRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Ruleid = "12345"
+            //};
+            //DeletePendingProfileRuleResponse deletePendingProfileRuleResponse = RequestPerformer.RequestPerformer.PerformRequest<DeletePendingProfileRuleResponse>(deletePendingProfileRuleRequest, "/riskprofile/rule/delete", "additional reference", 0);
+            #endregion
+
+            #region Validate Rule Against Other Rules
+            var validateRuleAgainstOtherRulesRequest = new ValidateRuleAgainstOtherRulesRequest()
             {
                 Uri = authenticationResponse.uri,
                 Ruleid = "12345"
             };
-            DeletePendingProfileRuleResponse deletePendingProfileRuleResponse = RequestPerformer.RequestPerformer.PerformRequest<DeletePendingProfileRuleResponse>(deletePendingProfileRuleRequest, "/riskprofile/rule/delete", "additional reference", 0);
+            ValidateRuleAgainstOtherRulesResponse ValidateRuleAgainstOtherRulesResponse = RequestPerformer.RequestPerformer.PerformRequest<ValidateRuleAgainstOtherRulesResponse>(validateRuleAgainstOtherRulesRequest, "/riskprofile/rule/validate", "additional reference", 0);
             #endregion
         }
     }
