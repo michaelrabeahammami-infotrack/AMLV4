@@ -1,34 +1,74 @@
-﻿namespace AMLv4_API.Aml_v4_API.AssessmentArchiving
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Unarchive Assessment to restore to reports
     /// </summary>
     public class UnarchiveAssessmentRequest
     {
-        public string AssessmentID { get; set; }
-        public string uri { get; set; }
+        [JsonProperty("AssessmentID")]
+        public string AssessmentId { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
     public class UnarchiveAssessmentResponse
     {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public long AssessmentID { get; set; }
-        public long ClientID { get; set; }
-        public long AmlUserID { get; set; }
-        public long AmlCustomerID { get; set; }
-        public string clienttype { get; set; }
-        public string Date { get; set; }
-        public string reference { get; set; }
-        public string assessmenttype { get; set; }
-        public long profileid { get; set; }
-        public string profilename { get; set; }
-        public string status { get; set; }
-        public string Archived { get; set; }
-        public string Locked { get; set; }
-        public long numdocuments { get; set; }
-        public long numrelationships { get; set; }
-        public long numalerts { get; set; }
-    }
+        [JsonProperty("error")]
+        public string Error { get; set; }
 
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("AssessmentID")]
+        public long AssessmentId { get; set; }
+
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
+
+        [JsonProperty("AmlUserID")]
+        public long AmlUserId { get; set; }
+
+        [JsonProperty("AmlCustomerID")]
+        public long AmlCustomerId { get; set; }
+
+        [JsonProperty("clienttype")]
+        public string Clienttype { get; set; }
+
+        [JsonProperty("date")]
+        public DateTime Date { get; set; }
+
+        [JsonProperty("reference")]
+        public string Reference { get; set; }
+
+        [JsonProperty("assessmenttype")]
+        public string Assessmenttype { get; set; }
+
+        [JsonProperty("profileid")]
+        public long Profileid { get; set; }
+
+        [JsonProperty("profilename")]
+        public string Profilename { get; set; }
+
+        [JsonProperty("status")]
+        public string Status { get; set; }
+
+        [JsonProperty("Archived")]
+        public string Archived { get; set; }
+
+        [JsonProperty("Locked")]
+        public string Locked { get; set; }
+
+        [JsonProperty("numdocuments")]
+        public long Numdocuments { get; set; }
+
+        [JsonProperty("numrelationships")]
+        public long Numrelationships { get; set; }
+
+        [JsonProperty("numalerts")]
+        public long Numalerts { get; set; }
+    }
 }

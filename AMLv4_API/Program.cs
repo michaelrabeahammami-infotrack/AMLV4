@@ -519,14 +519,32 @@ namespace AMLv4_API
             #endregion
 
             #region Monitoring Alert Update
-            var monitoringAlertUpdateRequest = new MonitoringAlertUpdateRequest()
+            //var monitoringAlertUpdateRequest = new MonitoringAlertUpdateRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AlertId = "12345",
+            //    Cancelled = Cancelled.no,
+            //    CancelReason = "myReason"
+            //};
+            //MonitoringAlertUpdateResponse monitoringAlertUpdateResponse = RequestPerformer.RequestPerformer.PerformRequest<MonitoringAlertUpdateResponse>(monitoringAlertUpdateRequest, "/alert/update", "additional reference", 0);
+            #endregion
+
+            #region Archive Assessment
+            //var archiveAssessmentRequest = new ArchiveAssessmentRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AssessmentId = "12345"
+            //};
+            //ArchiveAssessmentResponse archiveAssessmentResponse = RequestPerformer.RequestPerformer.PerformRequest<ArchiveAssessmentResponse>(archiveAssessmentRequest, "/assessment/archive", "additional reference", 0);
+            #endregion
+
+            #region Unarchive Assessment
+            var unarchiveAssessmentRequest = new UnarchiveAssessmentRequest()
             {
                 Uri = authenticationResponse.uri,
-                AlertId = "12345",
-                Cancelled = Cancelled.no,
-                CancelReason = "myReason"
+                AssessmentId = "12345"
             };
-            MonitoringAlertUpdateResponse monitoringAlertUpdateResponse = RequestPerformer.RequestPerformer.PerformRequest<MonitoringAlertUpdateResponse>(monitoringAlertUpdateRequest, "/alert/update", "additional reference", 0);
+            UnarchiveAssessmentResponse unarchiveAssessmentResponse = RequestPerformer.RequestPerformer.PerformRequest<UnarchiveAssessmentResponse>(unarchiveAssessmentRequest, "/assessment/unarchive", "additional reference", 0);
             #endregion
         }
     }
