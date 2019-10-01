@@ -659,12 +659,21 @@ namespace AMLv4_API
             #endregion
 
             #region Archive Risk Profile
-            var archiveRiskProfileRequest = new ArchiveRiskProfileRequest()
+            //var archiveRiskProfileRequest = new ArchiveRiskProfileRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Profileid = "12345"
+            //};
+            //ArchiveRiskProfileResponse ArchiveRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<ArchiveRiskProfileResponse>(archiveRiskProfileRequest, "/riskprofile/archive", "additional reference", 0);
+            #endregion
+
+            #region Unarchive Risk Profile
+            var unarchiveRiskProfileRequest = new UnarchiveRiskProfileRequest()
             {
                 Uri = authenticationResponse.uri,
                 Profileid = "12345"
             };
-            ArchiveRiskProfileResponse ArchiveRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<ArchiveRiskProfileResponse>(archiveRiskProfileRequest, "/riskprofile/archive", "additional reference", 0);
+            UnarchiveRiskProfileResponse UnarchiveRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<UnarchiveRiskProfileResponse>(unarchiveRiskProfileRequest, "/riskprofile/unarchive", "additional reference", 0);
             #endregion
         }
     }
