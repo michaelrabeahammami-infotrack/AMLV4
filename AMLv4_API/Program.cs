@@ -594,13 +594,22 @@ namespace AMLv4_API
             #endregion
 
             #region Add Risk Profile
-            var addRiskProfileRequest = new AddRiskProfileRequest()
+            //var addRiskProfileRequest = new AddRiskProfileRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Profilename = "myProfile",
+            //    Profiletype = Profiletype.Personal
+            //};
+            //AddRiskProfileResponse addRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<AddRiskProfileResponse>(addRiskProfileRequest, "/riskprofile/add", "additional reference", 0);
+            #endregion
+
+            #region Add Risk Profile
+            var copyRiskProfileRequest = new CopyRiskProfileRequest()
             {
                 Uri = authenticationResponse.uri,
-                Profilename = "myProfile",
-                Profiletype = Profiletype.Personal
+                Profileid = "12345"
             };
-            AddRiskProfileResponse addRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<AddRiskProfileResponse>(addRiskProfileRequest, "/riskprofile/add", "additional reference", 0);
+            CopyRiskProfileResponse copyRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<CopyRiskProfileResponse>(copyRiskProfileRequest, "/riskprofile/copy", "additional reference", 0);
             #endregion
         }
     }

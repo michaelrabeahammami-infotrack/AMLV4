@@ -1,32 +1,61 @@
-﻿namespace AMLv4_API.Aml_v4_API.RiskAssessmentProfiles
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
-    /// Add a new Risk Profile (the rules must be added separately)
+    /// Copy an existing Risk profile and rules
     /// </summary>
     public class CopyRiskProfileRequest
     {
-        public string profilename { get; set; }
-        public Profiletype profiletype { get; set; }
-        public string uri { get; set; }
+        [JsonProperty("profileid")]
+        public string Profileid { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
     public class CopyRiskProfileResponse
     {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public string profilecreated { get; set; }
-        public long profileid { get; set; }
-        public string profilename { get; set; }
-        public string profileorigin { get; set; }
-        public string profilestatus { get; set; }
-        public string profiletype { get; set; }
-        public long rulecount { get; set; }
-        public Rule[] rules { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("profilecreated")]
+        public DateTime Profilecreated { get; set; }
+
+        [JsonProperty("profileid")]
+        public long Profileid { get; set; }
+
+        [JsonProperty("profilename")]
+        public string Profilename { get; set; }
+
+        [JsonProperty("profileorigin")]
+        public string Profileorigin { get; set; }
+
+        [JsonProperty("profilestatus")]
+        public string Profilestatus { get; set; }
+
+        [JsonProperty("profiletype")]
+        public string Profiletype { get; set; }
+
+        [JsonProperty("rulecount")]
+        public long Rulecount { get; set; }
+
+        [JsonProperty("rules")]
+        public Rule[] Rules { get; set; }
     }
 
     public class Rule
     {
-        public long ruleid { get; set; }
-        public string rulestatus { get; set; }
-        public string summary { get; set; }
+        [JsonProperty("ruleid")]
+        public long Ruleid { get; set; }
+
+        [JsonProperty("rulestatus")]
+        public string Rulestatus { get; set; }
+
+        [JsonProperty("summary")]
+        public string Summary { get; set; }
     }
 }
