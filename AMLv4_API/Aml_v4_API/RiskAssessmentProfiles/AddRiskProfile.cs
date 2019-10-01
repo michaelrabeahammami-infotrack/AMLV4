@@ -1,24 +1,49 @@
-﻿namespace AMLv4_API.Aml_v4_API.RiskAssessmentProfiles
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Add a new Risk Profile (the rules must be added separately)
     /// </summary>
-    public partial class AddRiskProfileRequest
+    public class AddRiskProfileRequest
     {
-        public string profilename { get; set; }
-        public Profiletype profiletype { get; set; }
-        public string uri { get; set; }
+        [JsonProperty("profilename")]
+        public string Profilename { get; set; }
+
+        [JsonProperty("profiletype")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Profiletype Profiletype { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
     public class AddRiskProfileResponse
     {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public long profileid { get; set; }
-        public string profilename { get; set; }
-        public string profiletype { get; set; }
-        public string profilestatus { get; set; }
-        public string profilecreated { get; set; }
-        public string profileorigin { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("profileid")]
+        public long Profileid { get; set; }
+
+        [JsonProperty("profilename")]
+        public string Profilename { get; set; }
+
+        [JsonProperty("profiletype")]
+        public string Profiletype { get; set; }
+
+        [JsonProperty("profilestatus")]
+        public string Profilestatus { get; set; }
+
+        [JsonProperty("profilecreated")]
+        public DateTime Profilecreated { get; set; }
+
+        [JsonProperty("profileorigin")]
+        public string Profileorigin { get; set; }
     }
 }

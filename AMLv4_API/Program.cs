@@ -584,13 +584,23 @@ namespace AMLv4_API
             #endregion
 
             #region List Risk Profiles
-            var listRiskProfilesRequest = new ListRiskProfilesRequest()
+            //var listRiskProfilesRequest = new ListRiskProfilesRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    Profilestatus = Profilestatus.Enabled,
+            //    Profiletype = Profiletype.Personal
+            //};
+            //ListRiskProfilesResponse listRiskProfilesResponse = RequestPerformer.RequestPerformer.PerformRequest<ListRiskProfilesResponse>(listRiskProfilesRequest, "/riskprofile/list", "additional reference", 0);
+            #endregion
+
+            #region Add Risk Profile
+            var addRiskProfileRequest = new AddRiskProfileRequest()
             {
                 Uri = authenticationResponse.uri,
-                Profilestatus = Profilestatus.Enabled,
+                Profilename = "myProfile",
                 Profiletype = Profiletype.Personal
             };
-            ListRiskProfilesResponse listRiskProfilesResponse = RequestPerformer.RequestPerformer.PerformRequest<ListRiskProfilesResponse>(listRiskProfilesRequest, "/riskprofile/list", "additional reference", 0);
+            AddRiskProfileResponse addRiskProfileResponse = RequestPerformer.RequestPerformer.PerformRequest<AddRiskProfileResponse>(addRiskProfileRequest, "/riskprofile/add", "additional reference", 0);
             #endregion
         }
     }
