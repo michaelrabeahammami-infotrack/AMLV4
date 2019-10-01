@@ -1,21 +1,39 @@
-﻿namespace AMLv4_API.Aml_v4_API.RelationshipViewingAndArchiving
+﻿using Newtonsoft.Json;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// View a single Client Relationship
     /// </summary>
     public class ViewRelationshipsRequest
     {
-        public string RelationshipID { get; set; }
-        public string uri { get; set; }
+        [JsonProperty("RelationshipID")]
+        public string RelationshipId { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
     public class ViewRelationshipsResponse
     {
-        public string error { get; set; }
-        public long RelationshipID { get; set; }
-        public long ClientID { get; set; }
-        public long AssociateID { get; set; }
-        public long RelatedClientID { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
+
+        [JsonProperty("RelationshipID")]
+        public long RelationshipId { get; set; }
+
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
+
+        [JsonProperty("AssociateID")]
+        public long AssociateId { get; set; }
+
+        [JsonProperty("RelatedClientID")]
+        public long RelatedClientId { get; set; }
+
+        [JsonProperty("Relationship")]
         public string Relationship { get; set; }
+
+        [JsonProperty("Archived")]
         public string Archived { get; set; }
     }
 }
