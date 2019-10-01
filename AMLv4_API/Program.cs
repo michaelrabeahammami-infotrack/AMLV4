@@ -539,12 +539,21 @@ namespace AMLv4_API
             #endregion
 
             #region Unarchive Assessment
-            var unarchiveAssessmentRequest = new UnarchiveAssessmentRequest()
+            //var unarchiveAssessmentRequest = new UnarchiveAssessmentRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AssessmentId = "12345"
+            //};
+            //UnarchiveAssessmentResponse unarchiveAssessmentResponse = RequestPerformer.RequestPerformer.PerformRequest<UnarchiveAssessmentResponse>(unarchiveAssessmentRequest, "/assessment/unarchive", "additional reference", 0);
+            #endregion
+
+            #region Unarchive Assessment
+            var listRelationshipsRequest = new ListRelationshipsRequest()
             {
                 Uri = authenticationResponse.uri,
-                AssessmentId = "12345"
+                ClientId = "12345"
             };
-            UnarchiveAssessmentResponse unarchiveAssessmentResponse = RequestPerformer.RequestPerformer.PerformRequest<UnarchiveAssessmentResponse>(unarchiveAssessmentRequest, "/assessment/unarchive", "additional reference", 0);
+            ListRelationshipsResponse listRelationshipsResponse = RequestPerformer.RequestPerformer.PerformRequest<ListRelationshipsResponse>(listRelationshipsRequest, "/relationship/list", "additional reference", 0);
             #endregion
         }
     }

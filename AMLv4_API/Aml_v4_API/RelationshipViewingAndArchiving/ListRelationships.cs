@@ -1,35 +1,34 @@
-﻿namespace AMLv4_API.Aml_v4_API.RelationshipViewingAndArchiving
+﻿using Newtonsoft.Json;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// List Client existing relationships
     /// </summary>
     public class ListRelationshipsRequest
     {
-        public string ClientID { get; set; }
-        public string uri { get; set; }
-    }
-    public partial class ListRelationshipsResponse
-    {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public long ClientID { get; set; }
-        public long relationshipcount { get; set; }
-        public Relationship[] relationships { get; set; }
-    }
+        [JsonProperty("ClientID")]
+        public string ClientId { get; set; }
 
-    public class Relationship
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+    }
+    public class ListRelationshipsResponse
     {
-        public long RelationshipID { get; set; }
-        public long RelatedClientID { get; set; }
-        public long AssociateID { get; set; }
-        public string RelationshipRelationship { get; set; }
-        public string Clienttype { get; set; }
-        public string Forename { get; set; }
-        public string Surname { get; set; }
-        public string DOB { get; set; }
-        public string CurrentAddressPostcode { get; set; }
-        public string CountryCode { get; set; }
-        public string ComplianceStatus { get; set; }
-        public string Archived { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
+
+        [JsonProperty("relationshipcount")]
+        public long Relationshipcount { get; set; }
+
+        [JsonProperty("relationships")]
+        public Relationship[] Relationships { get; set; }
     }
 }
