@@ -47,14 +47,7 @@ namespace AMLv4_API.RequestPerformer
 
             //log the authority response
             // LogAuthorityResponse(logId, clientResult);
-
-
             return clientResult;
         }
-
     }
-
-
-   
-
 }

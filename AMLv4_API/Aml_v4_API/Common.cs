@@ -741,6 +741,15 @@ namespace AMLv4_API.Aml_v4_API
         [EnumMember(Value = "ubo")]
         Ubo 
     };
+    public enum Profilestatus 
+    {
+        [EnumMember(Value = "archived")]
+        Archived,
+        [EnumMember(Value = "enabled")]
+        Enabled,
+        [EnumMember(Value = "pending")]
+        Pending
+    };
 
     #endregion
 
@@ -752,7 +761,6 @@ namespace AMLv4_API.Aml_v4_API
 
     //public enum RelationshipValue { empty, existing, @new, newknown };
 
-    public enum Profilestatus { archived, enabled, pending };
 
     #region JSONConverters
     public class SingleOrArrayConverter<T> : JsonConverter

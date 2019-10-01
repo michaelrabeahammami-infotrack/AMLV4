@@ -565,7 +565,7 @@ namespace AMLv4_API
             //ViewRelationshipsResponse viewRelationshipsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewRelationshipsResponse>(viewRelationshipsRequest, "/relationship/view", "additional reference", 0);
             #endregion
 
-            #region View Relationship
+            #region Archive Relationship
             //var archiveRelationshipRequest = new ArchiveRelationshipRequest()
             //{
             //    Uri = authenticationResponse.uri,
@@ -574,13 +574,23 @@ namespace AMLv4_API
             //ArchiveRelationshipResponse archiveRelationshipResponse = RequestPerformer.RequestPerformer.PerformRequest<ArchiveRelationshipResponse>(archiveRelationshipRequest, "/relationship/archive", "additional reference", 0);
             #endregion
 
-            #region View Relationship
-            var unarchiveRelationshipRequest = new UnarchiveRelationshipRequest()
+            #region Unarchive Relationship
+            //var unarchiveRelationshipRequest = new UnarchiveRelationshipRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    RelationshipId = "12345"
+            //};
+            //UnarchiveRelationshipResponse unarchiveRelationshipResponse = RequestPerformer.RequestPerformer.PerformRequest<UnarchiveRelationshipResponse>(unarchiveRelationshipRequest, "/relationship/unarchive", "additional reference", 0);
+            #endregion
+
+            #region List Risk Profiles
+            var listRiskProfilesRequest = new ListRiskProfilesRequest()
             {
                 Uri = authenticationResponse.uri,
-                RelationshipId = "12345"
+                Profilestatus = Profilestatus.Enabled,
+                Profiletype = Profiletype.Personal
             };
-            UnarchiveRelationshipResponse unarchiveRelationshipResponse = RequestPerformer.RequestPerformer.PerformRequest<UnarchiveRelationshipResponse>(unarchiveRelationshipRequest, "/relationship/unarchive", "additional reference", 0);
+            ListRiskProfilesResponse listRiskProfilesResponse = RequestPerformer.RequestPerformer.PerformRequest<ListRiskProfilesResponse>(listRiskProfilesRequest, "/riskprofile/list", "additional reference", 0);
             #endregion
         }
     }

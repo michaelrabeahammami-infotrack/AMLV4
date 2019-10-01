@@ -1,30 +1,38 @@
-﻿namespace AMLv4_API.Aml_v4_API.RiskAssessmentProfiles
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// List all Risk Profiles for customer
     /// </summary>
     public class ListRiskProfilesRequest
     {
-        public Profilestatus? profilestatus { get; set; }
-        public Profiletype? profiletype { get; set; }
-        public string uri { get; set; }
+        [JsonProperty("profilestatus", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Profilestatus? Profilestatus { get; set; }
+
+        [JsonProperty("profiletype", NullValueHandling = NullValueHandling.Ignore)]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Profiletype? Profiletype { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
 
     public class ListRiskProfilesResponse
     {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public long profilecount { get; set; }
-        public Profile[] profiles { get; set; }
-    }
+        [JsonProperty("error")]
+        public string Error { get; set; }
 
-    public class Profile
-    {
-        public long profileid { get; set; }
-        public string profilename { get; set; }
-        public string profilestatus { get; set; }
-        public string profiletype { get; set; }
-        public string profilecreated { get; set; }
-        public string profileorigin { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("profilecount")]
+        public long Profilecount { get; set; }
+
+        [JsonProperty("profiles")]
+        public Profile[] Profiles { get; set; }
     }
 }
