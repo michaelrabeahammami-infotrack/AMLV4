@@ -735,34 +735,43 @@ namespace AMLv4_API
             #endregion
 
             #region Update Profile Rule
-            var updatePendingProfileRuleRequest = new UpdatePendingProfileRuleRequest()
+            //var updatePendingProfileRuleRequest = new UpdatePendingProfileRuleRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AllowEnhanced = AllowEnhanced.Yes,
+            //    AllowSimplified = AllowEnhanced.Yes,
+            //    DoccertEnhancedUnverified = AllowEnhanced.Yes,
+            //    DoccertEnhancedVerified = AllowEnhanced.Yes,
+            //    DoccertSimplified = AllowEnhanced.Yes,
+            //    InterviewMatch = MatchType.Yes,
+            //    InterviewValue = InterviewValue.Home,
+            //    NationalityMatch = MatchType.Yes,
+            //    NationalityValue = "uk",
+            //    NumadsElectronicEnhanced = "2",
+            //    NumadsEnhancedUnverified = "3",
+            //    NumadsEnhancedVerified = "4",
+            //    NumadsSimplified = "3",
+            //    NumidsElectronicEnhanced = "3",
+            //    NumidsEnhancedUnverified = "4",
+            //    NumidsEnhancedVerified = "3",
+            //    NumidsSimplified = "3",
+            //    NumotsElectronicEnhanced = "4",
+            //    RelationshipMatch = MatchType.Yes,
+            //    RelationshipValue = RelationshipValue.Existing,
+            //    ResidencyMatch = MatchType.Yes,
+            //    ResidencyValue = "hello",
+            //    Ruleid = "12345"
+            //};
+            //UpdatePendingProfileRuleResponse UpdatePendingProfileRuleResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdatePendingProfileRuleResponse>(updatePendingProfileRuleRequest, "/riskprofile/rule/update", "additional reference", 0);
+            #endregion
+
+            #region Delete Profile Rule
+            var deletePendingProfileRuleRequest = new DeletePendingProfileRuleRequest()
             {
                 Uri = authenticationResponse.uri,
-                AllowEnhanced = AllowEnhanced.Yes,
-                AllowSimplified = AllowEnhanced.Yes,
-                DoccertEnhancedUnverified = AllowEnhanced.Yes,
-                DoccertEnhancedVerified = AllowEnhanced.Yes,
-                DoccertSimplified = AllowEnhanced.Yes,
-                InterviewMatch = MatchType.Yes,
-                InterviewValue = InterviewValue.Home,
-                NationalityMatch = MatchType.Yes,
-                NationalityValue = "uk",
-                NumadsElectronicEnhanced = "2",
-                NumadsEnhancedUnverified = "3",
-                NumadsEnhancedVerified = "4",
-                NumadsSimplified = "3",
-                NumidsElectronicEnhanced = "3",
-                NumidsEnhancedUnverified = "4",
-                NumidsEnhancedVerified = "3",
-                NumidsSimplified = "3",
-                NumotsElectronicEnhanced = "4",
-                RelationshipMatch = MatchType.Yes,
-                RelationshipValue = RelationshipValue.Existing,
-                ResidencyMatch = MatchType.Yes,
-                ResidencyValue = "hello",
                 Ruleid = "12345"
             };
-            UpdatePendingProfileRuleResponse UpdatePendingProfileRuleResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdatePendingProfileRuleResponse>(updatePendingProfileRuleRequest, "/riskprofile/rule/update", "additional reference", 0);
+            DeletePendingProfileRuleResponse deletePendingProfileRuleResponse = RequestPerformer.RequestPerformer.PerformRequest<DeletePendingProfileRuleResponse>(deletePendingProfileRuleRequest, "/riskprofile/rule/delete", "additional reference", 0);
             #endregion
         }
     }
