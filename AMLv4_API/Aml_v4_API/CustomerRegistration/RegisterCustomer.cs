@@ -130,44 +130,4 @@
         public string[] Enum { get; set; }
     }
     #endregion
-    //#region Request
-
-    //public partial class RegisterCustomerRequest
-    //{
-    //    public CustData CustData { get; set; }
-    //    public string uri { get; set; }
-    //}
-
-    //public partial class CustData
-    //{
-    //    public string ContactEmail { get; set; }
-    //    public string ContactForename { get; set; }
-    //    public string ContactPosition { get; set; }
-    //    public string ContactSurname { get; set; }
-    //    public string ContactTitle { get; set; }
-    //    public string CustomerAccess { get; set; }
-    //    public string CustomerAddress { get; set; }
-    //    public string CustomerICONumber { get; set; }
-    //    public string CustomerName { get; set; }
-    //    public string MLROContactEmail { get; set; }
-    //    public string MLROContactName { get; set; }
-    //    public string MLROContactPosition { get; set; }
-    //    public string OrgType { get; set; }
-    //    public string Telephone { get; set; }
-    //    public string TermsAccepted { get; set; }
-    //}
-
-    //#endregion Request
-
-    //#region Response
-
-    //public class RegisterCustomerResponse
-    //{
-    //    public string error { get; set; }
-    //    public string uri { get; set; }
-    //    public string version { get; set; }
-    //}
-
-    //#endregion Response
-
 }

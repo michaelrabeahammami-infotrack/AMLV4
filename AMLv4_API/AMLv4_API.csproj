@@ -76,7 +76,6 @@
     <Compile Include="Aml_v4_API\Authentication\Authentication.cs" />
     <Compile Include="Aml_v4_API\CustomerTermsRevisions\CheckCustomerTermsVersion.cs" />
     <Compile Include="Aml_v4_API\Client\ClientListForCustomer.cs" />
-    <Compile Include="Aml_v4_API\Client\NonPersonalViewClientData.cs" />
     <Compile Include="Aml_v4_API\Client\SearchForClientWithWildcards.cs" />
     <Compile Include="Aml_v4_API\Client\ViewClientData.cs" />
     <Compile Include="Aml_v4_API\Common.cs" />

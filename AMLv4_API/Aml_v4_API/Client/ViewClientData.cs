@@ -15,7 +15,7 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("uri")]
         public string Uri { get; set; }
     }
-    public partial class ViewClientDataResponse
+    public class ViewClientDataResponse
     {
         [JsonProperty("error")]
         public string Error { get; set; }
