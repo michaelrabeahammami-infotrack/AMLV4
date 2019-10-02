@@ -960,13 +960,22 @@ namespace AMLv4_API
             //UpdateUserDetailsAndRightsResponse UpdateUserDetailsAndRightsResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdateUserDetailsAndRightsResponse>(UpdateUserDetailsAndRightsRequest, "/user/update", "additional reference", 0);
             #endregion
 
-            #region View User Details
-            var UserArchiveRequest = new UserArchiveRequest()
+            #region User Archive
+            //var UserArchiveRequest = new UserArchiveRequest()
+            //{
+            //    AmlUserId = "1234567",
+            //    Uri = authenticationResponse.uri
+            //};
+            //UserArchiveResponse UserArchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<UserArchiveResponse>(UserArchiveRequest, "/user/archive", "additional reference", 0);
+            #endregion
+
+            #region User Archive
+            var UserUnarchiveRequest = new UserUnarchiveRequest()
             {
                 AmlUserId = "1234567",
                 Uri = authenticationResponse.uri
             };
-            UserArchiveResponse UserArchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<UserArchiveResponse>(UserArchiveRequest, "/user/archive", "additional reference", 0);
+            UserUnarchiveResponse UserUnarchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<UserUnarchiveResponse>(UserUnarchiveRequest, "/user/unarchive", "additional reference", 0);
             #endregion
         }
     }
