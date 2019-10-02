@@ -841,12 +841,20 @@ namespace AMLv4_API
             #endregion
 
             #region Customer All Clients Due Diligence Report
-            var CustomerAllClientsDueDiligenceReportRequest = new CustomerAllClientsDueDiligenceReportRequest()
+            //var CustomerAllClientsDueDiligenceReportRequest = new CustomerAllClientsDueDiligenceReportRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AmlCustomerId = "12345"
+            //};
+            //CustomerAllClientsDueDiligenceReportResponse CustomerAllClientsDueDiligenceReportResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerAllClientsDueDiligenceReportResponse>(CustomerAllClientsDueDiligenceReportRequest, "/customer/cddreport", "additional reference", 0);
+            #endregion
+
+            #region Customer List
+            var CustomerListRequest = new CustomerListRequest()
             {
-                Uri = authenticationResponse.uri,
-                AmlCustomerId = "12345"
+                Uri = authenticationResponse.uri
             };
-            CustomerAllClientsDueDiligenceReportResponse CustomerAllClientsDueDiligenceReportResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerAllClientsDueDiligenceReportResponse>(CustomerAllClientsDueDiligenceReportRequest, "/customer/cddreport", "additional reference", 0);
+            CustomerListResponse CustomerListResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerListResponse>(CustomerListRequest, "/customer/list", "additional reference", 0);
             #endregion
         }
     }
