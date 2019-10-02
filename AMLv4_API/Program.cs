@@ -850,11 +850,20 @@ namespace AMLv4_API
             #endregion
 
             #region Customer List
-            var CustomerListRequest = new CustomerListRequest()
+            //var CustomerListRequest = new CustomerListRequest()
+            //{
+            //    Uri = authenticationResponse.uri
+            //};
+            //CustomerListResponse CustomerListResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerListResponse>(CustomerListRequest, "/customer/list", "additional reference", 0);
+            #endregion
+
+            #region Customer Archive
+            var CustomerArchiveRequest = new CustomerArchiveRequest()
             {
-                Uri = authenticationResponse.uri
+                Uri = authenticationResponse.uri,
+                AmlCustomerId = "12345"
             };
-            CustomerListResponse CustomerListResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerListResponse>(CustomerListRequest, "/customer/list", "additional reference", 0);
+            CustomerArchiveResponse CustomerArchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerArchiveResponse>(CustomerArchiveRequest, "/customer/archive", "additional reference", 0);
             #endregion
         }
     }
