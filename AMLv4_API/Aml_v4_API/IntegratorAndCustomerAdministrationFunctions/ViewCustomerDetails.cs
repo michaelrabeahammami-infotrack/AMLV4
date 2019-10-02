@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// View Customer Details
     /// </summary>
-    public class ViewCustomerDetailsRequest
+    public class ViewCustomerDetailsRequest : Amlv4BaseRequest
     {
         [JsonProperty("AmlCustomerID")]
         public string AmlCustomerId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ViewCustomerDetailsResponse : Amlv4BaseResponse

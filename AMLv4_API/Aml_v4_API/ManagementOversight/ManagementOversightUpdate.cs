@@ -5,7 +5,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Add Management Oversight Investigation Data
     /// </summary>
-    public class ManagementOversightUpdateRequest
+    public class ManagementOversightUpdateRequest : Amlv4BaseRequest
     {
         [JsonProperty("AssessmentID")]
         public string AssessmentId { get; set; }
@@ -27,9 +27,6 @@ namespace AMLv4_API.Aml_v4_API
         /// </summary>
         [JsonProperty("Unsatisfied", NullValueHandling = NullValueHandling.Ignore)]
         public string Unsatisfied { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ManagementOversightUpdateResponse : Amlv4BaseResponse

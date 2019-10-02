@@ -7,7 +7,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Search for clients matching various pattterns
     /// </summary>
-    public class SearchForClientWithWildcardsRequest
+    public class SearchForClientWithWildcardsRequest : Amlv4BaseRequest
     {
         /// <summary>
         /// Only searches by specific user (by AMLSearch id)
@@ -71,9 +71,6 @@ namespace AMLv4_API.Aml_v4_API
         /// </summary>
         [JsonProperty("StartDate", NullValueHandling = NullValueHandling.Ignore)]
         public string StartDate { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
 
         /// <summary>
         /// Only searches by specific user (Forename Surname, % wildcards)

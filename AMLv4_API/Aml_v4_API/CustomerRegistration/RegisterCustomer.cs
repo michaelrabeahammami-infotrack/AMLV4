@@ -7,13 +7,10 @@
     /// <summary>
     /// Register a new Customer
     /// </summary>
-    public class RegisterCustomerRequest
+    public class RegisterCustomerRequest : Amlv4BaseRequest
     {
         [JsonProperty("CustData")]
         public CustData CustData { get; set; }
-
-        [JsonProperty("uri", NullValueHandling = NullValueHandling.Ignore)]
-        public string Uri { get; set; }
     }
 
     public class CustData
@@ -72,9 +69,6 @@
     #region Response
     public class RegisterCustomerResponse : Amlv4BaseResponse
     {
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("version")]
         public string Version { get; set; }
     }

@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// List available Customers to Migrate
     /// </summary>
-    public class MigrationListRequest
+    public class MigrationListRequest : Amlv4BaseRequest
     {
         [JsonProperty("IntegratorID")]
         public string IntegratorId { get; set; }

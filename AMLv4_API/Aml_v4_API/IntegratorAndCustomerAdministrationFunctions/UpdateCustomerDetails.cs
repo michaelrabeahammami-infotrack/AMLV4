@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Update Customer Details
     /// </summary>
-    public class UpdateCustomerDetailsRequest
+    public class UpdateCustomerDetailsRequest : Amlv4BaseRequest
     {
         [JsonProperty("AllowOtherDocs", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -61,9 +61,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("Telephone")]
         public string Telephone { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class UpdateCustomerDetailsResponse : Amlv4BaseResponse

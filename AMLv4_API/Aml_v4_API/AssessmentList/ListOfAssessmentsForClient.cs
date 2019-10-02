@@ -7,7 +7,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Risk Assessment List
     /// </summary>
-    public class ListOfAssessmentsForClientRequest
+    public class ListOfAssessmentsForClientRequest : Amlv4BaseRequest
     {
         [JsonProperty("ClientID")]
         public string ClientId { get; set; }
@@ -15,9 +15,6 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("IncludeData")]
         [JsonConverter(typeof(StringEnumConverter))]
         public IncludeData IncludeData { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     public class ListOfAssessmentsForClientResponse : Amlv4BaseResponse
     {

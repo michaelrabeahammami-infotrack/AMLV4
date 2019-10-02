@@ -3,7 +3,7 @@ using Newtonsoft.Json.Converters;
 
 namespace AMLv4_API.Aml_v4_API
 {
-    public class AddUserToRegisteredCustomerRequest
+    public class AddUserToRegisteredCustomerRequest : Amlv4BaseRequest
     {
         /// <summary>
         /// Use if authorised as an Integrator, otherwise authorise as customer to add to
@@ -26,9 +26,6 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("ServicesAvailable", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringEnumConverter))]
         public ServicesAvailable? ServicesAvailable { get; set; }
-
-        [JsonProperty("uri", NullValueHandling = NullValueHandling.Ignore)]
-        public string Uri { get; set; }
 
         [JsonProperty("UserLoginID")]
         public string UserLoginId { get; set; }

@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Authenticate and get a URI response
     /// </summary>
-    public class TransactionListRequest
+    public class TransactionListRequest : Amlv4BaseRequest
     {
         [JsonProperty("AmlCustomerID", NullValueHandling = NullValueHandling.Ignore)]
         public string AmlCustomerId { get; set; }
@@ -31,9 +31,6 @@ namespace AMLv4_API.Aml_v4_API
         /// </summary>
         [JsonProperty("StartDate", NullValueHandling = NullValueHandling.Ignore)]
         public string StartDate { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class TransactionListResponse : Amlv4BaseResponse

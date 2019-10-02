@@ -6,10 +6,8 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Agree to adopt AML Default Profiles
     /// </summary>
-    public class AdoptProfilesRequest
+    public class AdoptProfilesRequest : Amlv4BaseRequest
     {
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     #endregion
 

@@ -6,10 +6,8 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// List all integrators customers
     /// </summary>
-    public class CustomerListRequest
+    public class CustomerListRequest : Amlv4BaseRequest
     {
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class CustomerListResponse : Amlv4BaseResponse

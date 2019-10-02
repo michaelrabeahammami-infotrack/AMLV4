@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// List Users for Customer
     /// </summary>
-    public class UserListRequest
+    public class UserListRequest : Amlv4BaseRequest
     {
         [JsonProperty("AmlCustomerID")]
         public string AmlCustomerId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class UserListResponse : Amlv4BaseResponse

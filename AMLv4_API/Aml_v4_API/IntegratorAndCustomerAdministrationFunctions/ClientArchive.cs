@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Archive client record and disable ongoing monitoring
     /// </summary>
-    public class ClientArchiveRequest
+    public class ClientArchiveRequest : Amlv4BaseRequest
     {
         [JsonProperty("ClientID")]
         public string ClientId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ClientArchiveResponse : Amlv4BaseResponse

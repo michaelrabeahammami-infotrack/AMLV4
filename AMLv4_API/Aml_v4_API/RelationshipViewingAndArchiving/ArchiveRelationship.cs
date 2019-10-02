@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Archive a Client Relationship
     /// </summary>
-    public class ArchiveRelationshipRequest
+    public class ArchiveRelationshipRequest : Amlv4BaseRequest
     {
         [JsonProperty("RelationshipID")]
         public string RelationshipId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ArchiveRelationshipResponse : Amlv4BaseResponse

@@ -7,7 +7,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Add document to client/assessment
     /// </summary>
-    public class AddDocumentToCddRecordRequest
+    public class AddDocumentToCddRecordRequest : Amlv4BaseRequest
     {
         /// <summary>
         /// From #/client/add response, if not set document added only to CDD Record not assessment
@@ -54,9 +54,6 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("includebinary")]
         [JsonConverter(typeof(StringEnumConverter))]
         public Includebinary Includebinary { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class AddDocumentToCddRecordResponse : Amlv4BaseResponse

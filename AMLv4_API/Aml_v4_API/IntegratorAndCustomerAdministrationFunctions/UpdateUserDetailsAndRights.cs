@@ -6,11 +6,8 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Update User details / rights
     /// </summary>
-    public class UpdateUserDetailsAndRightsRequest
+    public class UpdateUserDetailsAndRightsRequest : Amlv4BaseRequest
     {
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("AmlUserID")]
         public string AmlUserId { get; set; }
 

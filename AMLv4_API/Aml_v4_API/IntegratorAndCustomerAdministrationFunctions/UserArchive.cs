@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Archive User (disable auth)
     /// </summary>
-    public class UserArchiveRequest
+    public class UserArchiveRequest : Amlv4BaseRequest
     {
         [JsonProperty("AmlUserID")]
         public string AmlUserId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class UserArchiveResponse : Amlv4BaseResponse

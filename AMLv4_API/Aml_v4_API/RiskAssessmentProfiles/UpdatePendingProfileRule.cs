@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Update Risk Profile Rule for pending Risk Profile
     /// </summary>
-    public class UpdatePendingProfileRuleRequest
+    public class UpdatePendingProfileRuleRequest : Amlv4BaseRequest
     {
         [JsonProperty("allow_enhanced")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -87,9 +87,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("ruleid")]
         public string Ruleid { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class UpdatePendingProfileRuleResponse : Amlv4BaseResponse

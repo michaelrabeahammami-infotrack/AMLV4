@@ -3,7 +3,7 @@ using Newtonsoft.Json.Converters;
 
 namespace AMLv4_API.Aml_v4_API
 {
-    public class CustomerComplianceTotalsRequest
+    public class CustomerComplianceTotalsRequest : Amlv4BaseRequest
     {
         [JsonProperty("AmlCustomerID", NullValueHandling = NullValueHandling.Ignore)]
         public string AmlCustomerId { get; set; }
@@ -24,9 +24,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("StartDate", NullValueHandling = NullValueHandling.Ignore)]
         public string StartDate { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class CustomerComplianceTotalsResponse : Amlv4BaseResponse

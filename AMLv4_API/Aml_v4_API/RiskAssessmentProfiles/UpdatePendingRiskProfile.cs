@@ -6,16 +6,13 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Update Risk Profile (name only - whilst Pending)
     /// </summary>
-    public class UpdatePendingRiskProfileRequest
+    public class UpdatePendingRiskProfileRequest : Amlv4BaseRequest
     {
         [JsonProperty("profileid")]
         public string Profileid { get; set; }
 
         [JsonProperty("profilename")]
         public string Profilename { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     public class UpdatePendingRiskProfileResponse : Amlv4BaseResponse
     {

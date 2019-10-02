@@ -6,13 +6,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Risk Assessment Result
     /// </summary>
-    public class RiskAssessmentResultRequest
+    public class RiskAssessmentResultRequest : Amlv4BaseRequest
     {
         [JsonProperty("AssessmentID")]
         public string AssessmentId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class RiskAssessmentResultResponse : Amlv4BaseResponse

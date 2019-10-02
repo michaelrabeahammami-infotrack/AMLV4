@@ -6,13 +6,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Delete pending Risk Profile and list of rules
     /// </summary>
-    public class DeletePendingRiskProfileRequest
+    public class DeletePendingRiskProfileRequest : Amlv4BaseRequest
     {
         [JsonProperty("profileid")]
         public string Profileid { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     public class DeletePendingRiskProfileResponse : Amlv4BaseResponse
     {

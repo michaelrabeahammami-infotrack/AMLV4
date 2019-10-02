@@ -6,16 +6,13 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Monitoring Alert Update
     /// </summary>
-    public class MonitoringAlertUpdateRequest
+    public class MonitoringAlertUpdateRequest : Amlv4BaseRequest
     {
         /// <summary>
         /// Unique ID of the Alert record
         /// </summary>
         [JsonProperty("AlertID")]
         public string AlertId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
 
         [JsonProperty("Cancelled")]
         public object Cancelled { get; set; }

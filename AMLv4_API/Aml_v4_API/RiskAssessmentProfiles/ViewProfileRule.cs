@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Profile Rule view (summaries) for one Risk Profile
     /// </summary>
-    public class ViewProfileRuleRequest
+    public class ViewProfileRuleRequest : Amlv4BaseRequest
     {
         [JsonProperty("ruleid")]
         public string Ruleid { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ViewProfileRuleResponse : Amlv4BaseResponse

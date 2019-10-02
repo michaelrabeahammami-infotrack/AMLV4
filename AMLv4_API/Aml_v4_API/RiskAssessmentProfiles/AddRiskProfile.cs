@@ -7,7 +7,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Add a new Risk Profile (the rules must be added separately)
     /// </summary>
-    public class AddRiskProfileRequest
+    public class AddRiskProfileRequest : Amlv4BaseRequest
     {
         [JsonProperty("profilename")]
         public string Profilename { get; set; }
@@ -15,9 +15,6 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("profiletype")]
         [JsonConverter(typeof(StringEnumConverter))]
         public Profiletype Profiletype { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class AddRiskProfileResponse : Amlv4BaseResponse

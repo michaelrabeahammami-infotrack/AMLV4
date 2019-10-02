@@ -6,13 +6,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// List Client existing relationships
     /// </summary>
-    public class ListRelationshipsRequest
+    public class ListRelationshipsRequest : Amlv4BaseRequest
     {
         [JsonProperty("ClientID")]
         public string ClientId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     public class ListRelationshipsResponse : Amlv4BaseResponse
     {

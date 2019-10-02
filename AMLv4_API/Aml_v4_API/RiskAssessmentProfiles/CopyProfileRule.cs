@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Profile Rule copy for rule of pending Risk Profile
     /// </summary>
-    public class CopyProfileRuleRequest
+    public class CopyProfileRuleRequest : Amlv4BaseRequest
     {
         [JsonProperty("ruleid")]
         public string Ruleid { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     public class CopyProfileRuleResponse : Amlv4BaseResponse
     {

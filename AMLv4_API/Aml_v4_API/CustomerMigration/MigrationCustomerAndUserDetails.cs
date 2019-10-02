@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Retrieve customer and user data from Version 2 for re-reistration
     /// </summary>
-    public class MigrationCustomerAndUserDetailsRequest
+    public class MigrationCustomerAndUserDetailsRequest : Amlv4BaseRequest
     {
         [JsonProperty("CustomerID")]
         public string CustomerId { get; set; }

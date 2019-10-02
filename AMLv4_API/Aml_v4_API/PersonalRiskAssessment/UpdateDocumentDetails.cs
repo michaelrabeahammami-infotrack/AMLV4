@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Update document - normally only change of expiry date due to incorrect entry
     /// </summary>
-    public class UpdateDocumentDetailsRequest
+    public class UpdateDocumentDetailsRequest : Amlv4BaseRequest
     {
         /// <summary>
         /// Base64 encoded new document, empty if includebinary == no
@@ -49,9 +49,6 @@ namespace AMLv4_API.Aml_v4_API
         /// </summary>
         [JsonProperty("includebinary", NullValueHandling = NullValueHandling.Ignore)]
         public Includebinary? Includebinary { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class UpdateDocumentDetailsResponse : Amlv4BaseResponse

@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Validate rule for consistenncey with other rules
     /// </summary>
-    public class ValidateRuleAgainstOtherRulesRequest
+    public class ValidateRuleAgainstOtherRulesRequest : Amlv4BaseRequest
     {
         [JsonProperty("ruleid")]
         public string Ruleid { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ValidateRuleAgainstOtherRulesResponse : Amlv4BaseResponse

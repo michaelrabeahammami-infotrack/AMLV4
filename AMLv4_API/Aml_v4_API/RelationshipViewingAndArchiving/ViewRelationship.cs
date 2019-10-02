@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// View a single Client Relationship
     /// </summary>
-    public class ViewRelationshipsRequest
+    public class ViewRelationshipsRequest : Amlv4BaseRequest
     {
         [JsonProperty("RelationshipID")]
         public string RelationshipId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     public class ViewRelationshipsResponse : Amlv4BaseResponse
     {

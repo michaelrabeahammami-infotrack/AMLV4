@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// List Client Documents
     /// </summary>
-    public class ListDocumentsOnCddRecordOrAssessmentRequest
+    public class ListDocumentsOnCddRecordOrAssessmentRequest : Amlv4BaseRequest
     {
         /// <summary>
         /// Use to see documents used on a specific assessment
@@ -16,9 +16,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("ClientID")]
         public string ClientId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ListDocumentsOnCddRecordOrAssessmentResponse : Amlv4BaseResponse

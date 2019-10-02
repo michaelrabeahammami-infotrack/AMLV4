@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Unarchive a Client Relationship
     /// </summary>
-    public class UnarchiveRelationshipRequest
+    public class UnarchiveRelationshipRequest : Amlv4BaseRequest
     {
         [JsonProperty("RelationshipID")]
         public string RelationshipId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     public class UnarchiveRelationshipResponse : Amlv4BaseResponse
     {

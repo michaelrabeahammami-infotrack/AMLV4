@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// View Management Oversight
     /// </summary>
-    public class ManagementOversightViewRequest
+    public class ManagementOversightViewRequest : Amlv4BaseRequest
     {
         [JsonProperty("AssessmentID")]
         public string AssessmentId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ManagementOversightViewResponse : Amlv4BaseResponse

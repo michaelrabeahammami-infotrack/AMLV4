@@ -7,7 +7,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Lookup available risk profiles and CDD
     /// </summary>
-    public class SelectRiskProfileCddRequest
+    public class SelectRiskProfileCddRequest : Amlv4BaseRequest
     {
         [JsonProperty("interview_value")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -30,9 +30,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("residency_value")]
         public string ResidencyValue { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     #endregion
 

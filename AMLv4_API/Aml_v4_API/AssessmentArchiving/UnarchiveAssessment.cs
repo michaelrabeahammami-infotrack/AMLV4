@@ -6,13 +6,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Unarchive Assessment to restore to reports
     /// </summary>
-    public class UnarchiveAssessmentRequest
+    public class UnarchiveAssessmentRequest : Amlv4BaseRequest
     {
         [JsonProperty("AssessmentID")]
         public string AssessmentId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class UnarchiveAssessmentResponse : Amlv4BaseResponse

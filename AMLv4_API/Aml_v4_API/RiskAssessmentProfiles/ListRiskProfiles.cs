@@ -7,7 +7,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// List all Risk Profiles for customer
     /// </summary>
-    public class ListRiskProfilesRequest
+    public class ListRiskProfilesRequest : Amlv4BaseRequest
     {
         [JsonProperty("profilestatus", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -16,9 +16,6 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("profiletype", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringEnumConverter))]
         public Profiletype? Profiletype { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ListRiskProfilesResponse : Amlv4BaseResponse

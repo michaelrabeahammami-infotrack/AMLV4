@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Non-Personal AAdd Associate
     /// </summary>
-    public class AddAssociateRequest
+    public class AddAssociateRequest : Amlv4BaseRequest
     {
         /// <summary>
         /// Pipe separated '|' values
@@ -53,9 +53,6 @@ namespace AMLv4_API.Aml_v4_API
         /// </summary>
         [JsonProperty("Surname", NullValueHandling = NullValueHandling.Ignore)]
         public string Surname { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class AddAssociateResponse : Amlv4BaseResponse

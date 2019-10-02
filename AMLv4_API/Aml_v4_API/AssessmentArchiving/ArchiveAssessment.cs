@@ -6,13 +6,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Archive Assessment to remove from reports
     /// </summary>
-    public class ArchiveAssessmentRequest
+    public class ArchiveAssessmentRequest : Amlv4BaseRequest
     {
         [JsonProperty("AssessmentID")]
         public string AssessmentId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ArchiveAssessmentResponse : Amlv4BaseResponse

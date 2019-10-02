@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Unarchive Customer (and re-enable if live)
     /// </summary>
-    public class CustomerUnarchiveRequest
+    public class CustomerUnarchiveRequest : Amlv4BaseRequest
     {
         [JsonProperty("AmlCustomerID")]
         public string AmlCustomerId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class CustomerUnarchiveResponse : Amlv4BaseResponse

@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// View Customer Terms Verison and new or existing signed PDF
     /// </summary>
-    public class CheckCustomerTermsVersionRequest
+    public class CheckCustomerTermsVersionRequest : Amlv4BaseRequest
     {
         /// <summary>
         /// no|yes - Set to no to check terms version, yes to retrieve a copy of the terms
@@ -14,9 +14,6 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("IncludeBinary", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringEnumConverter))]
         public IncludeBinary? IncludeBinary { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
 
         /// <summary>
         /// no|yes - Set to yes to obtain a preview of a new Terms version. Set to no to view

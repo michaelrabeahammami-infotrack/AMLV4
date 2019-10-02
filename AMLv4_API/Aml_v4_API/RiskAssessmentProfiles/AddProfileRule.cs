@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Add a new Profile Rule to a pending Risk Profile
     /// </summary>
-    public class AddProfileRulesRequest
+    public class AddProfileRulesRequest : Amlv4BaseRequest
     {
         [JsonProperty("allow_enhanced")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -87,9 +87,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("residency_value", NullValueHandling = NullValueHandling.Ignore)]
         public string ResidencyValue { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     public class AddPofileRuleResponse : Amlv4BaseResponse
     {

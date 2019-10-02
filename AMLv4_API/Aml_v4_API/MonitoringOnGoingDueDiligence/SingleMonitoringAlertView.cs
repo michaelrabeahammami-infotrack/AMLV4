@@ -8,7 +8,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Monitoring Alert Update
     /// </summary>
-    public class SingleMonitoringAlertViewRequest
+    public class SingleMonitoringAlertViewRequest : Amlv4BaseRequest
     {
         /// <summary>
         /// Unique ID of the Alert record
@@ -36,9 +36,6 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("UndoNonCompliance", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringEnumConverter))]
         public Cancelled? UndoNonCompliance { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class SingleMonitoringAlertViewResponse : Amlv4BaseResponse

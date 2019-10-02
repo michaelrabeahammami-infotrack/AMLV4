@@ -7,7 +7,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Personal Risk Assessment, Client data update
     /// </summary>
-    public class PersonalRiskAssessmentUpdateClientDataRequest
+    public class PersonalRiskAssessmentUpdateClientDataRequest : Amlv4BaseRequest
     {
         [JsonProperty("AssessmentType")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -145,9 +145,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("Title")]
         public string Title { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     #endregion
 

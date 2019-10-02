@@ -6,13 +6,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Copy an existing Risk profile and rules
     /// </summary>
-    public class CopyRiskProfileRequest
+    public class CopyRiskProfileRequest : Amlv4BaseRequest
     {
         [JsonProperty("profileid")]
         public string Profileid { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     public class CopyRiskProfileResponse : Amlv4BaseResponse
     {

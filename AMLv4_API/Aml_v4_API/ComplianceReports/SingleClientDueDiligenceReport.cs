@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Retrieve Client Full CDD report pdf
     /// </summary>
-    public class SingleClientDueDiligenceReportRequest
+    public class SingleClientDueDiligenceReportRequest : Amlv4BaseRequest
     {
         [JsonProperty("ClientID")]
         public string ClientId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class SingleClientDueDiligenceReportResponse : Amlv4BaseResponse

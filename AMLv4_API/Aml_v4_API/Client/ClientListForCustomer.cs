@@ -3,7 +3,7 @@ using Newtonsoft.Json.Converters;
 
 namespace AMLv4_API.Aml_v4_API
 {
-    public class ClientListForCustomerRequest
+    public class ClientListForCustomerRequest : Amlv4BaseRequest
     {
         /// <summary>
         /// Type of Client, personal or nonpersonal
@@ -11,9 +11,6 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("clienttypefilter", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringEnumConverter))]
         public Clienttypefilter? Clienttypefilter { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ClientListForCustomerResponse : Amlv4BaseResponse

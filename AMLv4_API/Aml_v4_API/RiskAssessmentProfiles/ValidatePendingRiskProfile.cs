@@ -6,13 +6,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Validate pending Risk Profile and list of rules to ensure can be enabled
     /// </summary>
-    public class ValidatePendingRiskProfileRequest
+    public class ValidatePendingRiskProfileRequest : Amlv4BaseRequest
     {
         [JsonProperty("profileid")]
         public string Profileid { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ValidatePendingRiskProfileResponse : Amlv4BaseResponse

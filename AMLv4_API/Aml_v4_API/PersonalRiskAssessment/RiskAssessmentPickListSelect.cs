@@ -6,16 +6,13 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Select Picklist entry and Run Risk Assessment
     /// </summary>
-    public class RiskAssessmentPickListSelectRequest
+    public class RiskAssessmentPickListSelectRequest : Amlv4BaseRequest
     {
         [JsonProperty("AssessmentID")]
         public string AssessmentId { get; set; }
 
         [JsonProperty("PickID")]
         public string PickId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class RiskAssessmentPickListSelectResponse : Amlv4BaseResponse

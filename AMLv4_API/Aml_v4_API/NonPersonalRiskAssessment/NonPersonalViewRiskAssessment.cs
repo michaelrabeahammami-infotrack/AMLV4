@@ -6,13 +6,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// View Assessment Details before or after running
     /// </summary>
-    public class NonPersonalViewRiskAssessmentRequest
+    public class NonPersonalViewRiskAssessmentRequest : Amlv4BaseRequest
     {
         [JsonProperty("AssessmentID")]
         public string AssessmentId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class NonPersonalViewRiskAssessmentResponse : Amlv4BaseResponse

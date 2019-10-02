@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Non Personal Organisation Lookup
     /// </summary>
-    public class OrganisationLookupRequest
+    public class OrganisationLookupRequest : Amlv4BaseRequest
     {
         [JsonProperty("CompanyName", NullValueHandling = NullValueHandling.Ignore)]
         public string CompanyName { get; set; }
@@ -16,9 +16,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("CountryCode")]
         public string CountryCode { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class OrganisationLookupResponse : Amlv4BaseResponse

@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Retrieve Customer (All Client) Full CDD report pdf
     /// </summary>
-    public class CustomerAllClientsDueDiligenceReportRequest
+    public class CustomerAllClientsDueDiligenceReportRequest : Amlv4BaseRequest
     {
         [JsonProperty("AmlCustomerID")]
         public string AmlCustomerId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class CustomerAllClientsDueDiligenceReportResponse : Amlv4BaseResponse

@@ -5,7 +5,7 @@ namespace AMLv4_API.Aml_v4_API
     //// <summary>
     /// Non-Personal Associates List
     /// </summary>
-    public class AssociatesListRequest
+    public class AssociatesListRequest : Amlv4BaseRequest
     {
         /// <summary>
         /// Use to see asociates used on a specific assessment
@@ -15,9 +15,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("ClientID")]
         public string ClientId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class AssociatesListResponse : Amlv4BaseResponse

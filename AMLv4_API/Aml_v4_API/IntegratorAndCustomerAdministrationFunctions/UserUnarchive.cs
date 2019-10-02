@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Anarchive User (re-enable auth)
     /// </summary>
-    public class UserUnarchiveRequest
+    public class UserUnarchiveRequest : Amlv4BaseRequest
     {
         [JsonProperty("AmlUserID")]
         public string AmlUserId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class UserUnarchiveResponse : Amlv4BaseResponse

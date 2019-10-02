@@ -6,16 +6,13 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// View Document Details and optionally retrieve uploaded file if any
     /// </summary>
-    public class ViewDocumentDetailsRequest
+    public class ViewDocumentDetailsRequest : Amlv4BaseRequest
     {
         [JsonProperty("docid")]
         public string Docid { get; set; }
 
         [JsonProperty("includebinary", NullValueHandling = NullValueHandling.Ignore)]
         public Includebinary? Includebinary { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class ViewDocumentDetailsResponse : Amlv4BaseResponse

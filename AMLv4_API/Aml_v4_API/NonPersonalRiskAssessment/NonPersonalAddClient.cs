@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Add Non-Personal Client Data
     /// </summary>
-    public class NonPersonalAddClientRequest
+    public class NonPersonalAddClientRequest : Amlv4BaseRequest
     {
         [JsonProperty("AssessmentType")]
         [JsonConverter(typeof(StringEnumConverter))]
@@ -63,9 +63,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("SearchRef")]
         public string SearchRef { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class NonPersonalAddClientResponse : Amlv4BaseResponse

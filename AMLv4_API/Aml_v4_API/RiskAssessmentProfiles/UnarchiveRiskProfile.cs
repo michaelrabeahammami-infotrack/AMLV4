@@ -6,13 +6,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Archive an enabled Risk Profile and list of rules to allow use
     /// </summary>
-    public class UnarchiveRiskProfileRequest
+    public class UnarchiveRiskProfileRequest : Amlv4BaseRequest
     {
         [JsonProperty("profileid")]
         public string Profileid { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
     public class UnarchiveRiskProfileResponse : Amlv4BaseResponse
     {

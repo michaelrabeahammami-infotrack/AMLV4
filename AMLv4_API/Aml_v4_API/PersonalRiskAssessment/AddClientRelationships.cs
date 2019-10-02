@@ -6,7 +6,7 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Add Client relationships
     /// </summary>
-    public class AddClientRelationshipsRequest
+    public class AddClientRelationshipsRequest : Amlv4BaseRequest
     {
         /// <summary>
         /// required only if adding relationship AFTER Risk Assessment
@@ -36,9 +36,6 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("Relationship")]
         [JsonConverter(typeof(StringEnumConverter))]
         public RelationshipType Relationship { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class AddClientRelationshipsResponse : Amlv4BaseResponse

@@ -7,13 +7,10 @@ namespace AMLv4_API.Aml_v4_API
     /// Permanently Delete Document Details (use before linking to an assessment, normally after
     /// upload in error)
     /// </summary>
-    public class DeleteDocumentDetailsRequest
+    public class DeleteDocumentDetailsRequest : Amlv4BaseRequest
     {
         [JsonProperty("docid")]
         public string Docid { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class DeleteDocumentDetailsResponse : Amlv4BaseResponse

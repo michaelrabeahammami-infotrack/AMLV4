@@ -6,10 +6,8 @@ namespace AMLv4_API.Aml_v4_API
     /// Accept new version of customer terms. The version stored for the customer will be updated
     /// to the latest.
     /// </summary>
-    public class AcceptNewCustomerTermsVersionRequest
+    public class AcceptNewCustomerTermsVersionRequest : Amlv4BaseRequest
     {
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class AcceptNewCustomerTermsVersionResponse : Amlv4BaseResponse

@@ -2,7 +2,7 @@
 
 namespace AMLv4_API.Aml_v4_API
 {
-    public class CustomerTermsRequest
+    public class CustomerTermsRequest : Amlv4BaseRequest
     {
         [JsonProperty("ContactEmail")]
         public string ContactEmail { get; set; }
@@ -24,9 +24,6 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("CustomerName")]
         public string CustomerName { get; set; }
-
-        [JsonProperty("uri", NullValueHandling = NullValueHandling.Ignore)]
-        public string Uri { get; set; }
     }
 
     public class CustomerTermsResponse : Amlv4BaseResponse

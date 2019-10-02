@@ -5,13 +5,10 @@ namespace AMLv4_API.Aml_v4_API
     /// <summary>
     /// Archive a Customer (disables authorisation)
     /// </summary>
-    public class CustomerArchiveRequest
+    public class CustomerArchiveRequest : Amlv4BaseRequest
     {
         [JsonProperty("AmlCustomerID")]
         public string AmlCustomerId { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
     }
 
     public class CustomerArchiveResponse : Amlv4BaseResponse
