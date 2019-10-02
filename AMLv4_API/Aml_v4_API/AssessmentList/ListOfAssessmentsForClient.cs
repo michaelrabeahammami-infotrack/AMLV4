@@ -1,62 +1,75 @@
-﻿namespace AMLv4_API.Aml_v4_API.AssessmentList
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Risk Assessment List
     /// </summary>
     public class ListOfAssessmentsForClientRequest
     {
-        public string ClientID { get; set; }
-        public string IncludeData { get; set; }
-        public string uri { get; set; }
+        [JsonProperty("ClientID")]
+        public string ClientId { get; set; }
+
+        [JsonProperty("IncludeData")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public IncludeData IncludeData { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
-
-    public enum IncludeData { No, Yes };
-
     public class ListOfAssessmentsForClientResponse
     {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public long numresults { get; set; }
-        public Result[] results { get; set; }
-    }
+        [JsonProperty("error")]
+        public string Error { get; set; }
 
-    public class Result
-    {
-        public long AssessmentID { get; set; }
-        public long ClientID { get; set; }
-        public string ClientType { get; set; }
-        public string ClientReference { get; set; }
-        public string ClientArchived { get; set; }
-        public string ClientName { get; set; }
-        public string ClientDob { get; set; }
-        public string ClientPostCode { get; set; }
-        public string ClientCountryCode { get; set; }
-        public long ProfileID { get; set; }
-        public string ProfileName { get; set; }
-        public string UserName { get; set; }
-        public string AssessmentType { get; set; }
-        public string AssessmentDate { get; set; }
-        public string AssessmentResult { get; set; }
-        public string AssessmentArchived { get; set; }
-        public long AssessmentAlertCount { get; set; }
-        public ResultData ResultData { get; set; }
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("numresults")]
+        public long Numresults { get; set; }
+
+        [JsonProperty("results")]
+        public Result[] Results { get; set; }
     }
 
     public class ResultData
     {
-        public long TransactionID { get; set; }
+        [JsonProperty("TransactionID")]
+        public long TransactionId { get; set; }
+
+        [JsonProperty("InvoiceReference")]
         public string InvoiceReference { get; set; }
+
+        [JsonProperty("InvoiceNet")]
         public string InvoiceNet { get; set; }
+
+        [JsonProperty("ReportReference")]
         public string ReportReference { get; set; }
-        public string DateOfSearch { get; set; }
+
+        [JsonProperty("DateOfSearch")]
+        public DateTime DateOfSearch { get; set; }
+
+        [JsonProperty("NumIdsDocument")]
         public long NumIdsDocument { get; set; }
+
+        [JsonProperty("NumAdsDocument")]
         public long NumAdsDocument { get; set; }
+
+        [JsonProperty("VerifiedDocs")]
         public string VerifiedDocs { get; set; }
+
+        [JsonProperty("ElectronicStatus")]
         public string ElectronicStatus { get; set; }
+
+        [JsonProperty("OverallStatus")]
         public string OverallStatus { get; set; }
+
+        [JsonProperty("SanctionMatches")]
         public string SanctionMatches { get; set; }
+
+        [JsonProperty("FailError")]
         public string FailError { get; set; }
     }
-
-
 }

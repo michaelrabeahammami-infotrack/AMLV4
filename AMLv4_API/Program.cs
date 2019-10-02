@@ -812,13 +812,23 @@ namespace AMLv4_API
             #endregion
 
             #region View Client Data
-            var ViewClientDataRequest = new ViewClientDataRequest()
+            //var ViewClientDataRequest = new ViewClientDataRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    ClientId = "12345"
+
+            //};
+            //ViewClientDataResponse ViewClientDataResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewClientDataResponse>(ViewClientDataRequest, "/client/view", "additional reference", 0);
+            #endregion
+
+            #region List Of Assessments For Client
+            var ListOfAssessmentsForClientRequest = new ListOfAssessmentsForClientRequest()
             {
                 Uri = authenticationResponse.uri,
-                ClientId = "12345"
-                
+                ClientId = "12345",
+                IncludeData = IncludeData.Yes
             };
-            ViewClientDataResponse ViewClientDataResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewClientDataResponse>(ViewClientDataRequest, "/client/view", "additional reference", 0);
+            ListOfAssessmentsForClientResponse ListOfAssessmentsForClientResponse = RequestPerformer.RequestPerformer.PerformRequest<ListOfAssessmentsForClientResponse>(ListOfAssessmentsForClientRequest, "/assessment/list", "additional reference", 0);
             #endregion
         }
     }
