@@ -867,13 +867,27 @@ namespace AMLv4_API
             #endregion
 
             #region Customer Unarchive
-            var CustomerUnarchiveRequest = new CustomerUnarchiveRequest()
+            //var CustomerUnarchiveRequest = new CustomerUnarchiveRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AmlCustomerId = "12345",
+
+            //};
+            //CustomerUnarchiveResponse CustomerUnarchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerUnarchiveResponse>(CustomerUnarchiveRequest, "/customer/unarchive", "additional reference", 0);
+            #endregion
+
+            #region Customer Compliance Totals
+            var CustomerComplianceTotalsRequest = new CustomerComplianceTotalsRequest()
             {
                 Uri = authenticationResponse.uri,
                 AmlCustomerId = "12345",
-                
+                AmlUserId = "12345",
+                ClientType = Clienttypefilter.Personal,
+                EndDate = DateTime.Now.ToString("yyyy-MM-dd"),
+                IncludeArchived = IncludeArchived.Yes,
+                StartDate = DateTime.Now.ToString("yyyy-MM-dd")
             };
-            CustomerUnarchiveResponse CustomerUnarchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerUnarchiveResponse>(CustomerUnarchiveRequest, "/customer/unarchive", "additional reference", 0);
+            CustomerComplianceTotalsResponse CustomerComplianceTotalsResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerComplianceTotalsResponse>(CustomerComplianceTotalsRequest, "/customer/compliance", "additional reference", 0);
             #endregion
         }
     }
