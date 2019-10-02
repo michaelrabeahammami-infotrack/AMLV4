@@ -943,11 +943,16 @@ namespace AMLv4_API.Aml_v4_API
         Yes
     };
 
+    public enum AllowOtherDocs 
+    {
+        [EnumMember(Value = "no")]
+        no,
+        [EnumMember(Value = "yes")]
+        yes 
+    };
     #endregion
 
     public enum Cancelled { no, yes };
-
-    public enum AllowOtherDocs { no, yes };
 
     #region JSONConverters
     public class SingleOrArrayConverter<T> : JsonConverter

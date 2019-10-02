@@ -891,12 +891,37 @@ namespace AMLv4_API
             #endregion
 
             #region View Customer Details
-            var ViewCustomerDetailsRequest = new ViewCustomerDetailsRequest()
+            //var ViewCustomerDetailsRequest = new ViewCustomerDetailsRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AmlCustomerId = "12345"
+            //};
+            //ViewCustomerDetailsResponse ViewCustomerDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewCustomerDetailsResponse>(ViewCustomerDetailsRequest, "/customer/view", "additional reference", 0);
+            #endregion
+
+            #region Update Customer Details
+            var UpdateCustomerDetailsRequest = new UpdateCustomerDetailsRequest()
             {
                 Uri = authenticationResponse.uri,
-                AmlCustomerId = "12345"
+                AmlCustomerId = "12345",
+                AllowOtherDocs = AllowOtherDocs.yes,
+                ContactEmail = "joao@infotrack.co.uk",
+                ContactForename = "joao",
+                ContactPosition = "myPosition",
+                ContactSurname = "mysurname",
+                ContactTitle = "Mr",
+                CustomerAccess = CustomerAccess.Transactional,
+                CustomerAddress = "myAddress",
+                CustomerIcoNumber = "123456",
+                CustomerName = "myname",
+                Fax = "123456",
+                MlroContactEmail = "joao@infotrack.co.uk",
+                MlroContactName = "joao",
+                MlroContactPosition = "mega CEO",
+                OrgType = OrgType.Casino,
+                Telephone = "123456"
             };
-            ViewCustomerDetailsResponse ViewCustomerDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewCustomerDetailsResponse>(ViewCustomerDetailsRequest, "/customer/view", "additional reference", 0);
+            UpdateCustomerDetailsResponse UpdateCustomerDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdateCustomerDetailsResponse>(UpdateCustomerDetailsRequest, "/customer/update", "additional reference", 0);
             #endregion
         }
     }
