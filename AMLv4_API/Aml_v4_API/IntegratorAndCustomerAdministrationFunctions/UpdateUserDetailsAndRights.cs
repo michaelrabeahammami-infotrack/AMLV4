@@ -14,6 +14,9 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("AmlUserID")]
         public string AmlUserId { get; set; }
 
+        [JsonProperty("UserLoginID")]
+        public string UserLoginId { get; set; }
+
         [JsonProperty("ContactEmail")]
         public string ContactEmail { get; set; }
 

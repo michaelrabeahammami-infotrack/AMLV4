@@ -954,9 +954,19 @@ namespace AMLv4_API
                 ContactSurname = "mysurname",
                 ContactTitle = "mr",
                 ServicesAvailable = ServicesAvailable.Mod,
-                UserType = UserType.Admin
+                UserType = UserType.Admin,
+                UserLoginId = "1234657"
             };
-            UpdateUserDetailsAndRightsResponse UpdateUserDetailsAndRightsResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdateUserDetailsAndRightsResponse>(UpdateUserDetailsAndRightsRequest, "/user/view", "additional reference", 0);
+            UpdateUserDetailsAndRightsResponse UpdateUserDetailsAndRightsResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdateUserDetailsAndRightsResponse>(UpdateUserDetailsAndRightsRequest, "/user/update", "additional reference", 0);
+            #endregion
+
+            #region View User Details
+            //var UserArchiveRequest = new UserArchiveRequest()
+            //{
+            //    AmlUserId = "1234567",
+            //    Uri = authenticationResponse.uri
+            //};
+            //UserArchiveResponse UserArchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<UserArchiveResponse>(UserArchiveRequest, "/user/archive", "additional reference", 0);
             #endregion
         }
     }
