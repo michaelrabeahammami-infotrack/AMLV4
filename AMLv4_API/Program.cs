@@ -993,12 +993,21 @@ namespace AMLv4_API
             #endregion
 
             #region Client Archive
-            var ClientArchiveRequest = new ClientArchiveRequest()
+            //var ClientArchiveRequest = new ClientArchiveRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    ClientId = "123465"
+            //};
+            //ClientArchiveResponse ClientArchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<ClientArchiveResponse>(ClientArchiveRequest, "/client/archive", "additional reference", 0);
+            #endregion
+
+            #region Client Unarchive
+            var ClientUnarchiveRequest = new ClientUnarchiveRequest()
             {
                 Uri = authenticationResponse.uri,
                 ClientId = "123465"
             };
-            ClientArchiveResponse ClientArchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<ClientArchiveResponse>(ClientArchiveRequest, "/client/archive", "additional reference", 0);
+            ClientUnarchiveResponse ClientUnarchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<ClientUnarchiveResponse>(ClientUnarchiveRequest, "/client/unarchive", "additional reference", 0);
             #endregion
         }
     }

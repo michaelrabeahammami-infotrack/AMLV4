@@ -1,19 +1,30 @@
-﻿namespace AMLv4_API.Aml_v4_API.IntegratorAndCustomerAdministrationFunctions
+﻿using Newtonsoft.Json;
+
+namespace AMLv4_API.Aml_v4_API
 {
     /// <summary>
     /// Un-Archive client record and re-enable ongoing monitoring
     /// </summary>
     public class ClientUnarchiveRequest
     {
-        public string ClientID { get; set; }
-        public string uri { get; set; }
+        [JsonProperty("ClientID")]
+        public string ClientId { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
     }
-    public class ClientUnarchiveResponse
+     class ClientUnarchiveResponse
     {
-        public string error { get; set; }
-        public string uri { get; set; }
-        public long ClientID { get; set; }
+        [JsonProperty("error")]
+        public string Error { get; set; }
+
+        [JsonProperty("uri")]
+        public string Uri { get; set; }
+
+        [JsonProperty("ClientID")]
+        public long ClientId { get; set; }
+
+        [JsonProperty("Archived")]
         public string Archived { get; set; }
     }
-
 }
