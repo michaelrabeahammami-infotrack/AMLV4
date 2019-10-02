@@ -979,17 +979,26 @@ namespace AMLv4_API
             #endregion
 
             #region Transaction List
-            var TransactionListRequest = new TransactionListRequest()
+            //var TransactionListRequest = new TransactionListRequest()
+            //{
+            //    AmlUserId = "1234567",
+            //    Uri = authenticationResponse.uri,
+            //    AmlCustomerId = "12345",
+            //    BillingRef = "123465",
+            //    ClientId = 123465,
+            //    EndDate = DateTime.Now.ToString("yyyy-MM-dd"),
+            //    StartDate = DateTime.Now.ToString("yyyy-MM-dd")
+            //};
+            //TransactionListResponse TransactionListResponse = RequestPerformer.RequestPerformer.PerformRequest<TransactionListResponse>(TransactionListRequest, "/transaction/list", "additional reference", 0);
+            #endregion
+
+            #region Client Archive
+            var ClientArchiveRequest = new ClientArchiveRequest()
             {
-                AmlUserId = "1234567",
                 Uri = authenticationResponse.uri,
-                AmlCustomerId = "12345",
-                BillingRef = "123465",
-                ClientId = 123465,
-                EndDate = DateTime.Now.ToString("yyyy-MM-dd"),
-                StartDate = DateTime.Now.ToString("yyyy-MM-dd")
+                ClientId = "123465"
             };
-            TransactionListResponse TransactionListResponse = RequestPerformer.RequestPerformer.PerformRequest<TransactionListResponse>(TransactionListRequest, "/transaction/list", "additional reference", 0);
+            ClientArchiveResponse ClientArchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<ClientArchiveResponse>(ClientArchiveRequest, "/client/archive", "additional reference", 0);
             #endregion
         }
     }
