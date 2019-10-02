@@ -943,30 +943,30 @@ namespace AMLv4_API
             #endregion
 
             #region Update User Details
-            var UpdateUserDetailsAndRightsRequest = new UpdateUserDetailsAndRightsRequest()
-            {
-                AmlUserId = "12345",
-                Uri = authenticationResponse.uri,
-                ContactEmail = "joao@infotrack.co.uk",
-                ContactForename = "joao",
-                ContactForname = "joao",
-                ContactPosition = "mega CEO",
-                ContactSurname = "mysurname",
-                ContactTitle = "mr",
-                ServicesAvailable = ServicesAvailable.Mod,
-                UserType = UserType.Admin,
-                UserLoginId = "1234657"
-            };
-            UpdateUserDetailsAndRightsResponse UpdateUserDetailsAndRightsResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdateUserDetailsAndRightsResponse>(UpdateUserDetailsAndRightsRequest, "/user/update", "additional reference", 0);
+            //var UpdateUserDetailsAndRightsRequest = new UpdateUserDetailsAndRightsRequest()
+            //{
+            //    AmlUserId = "12345",
+            //    Uri = authenticationResponse.uri,
+            //    ContactEmail = "joao@infotrack.co.uk",
+            //    ContactForename = "joao",
+            //    ContactForname = "joao",
+            //    ContactPosition = "mega CEO",
+            //    ContactSurname = "mysurname",
+            //    ContactTitle = "mr",
+            //    ServicesAvailable = ServicesAvailable.Mod,
+            //    UserType = UserType.Admin,
+            //    UserLoginId = "1234657"
+            //};
+            //UpdateUserDetailsAndRightsResponse UpdateUserDetailsAndRightsResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdateUserDetailsAndRightsResponse>(UpdateUserDetailsAndRightsRequest, "/user/update", "additional reference", 0);
             #endregion
 
             #region View User Details
-            //var UserArchiveRequest = new UserArchiveRequest()
-            //{
-            //    AmlUserId = "1234567",
-            //    Uri = authenticationResponse.uri
-            //};
-            //UserArchiveResponse UserArchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<UserArchiveResponse>(UserArchiveRequest, "/user/archive", "additional reference", 0);
+            var UserArchiveRequest = new UserArchiveRequest()
+            {
+                AmlUserId = "1234567",
+                Uri = authenticationResponse.uri
+            };
+            UserArchiveResponse UserArchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<UserArchiveResponse>(UserArchiveRequest, "/user/archive", "additional reference", 0);
             #endregion
         }
     }
