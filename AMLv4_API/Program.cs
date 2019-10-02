@@ -934,12 +934,29 @@ namespace AMLv4_API
             #endregion
 
             #region View User Details
-            var ViewUserDetailsRequest = new ViewUserDetailsRequest()
+            //var ViewUserDetailsRequest = new ViewUserDetailsRequest()
+            //{
+            //    AmlUserId = "12345",
+            //    Uri = authenticationResponse.uri
+            //};
+            //ViewUserDetailsResponse ViewUserDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewUserDetailsResponse>(ViewUserDetailsRequest, "/user/view", "additional reference", 0);
+            #endregion
+
+            #region Update User Details
+            var UpdateUserDetailsAndRightsRequest = new UpdateUserDetailsAndRightsRequest()
             {
                 AmlUserId = "12345",
-                Uri = authenticationResponse.uri
+                Uri = authenticationResponse.uri,
+                ContactEmail = "joao@infotrack.co.uk",
+                ContactForename = "joao",
+                ContactForname = "joao",
+                ContactPosition = "mega CEO",
+                ContactSurname = "mysurname",
+                ContactTitle = "mr",
+                ServicesAvailable = ServicesAvailable.Mod,
+                UserType = UserType.Admin
             };
-            ViewUserDetailsResponse ViewUserDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewUserDetailsResponse>(ViewUserDetailsRequest, "/user/view", "additional reference", 0);
+            UpdateUserDetailsAndRightsResponse UpdateUserDetailsAndRightsResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdateUserDetailsAndRightsResponse>(UpdateUserDetailsAndRightsRequest, "/user/view", "additional reference", 0);
             #endregion
         }
     }
