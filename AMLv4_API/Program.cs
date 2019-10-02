@@ -877,17 +877,26 @@ namespace AMLv4_API
             #endregion
 
             #region Customer Compliance Totals
-            var CustomerComplianceTotalsRequest = new CustomerComplianceTotalsRequest()
+            //var CustomerComplianceTotalsRequest = new CustomerComplianceTotalsRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AmlCustomerId = "12345",
+            //    AmlUserId = "12345",
+            //    ClientType = Clienttypefilter.Personal,
+            //    EndDate = DateTime.Now.ToString("yyyy-MM-dd"),
+            //    IncludeArchived = IncludeArchived.Yes,
+            //    StartDate = DateTime.Now.ToString("yyyy-MM-dd")
+            //};
+            //CustomerComplianceTotalsResponse CustomerComplianceTotalsResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerComplianceTotalsResponse>(CustomerComplianceTotalsRequest, "/customer/compliance", "additional reference", 0);
+            #endregion
+
+            #region View Customer Details
+            var ViewCustomerDetailsRequest = new ViewCustomerDetailsRequest()
             {
                 Uri = authenticationResponse.uri,
-                AmlCustomerId = "12345",
-                AmlUserId = "12345",
-                ClientType = Clienttypefilter.Personal,
-                EndDate = DateTime.Now.ToString("yyyy-MM-dd"),
-                IncludeArchived = IncludeArchived.Yes,
-                StartDate = DateTime.Now.ToString("yyyy-MM-dd")
+                AmlCustomerId = "12345"
             };
-            CustomerComplianceTotalsResponse CustomerComplianceTotalsResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerComplianceTotalsResponse>(CustomerComplianceTotalsRequest, "/customer/compliance", "additional reference", 0);
+            ViewCustomerDetailsResponse ViewCustomerDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewCustomerDetailsResponse>(ViewCustomerDetailsRequest, "/customer/view", "additional reference", 0);
             #endregion
         }
     }
