@@ -21,14 +21,8 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class ListDocumentsOnCddRecordOrAssessmentResponse
+    public class ListDocumentsOnCddRecordOrAssessmentResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("numids")]
         public long Numids { get; set; }
 

@@ -58,14 +58,8 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class AddAssociateResponse
+    public class AddAssociateResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("AssociateID")]
         public long AssociateId { get; set; }
 

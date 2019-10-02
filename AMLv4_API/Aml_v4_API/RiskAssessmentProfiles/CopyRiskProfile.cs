@@ -14,14 +14,8 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("uri")]
         public string Uri { get; set; }
     }
-    public class CopyRiskProfileResponse
+    public class CopyRiskProfileResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("profilecreated")]
         public DateTime Profilecreated { get; set; }
 

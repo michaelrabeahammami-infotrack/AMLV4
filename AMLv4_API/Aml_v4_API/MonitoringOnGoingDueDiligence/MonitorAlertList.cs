@@ -18,14 +18,8 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class MonitorAlertListResponse
+    public class MonitorAlertListResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("numalerts")]
         public long Numalerts { get; set; }
 

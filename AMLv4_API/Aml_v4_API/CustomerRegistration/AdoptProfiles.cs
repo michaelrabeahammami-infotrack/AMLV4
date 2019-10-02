@@ -14,14 +14,8 @@ namespace AMLv4_API.Aml_v4_API
     #endregion
 
     #region Response
-    public class AdoptProfilesResponse
+    public class AdoptProfilesResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("profilecount")]
         public long Profilecount { get; set; }
 

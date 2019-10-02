@@ -24,14 +24,8 @@ namespace AMLv4_API.Aml_v4_API
         public object CancelReason { get; set; }
     }
 
-    public class MonitoringAlertUpdateResponse
+    public class MonitoringAlertUpdateResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("CustomerID")]
         public string CustomerId { get; set; }
 

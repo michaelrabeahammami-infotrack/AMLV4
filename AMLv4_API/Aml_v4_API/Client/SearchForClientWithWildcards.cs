@@ -82,14 +82,8 @@ namespace AMLv4_API.Aml_v4_API
         public string UserName { get; set; }
     }
 
-    public class SearchForClientWithWildcardsResponse
+    public class SearchForClientWithWildcardsResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("nummatches")]
         public long Nummatches { get; set; }
 

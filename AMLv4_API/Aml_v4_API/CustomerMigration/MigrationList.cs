@@ -14,11 +14,8 @@ namespace AMLv4_API.Aml_v4_API
     #endregion
 
     #region response
-    public class MigrationListResponse
+    public class MigrationListResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
         [JsonProperty("customercount")]
         public long Customercount { get; set; }
 

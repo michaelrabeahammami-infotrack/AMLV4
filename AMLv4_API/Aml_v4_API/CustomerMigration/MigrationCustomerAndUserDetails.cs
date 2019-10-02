@@ -20,14 +20,8 @@ namespace AMLv4_API.Aml_v4_API
     #endregion
 
     #region response
-    public class MigrationCustomerAndUserDetailsResponse
+    public class MigrationCustomerAndUserDetailsResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("CustomerLoginID")]
         public string CustomerLoginId { get; set; }
 

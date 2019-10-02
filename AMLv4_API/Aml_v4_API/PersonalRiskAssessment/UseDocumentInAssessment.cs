@@ -17,7 +17,7 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class UseDocumentInAssessmentResponse
+    public class UseDocumentInAssessmentResponse : Amlv4BaseResponse
     {
         [JsonProperty("schemafile")]
         public string Schemafile { get; set; }

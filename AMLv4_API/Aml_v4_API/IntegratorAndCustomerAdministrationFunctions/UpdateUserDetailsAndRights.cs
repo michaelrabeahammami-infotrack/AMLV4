@@ -50,14 +50,8 @@ namespace AMLv4_API.Aml_v4_API
         public object ContactForename { get; set; }
     }
 
-    public class UpdateUserDetailsAndRightsResponse
+    public class UpdateUserDetailsAndRightsResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("AmlUserID")]
         public long AmlUserId { get; set; }
 

@@ -15,14 +15,8 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class NonPersonalRunRiskAssessmentResponse
+    public class NonPersonalRunRiskAssessmentResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("AssessmentID")]
         public long AssessmentId { get; set; }
 

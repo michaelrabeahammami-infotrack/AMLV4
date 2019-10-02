@@ -41,14 +41,8 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class SingleMonitoringAlertViewResponse
+    public class SingleMonitoringAlertViewResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("CustomerID")]
         public string CustomerId { get; set; }
 

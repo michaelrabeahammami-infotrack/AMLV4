@@ -14,7 +14,7 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class ManagementOversightViewResponse
+    public class ManagementOversightViewResponse : Amlv4BaseResponse
     {
         [JsonProperty("schemafile")]
         public string Schemafile { get; set; }

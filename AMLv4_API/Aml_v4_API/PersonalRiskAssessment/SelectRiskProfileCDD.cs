@@ -37,14 +37,8 @@ namespace AMLv4_API.Aml_v4_API
     #endregion
 
     #region response
-    public class SelectRiskProfileCddResponse
+    public class SelectRiskProfileCddResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("profilecount")]
         public long Profilecount { get; set; }
 

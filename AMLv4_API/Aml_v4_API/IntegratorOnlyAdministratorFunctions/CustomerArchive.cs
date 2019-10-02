@@ -14,14 +14,8 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class CustomerArchiveResponse
+    public class CustomerArchiveResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("AmlCustomerID")]
         public long AmlCustomerId { get; set; }
 

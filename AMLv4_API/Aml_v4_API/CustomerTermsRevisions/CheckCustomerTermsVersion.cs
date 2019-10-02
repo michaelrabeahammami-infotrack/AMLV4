@@ -27,14 +27,8 @@ namespace AMLv4_API.Aml_v4_API
         public IncludeBinary? ViewingNewVersion { get; set; }
     }
 
-    public class CheckCustomerTermsVersionResponse
+    public class CheckCustomerTermsVersionResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("TermsBinary")]
         public string TermsBinary { get; set; }
 

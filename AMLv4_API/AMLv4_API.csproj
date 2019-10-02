@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aml_v4_API\Amlv4BaseResponse.cs" />
     <Compile Include="Aml_v4_API\CustomerTermsRevisions\AcceptNewCustomerTermsVersion.cs" />
     <Compile Include="Aml_v4_API\CustomerRegistration\AddUserToRegisteredCustomer.cs" />
     <Compile Include="Aml_v4_API\CustomerRegistration\AdoptProfiles.cs" />

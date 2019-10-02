@@ -19,14 +19,8 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("uri")]
         public string Uri { get; set; }
     }
-    public class ListOfAssessmentsForClientResponse
+    public class ListOfAssessmentsForClientResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("numresults")]
         public long Numresults { get; set; }
 

@@ -15,15 +15,8 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class PersonalRiskAssessmentDocumentTypesResponse
+    public class PersonalRiskAssessmentDocumentTypesResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public Error Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("numidtypes")]
         public long Numidtypes { get; set; }
 

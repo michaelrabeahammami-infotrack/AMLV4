@@ -945,17 +945,17 @@ namespace AMLv4_API
             #region Update User Details
             //var UpdateUserDetailsAndRightsRequest = new UpdateUserDetailsAndRightsRequest()
             //{
-            //    AmlUserId = "12345",
+            //    AmlUserId = "",
             //    Uri = authenticationResponse.uri,
-            //    ContactEmail = "joao@infotrack.co.uk",
-            //    ContactForename = "joao",
-            //    ContactForname = "joao",
-            //    ContactPosition = "mega CEO",
-            //    ContactSurname = "mysurname",
-            //    ContactTitle = "mr",
+            //    ContactEmail = "",
+            //    ContactForename = "",
+            //    ContactForname = "",
+            //    ContactPosition = "",
+            //    ContactSurname = "",
+            //    ContactTitle = "",
             //    ServicesAvailable = ServicesAvailable.Mod,
             //    UserType = UserType.Admin,
-            //    UserLoginId = "1234657"
+            //    UserLoginId = ""
             //};
             //UpdateUserDetailsAndRightsResponse UpdateUserDetailsAndRightsResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdateUserDetailsAndRightsResponse>(UpdateUserDetailsAndRightsRequest, "/user/update", "additional reference", 0);
             #endregion
@@ -1002,12 +1002,12 @@ namespace AMLv4_API
             #endregion
 
             #region Client Unarchive
-            var ClientUnarchiveRequest = new ClientUnarchiveRequest()
-            {
-                Uri = authenticationResponse.uri,
-                ClientId = "123465"
-            };
-            ClientUnarchiveResponse ClientUnarchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<ClientUnarchiveResponse>(ClientUnarchiveRequest, "/client/unarchive", "additional reference", 0);
+            //var ClientUnarchiveRequest = new ClientUnarchiveRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    ClientId = "123465"
+            //};
+            //ClientUnarchiveResponse ClientUnarchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<ClientUnarchiveResponse>(ClientUnarchiveRequest, "/client/unarchive", "additional reference", 0);
             #endregion
         }
     }

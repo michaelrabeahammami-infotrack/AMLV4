@@ -13,14 +13,8 @@ namespace AMLv4_API.Aml_v4_API
         [JsonProperty("uri")]
         public string Uri { get; set; }
     }
-     class ClientUnarchiveResponse
+     class ClientUnarchiveResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("ClientID")]
         public long ClientId { get; set; }
 

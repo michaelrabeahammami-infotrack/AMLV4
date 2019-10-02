@@ -12,14 +12,8 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class AcceptNewCustomerTermsVersionResponse
+    public class AcceptNewCustomerTermsVersionResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
-        [JsonProperty("uri")]
-        public string Uri { get; set; }
-
         [JsonProperty("DateAccepted")]
         public string DateAccepted { get; set; }
 

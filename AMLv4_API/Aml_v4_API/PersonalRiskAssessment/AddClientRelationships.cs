@@ -41,11 +41,8 @@ namespace AMLv4_API.Aml_v4_API
         public string Uri { get; set; }
     }
 
-    public class AddClientRelationshipsResponse
+    public class AddClientRelationshipsResponse : Amlv4BaseResponse
     {
-        [JsonProperty("error")]
-        public string Error { get; set; }
-
         [JsonProperty("RelationshipID")]
         public long RelationshipId { get; set; }
 
