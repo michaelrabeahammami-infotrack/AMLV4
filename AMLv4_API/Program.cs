@@ -19,7 +19,7 @@ namespace AMLv4_API
 
             AuthenticationRequest authRequest = new AuthenticationRequest()
             {
-                CustomerID = "InfoTrack Test Customer 001",
+                CustomerID = "InfoTrack Test Customer 002",
                 IntegratorID = integratorId,
                 UserID = "InfoTrack Test Id 001"
             };
@@ -858,12 +858,22 @@ namespace AMLv4_API
             #endregion
 
             #region Customer Archive
-            var CustomerArchiveRequest = new CustomerArchiveRequest()
+            //var CustomerArchiveRequest = new CustomerArchiveRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AmlCustomerId = "12345"
+            //};
+            //CustomerArchiveResponse CustomerArchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerArchiveResponse>(CustomerArchiveRequest, "/customer/archive", "additional reference", 0);
+            #endregion
+
+            #region Customer Unarchive
+            var CustomerUnarchiveRequest = new CustomerUnarchiveRequest()
             {
                 Uri = authenticationResponse.uri,
-                AmlCustomerId = "12345"
+                AmlCustomerId = "12345",
+                
             };
-            CustomerArchiveResponse CustomerArchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerArchiveResponse>(CustomerArchiveRequest, "/customer/archive", "additional reference", 0);
+            CustomerUnarchiveResponse CustomerUnarchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<CustomerUnarchiveResponse>(CustomerUnarchiveRequest, "/customer/unarchive", "additional reference", 0);
             #endregion
         }
     }
