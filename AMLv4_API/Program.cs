@@ -969,13 +969,27 @@ namespace AMLv4_API
             //UserArchiveResponse UserArchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<UserArchiveResponse>(UserArchiveRequest, "/user/archive", "additional reference", 0);
             #endregion
 
-            #region User Archive
-            var UserUnarchiveRequest = new UserUnarchiveRequest()
+            #region User Unarchive
+            //var UserUnarchiveRequest = new UserUnarchiveRequest()
+            //{
+            //    AmlUserId = "1234567",
+            //    Uri = authenticationResponse.uri
+            //};
+            //UserUnarchiveResponse UserUnarchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<UserUnarchiveResponse>(UserUnarchiveRequest, "/user/unarchive", "additional reference", 0);
+            #endregion
+
+            #region Transaction List
+            var TransactionListRequest = new TransactionListRequest()
             {
                 AmlUserId = "1234567",
-                Uri = authenticationResponse.uri
+                Uri = authenticationResponse.uri,
+                AmlCustomerId = "12345",
+                BillingRef = "123465",
+                ClientId = 123465,
+                EndDate = DateTime.Now.ToString("yyyy-MM-dd"),
+                StartDate = DateTime.Now.ToString("yyyy-MM-dd")
             };
-            UserUnarchiveResponse UserUnarchiveResponse = RequestPerformer.RequestPerformer.PerformRequest<UserUnarchiveResponse>(UserUnarchiveRequest, "/user/unarchive", "additional reference", 0);
+            TransactionListResponse TransactionListResponse = RequestPerformer.RequestPerformer.PerformRequest<TransactionListResponse>(TransactionListRequest, "/transaction/list", "additional reference", 0);
             #endregion
         }
     }
