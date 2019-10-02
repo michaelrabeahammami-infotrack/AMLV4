@@ -925,12 +925,21 @@ namespace AMLv4_API
             #endregion
 
             #region User List
-            var UserListRequest = new UserListRequest()
+            //var UserListRequest = new UserListRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AmlCustomerId = "12345"
+            //};
+            //UserListResponse UserListResponse = RequestPerformer.RequestPerformer.PerformRequest<UserListResponse>(UserListRequest, "/user/list", "additional reference", 0);
+            #endregion
+
+            #region View User Details
+            var ViewUserDetailsRequest = new ViewUserDetailsRequest()
             {
-                Uri = authenticationResponse.uri,
-                AmlCustomerId = "12345"
+                AmlUserId = "12345",
+                Uri = authenticationResponse.uri
             };
-            UserListResponse UserListResponse = RequestPerformer.RequestPerformer.PerformRequest<UserListResponse>(UserListRequest, "/user/list", "additional reference", 0);
+            ViewUserDetailsResponse ViewUserDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewUserDetailsResponse>(ViewUserDetailsRequest, "/user/view", "additional reference", 0);
             #endregion
         }
     }
