@@ -822,13 +822,22 @@ namespace AMLv4_API
             #endregion
 
             #region List Of Assessments For Client
-            var ListOfAssessmentsForClientRequest = new ListOfAssessmentsForClientRequest()
+            //var ListOfAssessmentsForClientRequest = new ListOfAssessmentsForClientRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    ClientId = "12345",
+            //    IncludeData = IncludeData.Yes
+            //};
+            //ListOfAssessmentsForClientResponse ListOfAssessmentsForClientResponse = RequestPerformer.RequestPerformer.PerformRequest<ListOfAssessmentsForClientResponse>(ListOfAssessmentsForClientRequest, "/assessment/list", "additional reference", 0);
+            #endregion
+
+            #region Single Client Due Diligence Report
+            var SingleClientDueDiligenceReportRequest = new SingleClientDueDiligenceReportRequest()
             {
                 Uri = authenticationResponse.uri,
-                ClientId = "12345",
-                IncludeData = IncludeData.Yes
+                ClientId = "12345"
             };
-            ListOfAssessmentsForClientResponse ListOfAssessmentsForClientResponse = RequestPerformer.RequestPerformer.PerformRequest<ListOfAssessmentsForClientResponse>(ListOfAssessmentsForClientRequest, "/assessment/list", "additional reference", 0);
+            SingleClientDueDiligenceReportResponse SingleClientDueDiligenceReportResponse = RequestPerformer.RequestPerformer.PerformRequest<SingleClientDueDiligenceReportResponse>(SingleClientDueDiligenceReportRequest, "/client/cddreport", "additional reference", 0);
             #endregion
         }
     }
