@@ -793,22 +793,32 @@ namespace AMLv4_API
             #endregion
 
             #region Search For Client With Wildcards
-            var SearchForClientWithWildcardsRequest = new SearchForClientWithWildcardsRequest()
+            //var SearchForClientWithWildcardsRequest = new SearchForClientWithWildcardsRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AmlUserId = "12345",
+            //    ClientName = "myname",
+            //    ClientReference = "myref",
+            //    ClientType = Clienttypefilter.Personal,
+            //    ComplianceStatus = ComplianceStatus.Compliant,
+            //    EndDate = DateTime.Now.ToString("yyyy-MM-dd"),
+            //    IncludeArchived = IncludeArchived.Yes,
+            //    Postcode = "se1 8rt",
+            //    RecordLimit = "32",
+            //    StartDate = DateTime.Now.ToString("yyyy-MM-dd"),
+            //    UserName = "myusername"
+            //};
+            //SearchForClientWithWildcardsResponse SearchForClientWithWildcardsResponse = RequestPerformer.RequestPerformer.PerformRequest<SearchForClientWithWildcardsResponse>(SearchForClientWithWildcardsRequest, "/client/search", "additional reference", 0);
+            #endregion
+
+            #region View Client Data
+            var ViewClientDataRequest = new ViewClientDataRequest()
             {
                 Uri = authenticationResponse.uri,
-                AmlUserId = "12345",
-                ClientName = "myname",
-                ClientReference = "myref",
-                ClientType = Clienttypefilter.Personal,
-                ComplianceStatus = ComplianceStatus.Compliant,
-                EndDate = DateTime.Now.ToString("yyyy-MM-dd"),
-                IncludeArchived = IncludeArchived.Yes,
-                Postcode = "se1 8rt",
-                RecordLimit = "32",
-                StartDate = DateTime.Now.ToString("yyyy-MM-dd"),
-                UserName = "myusername"
+                ClientId = "12345"
+                
             };
-            SearchForClientWithWildcardsResponse SearchForClientWithWildcardsResponse = RequestPerformer.RequestPerformer.PerformRequest<SearchForClientWithWildcardsResponse>(SearchForClientWithWildcardsRequest, "/client/search", "additional reference", 0);
+            ViewClientDataResponse ViewClientDataResponse = RequestPerformer.RequestPerformer.PerformRequest<ViewClientDataResponse>(ViewClientDataRequest, "/client/view", "additional reference", 0);
             #endregion
         }
     }
