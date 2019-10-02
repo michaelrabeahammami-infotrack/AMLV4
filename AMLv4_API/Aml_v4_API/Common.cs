@@ -423,6 +423,27 @@ namespace AMLv4_API.Aml_v4_API
 
         [JsonProperty("ContactSurname")]
         public string ContactSurname { get; set; }
+
+        [JsonProperty("LoginName")]
+        public string LoginName { get; set; }
+
+        [JsonProperty("Forename")]
+        public string Forename { get; set; }
+
+        [JsonProperty("Surname")]
+        public string Surname { get; set; }
+
+        [JsonProperty("Email")]
+        public string Email { get; set; }
+
+        [JsonProperty("UserType")]
+        public string UserType { get; set; }
+
+        [JsonProperty("ServicesAvailable")]
+        public string ServicesAvailable { get; set; }
+
+        [JsonProperty("Archived")]
+        public string Archived { get; set; }
     }
     #endregion
 

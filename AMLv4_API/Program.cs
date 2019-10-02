@@ -900,28 +900,37 @@ namespace AMLv4_API
             #endregion
 
             #region Update Customer Details
-            var UpdateCustomerDetailsRequest = new UpdateCustomerDetailsRequest()
+            //var UpdateCustomerDetailsRequest = new UpdateCustomerDetailsRequest()
+            //{
+            //    Uri = authenticationResponse.uri,
+            //    AmlCustomerId = "12345",
+            //    AllowOtherDocs = AllowOtherDocs.yes,
+            //    ContactEmail = "joao@infotrack.co.uk",
+            //    ContactForename = "joao",
+            //    ContactPosition = "myPosition",
+            //    ContactSurname = "mysurname",
+            //    ContactTitle = "Mr",
+            //    CustomerAccess = CustomerAccess.Transactional,
+            //    CustomerAddress = "myAddress",
+            //    CustomerIcoNumber = "123456",
+            //    CustomerName = "myname",
+            //    Fax = "123456",
+            //    MlroContactEmail = "joao@infotrack.co.uk",
+            //    MlroContactName = "joao",
+            //    MlroContactPosition = "mega CEO",
+            //    OrgType = OrgType.Casino,
+            //    Telephone = "123456"
+            //};
+            //UpdateCustomerDetailsResponse UpdateCustomerDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdateCustomerDetailsResponse>(UpdateCustomerDetailsRequest, "/customer/update", "additional reference", 0);
+            #endregion
+
+            #region User List
+            var UserListRequest = new UserListRequest()
             {
                 Uri = authenticationResponse.uri,
-                AmlCustomerId = "12345",
-                AllowOtherDocs = AllowOtherDocs.yes,
-                ContactEmail = "joao@infotrack.co.uk",
-                ContactForename = "joao",
-                ContactPosition = "myPosition",
-                ContactSurname = "mysurname",
-                ContactTitle = "Mr",
-                CustomerAccess = CustomerAccess.Transactional,
-                CustomerAddress = "myAddress",
-                CustomerIcoNumber = "123456",
-                CustomerName = "myname",
-                Fax = "123456",
-                MlroContactEmail = "joao@infotrack.co.uk",
-                MlroContactName = "joao",
-                MlroContactPosition = "mega CEO",
-                OrgType = OrgType.Casino,
-                Telephone = "123456"
+                AmlCustomerId = "12345"
             };
-            UpdateCustomerDetailsResponse UpdateCustomerDetailsResponse = RequestPerformer.RequestPerformer.PerformRequest<UpdateCustomerDetailsResponse>(UpdateCustomerDetailsRequest, "/customer/update", "additional reference", 0);
+            UserListResponse UserListResponse = RequestPerformer.RequestPerformer.PerformRequest<UserListResponse>(UserListRequest, "/user/list", "additional reference", 0);
             #endregion
         }
     }
