@@ -579,6 +579,40 @@ namespace AMLv4_API.Aml_v4_API
     }
     #endregion
 
+    #region User Data
+    /// <summary>
+    /// Optional - Supply with auth to auto-add new users
+    /// </summary>
+    public class UserData
+    {
+        [JsonProperty("ContactEmail")]
+        public string ContactEmail { get; set; }
+
+        [JsonProperty("ContactForname", NullValueHandling = NullValueHandling.Ignore)]
+        public string ContactForname { get; set; }
+
+        [JsonProperty("ContactSurname")]
+        public string ContactSurname { get; set; }
+
+        [JsonProperty("UserType")]
+        public UserType UserType { get; set; }
+
+        [JsonProperty("ContactForename")]
+        public object ContactForename { get; set; }
+    }
+    #endregion
+
+    #region Options
+    /// <summary>
+    /// Optional - Used to supply Billing Reference only in this context
+    /// </summary>
+    public class Options
+    {
+        [JsonProperty("BillingRef")]
+        public string BillingRef { get; set; }
+    }
+    #endregion
+
     #endregion
 
     #region Enums
